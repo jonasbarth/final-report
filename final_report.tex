@@ -13,6 +13,7 @@
 \usepackage{amssymb}
 \usepackage{index} %for indexes
 \usepackage{apacite} %APA referencing
+\usepackage[ruled,vlined]{algorithm2e}
 
 \newcommand{\R}{\mathbb{R}}
 \pagenumbering{roman} 
@@ -118,6 +119,7 @@ Learning reusable skills is the essence of Hierarchical Reinforcement Learning. 
 At timestep $t_1$, the primitive action $a$ is selected and lasts one timestep. At $t_2$, the policy $\pi$ invokes a subpolicy or subtask $\sigma$ which is in charge of selecting primitive actions until $t_5$. Upon termination, the subpolicy returns a reward (yellow asterisk) back to the master policy which incorporates it into the value of the state from where the policy was invoked. 
 
 \subsubsection{Option-Critic}
+The following Hierarchical algorithm is an advancement on the Markov-Options framework \cite{sutton1999between} which first introduced a framework for extending the classical one-timestep-action MDP to a multi-timestep-actions Semi MDP (SMDP). In Sutton et. al's work, the options/subpolicies had to be handcrafted for the agent to be able to use them. Additionally, learning these subpolicies comes at a great temporal and spatial expense. The Option-Critic architecture \cite{bacon2017option} not only discovers subpolicies autonomously, but also simultaneously learns the policy over options as well as subpolicies. 
 
 \subsubsection{Feudal Networks}
 
