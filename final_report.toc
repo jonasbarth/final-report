@@ -1,0 +1,20 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{1}% 
+\contentsline {subsection}{\numberline {1.1}Motivation}{1}% 
+\contentsline {subsection}{\numberline {1.2}Objectives}{1}% 
+\contentsline {section}{\numberline {2}Theoretical Background}{1}% 
+\contentsline {subsection}{\numberline {2.1}Deep Reinforcement Learning}{1}% 
+\contentsline {subsection}{\numberline {2.2}Hierarchical Reinforcement Learning}{3}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Option-Critic}{4}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Feudal Networks}{4}% 
+\contentsline {section}{\numberline {3}Specifications and Design}{4}% 
+\contentsline {subsection}{\numberline {3.1}System Requirements}{4}% 
+\contentsline {subsection}{\numberline {3.2}System Design}{5}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Reward Function}{5}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Exploitation vs Exploration}{6}% 
+\contentsline {subsection}{\numberline {3.3}Experiment Design}{6}% 
+\contentsline {section}{\numberline {4}Experiments and Results}{6}% 
+\contentsline {subsection}{\numberline {4.1}DQN Agent}{6}% 
+\contentsline {subsection}{\numberline {4.2}Option-Critic Agent}{6}% 
+\contentsline {subsection}{\numberline {4.3}Feudal Agent}{6}% 
+\contentsline {section}{References}{7}% 
