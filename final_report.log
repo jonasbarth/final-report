@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  10 APR 2020 19:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  11 APR 2020 15:48
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -350,6 +350,12 @@ Package index Info: Writing index file final_report.idx on input line 24.
 
 LaTeX Warning: Label `fig:2' multiply defined.
 
+
+LaTeX Warning: Label `fig:2' multiply defined.
+
+
+LaTeX Warning: Label `fig:4' multiply defined.
+
 )
 \openout1 = `final_report.aux'.
 
@@ -524,262 +530,265 @@ File: figs/mdp_detail.png Graphic file (type png)
 Package pdftex.def Info: figs/mdp_detail.png  used on input line 90.
 (pdftex.def)             Requested size: 241.84842pt x 102.56741pt.
  [2 <./figs/mdp_detail.png>]
-<figs/policy_target_nn.png, id=30, 963.6pt x 542.025pt>
+<figs/deep_rl_video_game.png, id=30, 963.6pt x 542.025pt>
+File: figs/deep_rl_video_game.png Graphic file (type png)
+<use figs/deep_rl_video_game.png>
+Package pdftex.def Info: figs/deep_rl_video_game.png  used on input line 110.
+(pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
+<figs/policy_target_nn.png, id=32, 963.6pt x 542.025pt>
 File: figs/policy_target_nn.png Graphic file (type png)
 <use figs/policy_target_nn.png>
-Package pdftex.def Info: figs/policy_target_nn.png  used on input line 114.
+Package pdftex.def Info: figs/policy_target_nn.png  used on input line 122.
 (pdftex.def)             Requested size: 483.69684pt x 186.38464pt.
-
-
-LaTeX Warning: Citation `lin1993reinforcement' undefined on input line 119.
-
-[3 <./figs/policy_target_nn.png>]
-<figs/hrl_smdp.png, id=37, 2006.49625pt x 1030.85126pt>
+ [3 <./figs/deep_rl_video_game.png>]
+<figs/hrl_smdp.png, id=38, 2006.49625pt x 1030.85126pt>
 File: figs/hrl_smdp.png Graphic file (type png)
 <use figs/hrl_smdp.png>
-Package pdftex.def Info: figs/hrl_smdp.png  used on input line 129.
+Package pdftex.def Info: figs/hrl_smdp.png  used on input line 137.
 (pdftex.def)             Requested size: 241.84842pt x 124.24734pt.
- [4 <./figs/hrl_smdp.png>]
-<figs/option_critic_architecture.png, id=42, 413.74574pt x 383.63326pt>
+ [4 <./figs/policy_target_nn.png>]
+<figs/option_critic_architecture.png, id=44, 413.74574pt x 383.63326pt>
 File: figs/option_critic_architecture.png Graphic file (type png)
 <use figs/option_critic_architecture.png>
 Package pdftex.def Info: figs/option_critic_architecture.png  used on input lin
-e 149.
+e 157.
 (pdftex.def)             Requested size: 241.84842pt x 224.25186pt.
- [5 <./figs/option_critic_architecture.png>] [6] [7]
-<figs/frame_preprocessing.png, id=54, 963.6pt x 542.025pt>
+ [5 <./figs/hrl_smdp.png> <./figs/option_critic_architecture.png>]
+<figs/fun_architecture.png, id=51, 804.606pt x 410.13225pt>
+File: figs/fun_architecture.png Graphic file (type png)
+<use figs/fun_architecture.png>
+Package pdftex.def Info: figs/fun_architecture.png  used on input line 168.
+(pdftex.def)             Requested size: 362.77263pt x 184.9145pt.
+ [6 <./figs/fun_architecture.png>] [7] [8]
+<figs/frame_preprocessing.png, id=62, 963.6pt x 542.025pt>
 File: figs/frame_preprocessing.png Graphic file (type png)
 <use figs/frame_preprocessing.png>
-Package pdftex.def Info: figs/frame_preprocessing.png  used on input line 236.
+Package pdftex.def Info: figs/frame_preprocessing.png  used on input line 253.
 (pdftex.def)             Requested size: 483.69684pt x 136.39644pt.
-<figs/mario_frame_stacking.png, id=56, 273.27094pt x 274.02374pt>
-File: figs/mario_frame_stacking.png Graphic file (type png)
-<use figs/mario_frame_stacking.png>
-Package pdftex.def Info: figs/mario_frame_stacking.png  used on input line 244.
-
-(pdftex.def)             Requested size: 120.92421pt x 121.25655pt.
- [8 <./figs/frame_preprocessing.png> <./figs/mario_frame_stacking.png>] [9] (fi
-nal_report.bbl
+ [9 <./figs/frame_preprocessing.png>]
+<figs/frame_stacking_nn.png, id=68, 963.6pt x 542.025pt>
+File: figs/frame_stacking_nn.png Graphic file (type png)
+<use figs/frame_stacking_nn.png>
+Package pdftex.def Info: figs/frame_stacking_nn.png  used on input line 264.
+(pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
+ [10 <./figs/frame_stacking_nn.png>] (final_report.bbl
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 171.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 198.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 2564) in paragraph at lines 276--288
+Underfull \hbox (badness 2564) in paragraph at lines 332--344
 []\OT1/cmr/m/n/10.95 (+20) Khalifa, A.  (2019).  \OT1/cmr/m/it/10.95 (+20) Mari
 o ai frame-work 10th an-niver-sary edi-tion.  \OT1/cmr/m/n/10.95 (+20) Re-triev
 ed from
  []
 
 
-Underfull \hbox (badness 7740) in paragraph at lines 504--526
+Underfull \hbox (badness 7740) in paragraph at lines 612--634
 []\OT1/cmr/m/n/10.95 (+20) Silver, D., Huang, A., Mad-di-son, C. J., Guez, A., 
 Sifre, L., van den Driess-
  []
 
 
-Underfull \hbox (badness 5563) in paragraph at lines 504--526
+Underfull \hbox (badness 5563) in paragraph at lines 612--634
 \OT1/cmr/m/n/10.95 (+20) che, G., ... Has-s-abis, D.  (2016).  Mas-ter-ing the 
 game of go with deep
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--526
+Underfull \hbox (badness 10000) in paragraph at lines 612--634
 \OT1/cmr/m/n/10.95 (+20) neu-ral net-works and tree search.  \OT1/cmr/m/it/10.9
 5 (+20) Na-ture\OT1/cmr/m/n/10.95 (+20) , \OT1/cmr/m/it/10.95 (+20) 529\OT1/cmr
 /m/n/10.95 (+20) , 484--503.  Re-trieved from
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+[11])
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Overfull \hbox (21.08598pt too wide) in paragraph at lines 268--308
+Overfull \hbox (21.08598pt too wide) in paragraph at lines 291--331
 \OT1/cmr/m/n/10.95 (-20) Borges, D. (2018). The Curse of Di-men-sion-al-ity!. [
 on-line] Medium. Avail-able at: https://medium.com/diogo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Overfull \hbox (58.81161pt too wide) in paragraph at lines 268--308
+Overfull \hbox (58.81161pt too wide) in paragraph at lines 291--331
 \OT1/cmr/m/n/10.95 (-20) Edi-tion). [on-line] Plato.stanford.edu. Avail-able at
 : https://plato.stanford.edu/archives/win2017/entries/empiricism-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--308
+Underfull \hbox (badness 10000) in paragraph at lines 291--331
 
  []
 
-[10] [11] [12] (final_report.aux)
-
-LaTeX Warning: There were undefined references.
-
+[12] [13] [14] (final_report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8529 strings out of 492895
- 130245 string characters out of 3135335
- 279901 words of memory out of 3000000
- 12180 multiletter control sequences out of 15000+200000
- 16017 words of font info for 103 fonts, out of 3000000 for 9000
+ 8557 strings out of 492895
+ 130842 string characters out of 3135335
+ 274377 words of memory out of 3000000
+ 12202 multiletter control sequences out of 15000+200000
+ 16233 words of font info for 105 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,43p,1480b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,43p,1559b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
 m Files/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MikT
 ex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MikTex/fonts/typ
@@ -792,9 +801,9 @@ ype1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MikTex/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:
 /Program Files/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on final_report.pdf (14 pages, 1007936 bytes).
+Output written on final_report.pdf (16 pages, 1266105 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13355 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 13377 words of extra memory for PDF output out of 14400 (max. 10000000)
 

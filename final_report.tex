@@ -103,7 +103,15 @@ An optimal policy is therefore one which for each state chooses the action assoc
 	Q(s,a) \gets Q(s,a) + \alpha \left[ R + \gamma \max\limits_{a^\prime} Q(S^\prime, a^\prime) - Q(s,a) \right] 
 \]
 
-Whenever an agent takes an action in a state and experiences a reward, the old Q-value needs to be updated to reflect that observation. This is done by adding the experienced reward $R$ for taking action $a$ in state $s$ to the discounted largest Q-value of the next state $Q(S^\prime, a^\prime)$ ($\gamma$ is the discount factor), subtracting the old Q-value, multiplying everything by the learning rate $\alpha$ and adding it to the old Q-value. The learning rate specifies the importance of new information \textit{vis-à-vis} old information. In traditional RL, the Q-function is a lookup table where each entry corresponds to a Q-value. Q-tables quickly become infeasible for complex problems however. For instance, assuming an image size of $84 \times 84$, the RGB Super Mario state space has a size of $(84 \times 84 \times 3)^{256}$. The solution is to replace the lookup table with a neural network - Deep Q Network (DQN) or policy network. This works because neural networks in essence are universal function approximators. Especially Convolutional Neural Networks have made it possible to identify features in images and map them to outputs, thus reducing the need for a large memory footprint and allowing the application of Reinforcement Learning to high-dimensional problems. 
+Whenever an agent takes an action in a state and experiences a reward, the old Q-value needs to be updated to reflect that observation. This is done by adding the experienced reward $R$ for taking action $a$ in state $s$ to the discounted largest Q-value of the next state $Q(S^\prime, a^\prime)$ ($\gamma$ is the discount factor), subtracting the old Q-value, multiplying everything by the learning rate $\alpha$ and adding it to the old Q-value. The learning rate specifies the importance of new information \textit{vis-à-vis} old information. In traditional RL, the Q-function is a lookup table where each entry corresponds to a Q-value. Q-tables quickly become infeasible for complex problems however. For instance, assuming an image size of $84 \times 84$, the RGB Super Mario state space has a size of $(84 \times 84 \times 3)^{256}$. The solution is to replace the lookup table with a neural network - Deep Q Network (DQN) or policy network. This works because neural networks in essence are universal function approximators. Especially Convolutional Neural Networks (CNN) have made it possible to identify features in images and map them to outputs, thus reducing the need for a large memory footprint and allowing the application of Reinforcement Learning to high-dimensional problems like video games. A video game Deep Reinforcement Learning system usually has a \textit{policy network}. The policy network is a CNN that receives a game frame as input and outputs an action to be taken in the game. 
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[trim={0 2cm 0 2cm},clip,width=1\linewidth]{figs/deep_rl_video_game.png}
+\caption{Policy Network for Super Mario} \label{fig:2}
+\end{figure}
+
+For Super Mario, the state is represented as a pixel matrix of dimensions $(width \times height \times channels)$ where channels is the number of colour channels in the frame - 3 for RGB, 1 for grayscale. Given a state, the CNN performs a forward pass and assigns ranks to the possible actions Mario can take, e.g. left, right, jump etc. Ranks in this case are the Q-values of that state and so the best action is the output neuron with the highest Q-value.
 
 \subsubsection{Target Networks}
 The improvement made by replacing the Q-table with a neural network is significant, however an issue arises when calculating the network loss. The loss is computed as the difference between the targeted Q-values of the next state, i.e. $Q(s^\prime, a^\prime)$, and the Q-values outputted by the network for the current state, i.e. $Q(s,a)$. Goal is for $Q(s,a)$ to approximate $Q(s^\prime, a^\prime)$, though because the policy network is used to calculate both values, any weight updates to the network will shift both $Q(s,a)$ and $Q(s^\prime, a^\prime)$. At each iteration, $Q(s,a)$ will move closer to the targeted Q-value., However the targeted $Q(s^\prime, a^\prime)$ will move as well and we end up chasing a moving target. Ultimately, this causes overestimation of the Q-values and leads to learning instabilities resulting in poor policies. The solution is to use a separate target network with the frozen weights of the policy network to calculate the target Q-values. Therefore, target Q-values remain stationary when being approximated and the network does not overestimate Q-values. Periodically, the policy network's weights are copied to the target network so that they accurately reflect the learning process.
@@ -130,7 +138,7 @@ Learning reusable skills is the essence of Hierarchical Reinforcement Learning. 
 \caption{The Hierarchical RL Semi Markov Decision Process \protect\cite{ribas2011neural}} \label{fig:3}
 \end{figure}
 
-At timestep $t_1$, the primitive action $a$ is selected and lasts one timestep. At $t_2$, the policy $\pi$ invokes a subpolicy or subtask $\sigma$ which is in charge of selecting primitive actions until $t_5$. Upon termination, the subpolicy returns a reward (yellow asterisk) back to the master policy which incorporates it into the value of the state from where the policy was invoked. 
+At timestep $t_1$, the primitive action $a$ is selected and lasts one timestep. At $t_2$, the policy $\pi$ invokes a subpolicy or subtask $\sigma$ which is in charge of selecting primitive actions until $t_5$. Upon termination, the subpolicy returns a reward (yellow asterisk) back to the master policy which incorporates it into the value of the state from where the policy was invoked. What convolutional neural networks did for vision, figuring out behavioural hierarchies are to RL.
 
 \subsubsection{Option-Critic}
 The following Hierarchical algorithm is an advancement on the Markov-Options framework \cite{sutton1999between} which first introduced a framework for extending the classical one-timestep-action MDP to a multi-timestep-actions Semi MDP (SMDP). The SMDP contains \textit{Markov Options}, a layer of temporal abstraction on top of the primitive one-timestep actions of the agent. An option is defined as a triplet $\langle I, \pi, \beta \rangle$ where:
@@ -142,7 +150,7 @@ The following Hierarchical algorithm is an advancement on the Markov-Options fra
 	\item $\beta : S^+ \to [0,1]$ is the termination criterion for the option.
 \end{itemize}
 
-An option can only be chosen by the agent if the current state is in the subset of states available to the option, $s_t \in I$. This restricts options to a specific portion of the state space. For every subsequent state reached in the option, it will terminate with probability $\beta(s_{t+k})$. In Sutton et. al's work, the options/subpolicies had to be handcrafted for the agent to learn and use them. Additionally, learning these subpolicies came at a great temporal and spatial expense because each option is solved as its own MDP. The Option-Critic architecture \cite{bacon2017option} improves upon this by not only discovering subpolicies autonomously, but also simultaneously learning the policy over options/master policy as well as subpolicies. Furthermore, it assumes that options are available to the agent everywhere in the state space. Just like vanilla Deep Reinforcement Learning, Option-Critic utilises Deep Q Networks to approximate the Q value function.
+An option can only be chosen by the agent if the current state is in the subset of states available to the option, $s_t \in I$. This restricts options to a specific portion of the state space. For every subsequent state reached in the option, it will terminate with probability $\beta(s_{t+k})$. In Sutton et. al's work, the options/subpolicies had to be handcrafted for the agent to learn and use them. Additionally, learning these subpolicies came at a great temporal and spatial expense because each option is solved as its own MDP. The Option-Critic architecture \cite{bacon2017option} improves upon this by not only discovering subpolicies autonomously, but also simultaneously learning the policy over options/master policy as well as subpolicies. The number of hierarchies is fixed at two. Furthermore, it assumes that options are available to the agent everywhere in the state space. Just like vanilla Deep Reinforcement Learning, Option-Critic utilises Deep Q Networks to approximate the Q value function.
 
 \begin{figure}[!htb]
 \centering
@@ -153,7 +161,15 @@ An option can only be chosen by the agent if the current state is in the subset 
 At each timestep, the master policy $\pi_\Omega$ chooses an option/subpolicy $\omega_t$. We follow the regular MDP structure where the option/subpolicy executes an action $a$ in the environment and receives a reward $r$ and new state $s^\prime$ in return. The critic then evaluates the option by using the Q-value $Q_U$ of executing a subpolicy $\omega$ from state $s$ to obtain the new Q update. If the next state is a terminal state of an option, we obtain the update value $\delta$ by subtracting the observed reward $r$ from $Q_U$. Otherwise, we compute the update value like we did for a terminal state and add the discounted Q-value $Q_\Omega$ of the entire option as well as the max Q-value of the \textbf{next} option. After evaluating, the option is improved using Stochastic Gradient Descent. The option terminates when the criterion $\beta_\omega$ is fulfilled after which the policy over options/master policy chooses the next option. 
 
 \subsubsection{Feudal Networks}
+Another recent Hierarchical Reinforcement Learning algorithm is DeepMind's FeUdal Network (FuN) \cite{vezhnevets2017feudal}. Like the Option-Critic architecture, is is an improvement on an older system, called Feudal Reinforcement Learning \cite{dayan1993feudal}. Feudal Reinforcement Learning follows the general Hierarchical Reinforcement Learning architecture where different levels of temporal abstraction work together to solve the overall task. Taking after the questionable medieval feudal system, managers set goals for the sub-managers to solve in the state space and receive rewards once completed. Communication is restricted to a single hierarchical step, meaning that each level can only give goals to the sub-manager below and receive goals from the manager above. Additionally, the number of hierarchies are not fixed. Though a great improvement on standard Q-learning, traditional Feudal Reinforcement Learning is not general enough to work on multiple domains and has inherent convergence issues. DeepMind's FeUdal Network provides a fixed two-level manager-worker hierarchy encapsulating multiple neural networks. At the top is the manager, setting goals for the worker in the latent space. Working like a compass, the manager figures out \textbf{where} the worker should go. At the bottom, the worker has a high temporal resolution and is responsible for choosing primitive actions in the environment. Given a goal by the manager, the worker decides \textbf{how} to achieve.
 
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.75\linewidth]{figs/fun_architecture.png}
+\caption{FuN Architecure \protect\cite{vezhnevets2017feudal}} \label{fig:4}
+\end{figure}
+
+FuN has a more complex architecture than the regular DQN and Option-Critic systems. First, the game frame is passed through a CNN modelled after DeepMind's Atari \cite{DBLP:journals/corr/MnihKSGAWR13} network to compute a separate intermediate representation $z_t$ of the state $x_t$ to be shared between the manager and worker. After further compressing the state $z_t$ into $s_t$, the manager utilises a Long short-term memory (LSTM) Recurrent Neural Network (RNN) to compute a goal $g_t$ for the worker to solve. The worker is given the intermediate state representation $z_t$ and uses an LSTM to produce an action embedding matrix $U$ where each row corresponds to a possible action within the game. To incorporate the manager's goal, the worker then embeds it into a vector $w_t$. By applying a dot product to the action matrix $U_t$ and the goal embedding $w_t$, we get a probability distribution over the actions. 
 
 \section{Specifications}
 
@@ -204,7 +220,7 @@ The reward function used in this project is inspired by the  \textit{openai gym}
 
 	\item Velocity: $v = x_t - x_{t-1}$. The difference in the agent's \textit{x} values in between time steps $t$ and $t - 1$. Moving right will increase $v$.
 	
-	\item Clock: $c = c_t - c_{t-1}$. The difference in the game's clock values in between time steps $t$ and $t - 1$. For each action committed in game, $c$ will decrease by $1$. Using frame skipping, each action performed by the Reinforcement Learning agent will yield a $c$ value of $-4$. This is to prevent the agent from standing still.
+	\item Clock: $c = c_t - c_{t-1}$. The difference in the game's clock values in between time steps $t$ and $t - 1$. For each action committed in game, $c$ will decrease by $1$. Using frame skipping \ref{frame_stacking_skipping}, each action performed by the Reinforcement Learning agent will yield a $c$ value of $-4$. This is to prevent the agent from standing still.
 	
 	\item Death/Win: 
 		\begin{equation*}
@@ -230,6 +246,7 @@ A popular policy for choosing between exploitation and exploration is the $\epsi
 
 
 \subsection{Frame Preprocessing}
+Preprocessing data is a step all Machine Learning systems go through prior to starting the actual learning. For a Reinforcement Learning network, the input is a pixel matrix representing a game frame. For Super Mario, the dimensions of the raw image as returned by the game are $240 \times 256 \times 3$. Before the raw image can be passed to the network however, it needs to go through a series of preprocessing steps aimed at reducing its dimensionality and making learning less computationally demanding. First, unnecessary information such as the score, lives, and timer and cropped out because they do not provide relevant clues to the agent. Second, the image is resized to $84 \times 84 \times 3$ using bilinear interpolation \cite{gribbon2004novel} to reduce neural network size. The dimensions $84 \times 84$ are taken from DeepMind's \textit{Playing Atari with Reinforcement Learning} paper \cite{DBLP:journals/corr/MnihKSGAWR13}. Converting the image to grayscale is another often applied preprocessing step. Though models tend to perform lower on grayscale \cite{lample2017playing}.
 
 \begin{figure}[!htb]
 \centering
@@ -237,13 +254,19 @@ A popular policy for choosing between exploitation and exploration is the $\epsi
 \caption{Frame Preprocessing Pipeline}
 \end{figure}
 
-\subsection{Frame Stacking and Frame Skipping}
+
+
+\subsection{Frame Stacking and Frame Skipping} \label{frame_stacking_skipping}
+When playing a video game, it is important for the player to have a sense of how the objects in the environment are moving. Looking at a single frame of Super Mario does not tell you whether Mario is moving left, right, up or down. Only when presented with consecutive frames could you actually determine Mario's movement. Hence, to give the policy network of our system an idea of where Mario is going, it is fed a stack of 4 frames as input. Using 4 frames was again pioneered by DeepMind \cite{DBLP:journals/corr/MnihKSGAWR13}.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.25\linewidth]{figs/mario_frame_stacking.png}
-\caption{Frame Stacking}
+\includegraphics[trim={0 2cm 0 2cm}, clip, width=.75\linewidth]{figs/frame_stacking_nn.png}
+\caption{Stacked frames are given as input to the neural network. The dimension of the input thus becomes $84 \times 84 \times 3 \times 4$}.
 \end{figure}
+
+\subsection{Custom Levels}
+
 
 \section{Experiments and Results}
 

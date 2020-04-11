@@ -144,6 +144,33 @@ Cobbe, K.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Dayan%
+\ \BBA {} Hinton%
+}{%
+Dayan%
+\ \BBA {} Hinton%
+}{%
+{\protect \APACyear {1993}}%
+}]{%
+dayan1993feudal}
+\APACinsertmetastar {%
+dayan1993feudal}%
+\begin{APACrefauthors}%
+Dayan, P.%
+\BCBT {}\ \BBA {} Hinton, G\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1993}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Feudal reinforcement learning} {Feudal reinforcement
+  learning}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Advances in neural information processing systems}
+  {Advances in neural information processing systems}\ (\BPGS\ 271--278).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Fran{\c{c}}ois-Lavet%
 \ \protect \BOthers {.}}{%
 Fran{\c{c}}ois-Lavet%
@@ -198,6 +225,35 @@ Geirhos, R.%
 \newblock
 \BIn{} \APACrefbtitle {Advances in Neural Information Processing Systems}
   {Advances in neural information processing systems}\ (\BPGS\ 7538--7550).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Gribbon%
+\ \BBA {} Bailey%
+}{%
+Gribbon%
+\ \BBA {} Bailey%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+gribbon2004novel}
+\APACinsertmetastar {%
+gribbon2004novel}%
+\begin{APACrefauthors}%
+Gribbon, K\BPBI T.%
+\BCBT {}\ \BBA {} Bailey, D\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A novel approach to real-time bilinear interpolation} {A
+  novel approach to real-time bilinear interpolation}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings. DELTA 2004. Second IEEE International
+  Workshop on Electronic Design, Test and Applications} {Proceedings. delta
+  2004. second ieee international workshop on electronic design, test and
+  applications}\ (\BPGS\ 126--131).
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -284,6 +340,58 @@ Khalifa, A.%
 \newblock
 \begin{APACrefURL} \url{https://github.com/amidos2006/Mario-AI-Framework}
   \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lample%
+\ \BBA {} Chaplot%
+}{%
+Lample%
+\ \BBA {} Chaplot%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+lample2017playing}
+\APACinsertmetastar {%
+lample2017playing}%
+\begin{APACrefauthors}%
+Lample, G.%
+\BCBT {}\ \BBA {} Chaplot, D\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Playing FPS games with deep reinforcement learning}
+  {Playing fps games with deep reinforcement learning}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Thirty-First AAAI Conference on Artificial
+  Intelligence.} {Thirty-first aaai conference on artificial intelligence.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lin%
+}{%
+Lin%
+}{%
+{\protect \APACyear {1993}}%
+}]{%
+lin1993reinforcement}
+\APACinsertmetastar {%
+lin1993reinforcement}%
+\begin{APACrefauthors}%
+Lin, L\BHBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1993}{}{}.
+\newblock
+\APACrefbtitle {Reinforcement learning for robots using neural networks}
+  {Reinforcement learning for robots using neural networks}\
+  \APACbVolEdTR{}{\BTR{}}.
+\newblock
+\APACaddressInstitution{}{Carnegie-Mellon Univ Pittsburgh PA School of Computer
+  Science}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -630,6 +738,37 @@ Van~Seijen, H.%
 \newblock
 \BIn{} \APACrefbtitle {Advances in Neural Information Processing Systems}
   {Advances in neural information processing systems}\ (\BPGS\ 5392--5402).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Vezhnevets%
+\ \protect \BOthers {.}}{%
+Vezhnevets%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+vezhnevets2017feudal}
+\APACinsertmetastar {%
+vezhnevets2017feudal}%
+\begin{APACrefauthors}%
+Vezhnevets, A\BPBI S.%
+, Osindero, S.%
+, Schaul, T.%
+, Heess, N.%
+, Jaderberg, M.%
+, Silver, D.%
+\BCBL {}\ \BBA {} Kavukcuoglu, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Feudal networks for hierarchical reinforcement learning}
+  {Feudal networks for hierarchical reinforcement learning}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 34th International Conference on
+  Machine Learning-Volume 70} {Proceedings of the 34th international conference
+  on machine learning-volume 70}\ (\BPGS\ 3540--3549).
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

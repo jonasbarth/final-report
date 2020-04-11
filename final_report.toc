@@ -6,19 +6,20 @@
 \contentsline {subsection}{\numberline {2.1}Deep Reinforcement Learning}{1}% 
 \contentsline {subsubsection}{\numberline {2.1.1}Target Networks}{3}% 
 \contentsline {subsubsection}{\numberline {2.1.2}Experience Replay}{3}% 
-\contentsline {subsection}{\numberline {2.2}Hierarchical Reinforcement Learning}{3}% 
-\contentsline {subsubsection}{\numberline {2.2.1}Option-Critic}{4}% 
-\contentsline {subsubsection}{\numberline {2.2.2}Feudal Networks}{5}% 
-\contentsline {section}{\numberline {3}Specifications}{5}% 
-\contentsline {subsection}{\numberline {3.1}System Requirements}{5}% 
-\contentsline {section}{\numberline {4}System Design}{6}% 
-\contentsline {subsection}{\numberline {4.1}Reward Function}{6}% 
-\contentsline {subsection}{\numberline {4.2}Exploitation vs Exploration}{7}% 
-\contentsline {subsection}{\numberline {4.3}Frame Preprocessing}{8}% 
-\contentsline {subsection}{\numberline {4.4}Frame Stacking and Frame Skipping}{8}% 
-\contentsline {section}{\numberline {5}Experiments and Results}{8}% 
-\contentsline {subsection}{\numberline {5.1}Experiment Design}{8}% 
-\contentsline {subsection}{\numberline {5.2}DQN Agent}{9}% 
-\contentsline {subsection}{\numberline {5.3}Option-Critic Agent}{9}% 
-\contentsline {subsection}{\numberline {5.4}Feudal Agent}{9}% 
-\contentsline {section}{References}{10}% 
+\contentsline {subsection}{\numberline {2.2}Hierarchical Reinforcement Learning}{4}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Option-Critic}{5}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Feudal Networks}{6}% 
+\contentsline {section}{\numberline {3}Specifications}{7}% 
+\contentsline {subsection}{\numberline {3.1}System Requirements}{7}% 
+\contentsline {section}{\numberline {4}System Design}{8}% 
+\contentsline {subsection}{\numberline {4.1}Reward Function}{8}% 
+\contentsline {subsection}{\numberline {4.2}Exploitation vs Exploration}{9}% 
+\contentsline {subsection}{\numberline {4.3}Frame Preprocessing}{9}% 
+\contentsline {subsection}{\numberline {4.4}Frame Stacking and Frame Skipping}{10}% 
+\contentsline {subsection}{\numberline {4.5}Custom Levels}{10}% 
+\contentsline {section}{\numberline {5}Experiments and Results}{10}% 
+\contentsline {subsection}{\numberline {5.1}Experiment Design}{10}% 
+\contentsline {subsection}{\numberline {5.2}DQN Agent}{10}% 
+\contentsline {subsection}{\numberline {5.3}Option-Critic Agent}{10}% 
+\contentsline {subsection}{\numberline {5.4}Feudal Agent}{10}% 
+\contentsline {section}{References}{11}% 
