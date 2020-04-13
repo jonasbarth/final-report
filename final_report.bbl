@@ -87,6 +87,38 @@ Bellemare, M\BPBI G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Braylan%
+, Hollenbeck%
+, Meyerson%
+\BCBL {}\ \BBA {} Miikkulainen%
+}{%
+Braylan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+braylan2015frame}
+\APACinsertmetastar {%
+braylan2015frame}%
+\begin{APACrefauthors}%
+Braylan, A.%
+, Hollenbeck, M.%
+, Meyerson, E.%
+\BCBL {}\ \BBA {} Miikkulainen, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Frame skip is a powerful parameter for learning to play
+  atari} {Frame skip is a powerful parameter for learning to play
+  atari}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Workshops at the Twenty-Ninth AAAI Conference on
+  Artificial Intelligence.} {Workshops at the twenty-ninth aaai conference on
+  artificial intelligence.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Chuchro%
 \ \BBA {} Gupta%
 }{%
