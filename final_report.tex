@@ -12,7 +12,8 @@
 \usepackage{amsmath} %for maths
 \usepackage{amssymb}
 \usepackage{index} %for indexes
-\usepackage{apacite} %APA referencing
+%\usepackage{apacite} %APA referencing
+%\usepackage[style=numeric]{biblatex}
 \usepackage[ruled,vlined]{algorithm2e}
 
 \newcommand{\R}{\mathbb{R}}
@@ -63,7 +64,7 @@ Reinforcement Learning algorithms come in many flavours, however most do so call
 hours of Atari gameplay. Distributional RL \cite{bellemare2017distributional} surpasses human
 players after 70 million frames in Atari games. If agents were able to abstract away behaviour when learning and reuse already learned information when faced with new situations, the training time could be reduced. Additionally, the agent would be more capable of generalisation.
 
-Introducing the abstraction of behaviour is the research area of Hierarchical Reinforcement Learning. Instead of treating the solution to a Super Mario level purely as a sequence of primitive actions, e.g. pressing left, right, jump etc, Hierarchical Reinforcement Learning breaks down the solution into more abstract learnable chunks. These chunks operate at a higher \textit{temporal abstraction} and act as subgoals for an agent to achieve in the game. Intuitively, this is how a human player would approach the game as well. They would most likely not think in terms of button combinations however, but on a higher level.To finish a level, Mario has to jump ravines, kill Goombas, avoid Fire Bars and climb steps - all of which are further decomposable into arrangements of primitive left, right, jump actions. Recent research \cite{nachum2019does} has shown that using an Hierarchical Approach to learning, results in up to 3 - 5 times fewer interactions with the environment. Thus, Hierarchical Reinforcement Learning comes with potential to alleviate the problem of long training times. 
+Introducing the abstraction of behaviour is the research area of Hierarchical Reinforcement Learning. Instead of treating the solution to a Super Mario level purely as a sequence of primitive actions, e.g. pressing left, right, jump etc, Hierarchical Reinforcement Learning breaks down the solution into more abstract learnable chunks. These chunks operate at a higher \textit{temporal abstraction} and act as subgoals for an agent to achieve in the game. Intuitively, this is how a human player would approach the game as well. They would most likely not think in terms of button combinations however, but on a higher level.To finish a level, Mario has to jump ravines, kill Goombas, avoid Fire Bars and climb steps - all of which are further decomposable into arrangements of primitive left, right, jump actions. Recent research \cite{nachum2019does} has shown that using an Hierarchical Approach to learning, results in up to 3 - 5 times fewer interactions with the environment. Thus, Hierarchical Reinforcement Learning comes with potential to alleviate the problem of long training times and generalisation. 
 
 \subsection{Objectives}
 The main objective of this project was to compare 
@@ -93,15 +94,17 @@ At a given point in time $t$, the agent performs an action $a_t$ in state $s_t$ 
 
 One of the most popular algorithms for learning optimal policies remains Q-learning \cite{watkins1992q}. Each state in the state space has state-action pairs called Q-values. The Q-value $Q(s,a)$ describes the rewards an agent can expect from taking taking action $a$ in state $s$. For instance, if Mario encounters a Goomba in his current state, the Q-value for taking an action running into the Goomba would be lower than the Q-value for taking an action killing the Goomba. The Q-value under a policy $\pi$ is formalised as the expected sum of discounted rewards \textbf{given} state $s$ and action $a$:
 
-\[ 
+\begin{equation}
  Q^\pi(s, a) = \E \left[ \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \Big| S_t = s, A_t = a \right]
-\]
+\end{equation}
 
-An optimal policy is therefore one which for each state chooses the action associated with the largest Q-value. All an agent has to do in order to learn an optimal policy is the Q function: $Q : S \times A \to \R$. The agent learns by continuously experiencing the environment, updating the Q-values until they converge using the following equation:
 
-\[
-	Q(s,a) \gets Q(s,a) + \alpha \left[ R + \gamma \max\limits_{a^\prime} Q(S^\prime, a^\prime) - Q(s,a) \right] 
-\]
+An optimal policy is therefore one which for each state chooses the action associated with the largest Q-value. To learn an optimal policy, an agent needs to learn the Q function: $Q : S \times A \to \R$ of the problem. Learning the Q-function is a process of continuously experiencing the environment and using the observations to update the Q-values until they converge. The following shows the Q-value update:
+
+\begin{equation} \label{q_update}
+	Q(s,a) \gets Q(s,a) + \alpha \left[ R + \gamma \max\limits_{a^\prime} Q(S^\prime, a^\prime) - Q(s,a) \right]
+\end{equation}
+
 
 Whenever an agent takes an action in a state and experiences a reward, the old Q-value needs to be updated to reflect that observation. This is done by adding the experienced reward $R$ for taking action $a$ in state $s$ to the discounted largest Q-value of the next state $Q(S^\prime, a^\prime)$ ($\gamma$ is the discount factor), subtracting the old Q-value, multiplying everything by the learning rate $\alpha$ and adding it to the old Q-value. The learning rate specifies the importance of new information \textit{vis-à-vis} old information. In traditional RL, the Q-function is a lookup table where each entry corresponds to a Q-value. Q-tables quickly become infeasible for complex problems however. For instance, assuming an image size of $84 \times 84$, the RGB Super Mario state space has a size of $(84 \times 84 \times 3)^{256}$. The solution is to replace the lookup table with a neural network - Deep Q Network (DQN) or policy network. This works because neural networks in essence are universal function approximators. Especially Convolutional Neural Networks (CNN) have made it possible to identify features in images and map them to outputs, thus reducing the need for a large memory footprint and allowing the application of Reinforcement Learning to high-dimensional problems like video games. A video game Deep Reinforcement Learning system usually has a \textit{policy network}. The policy network is a CNN that receives a game frame as input and outputs an action to be taken in the game. 
 
@@ -111,10 +114,10 @@ Whenever an agent takes an action in a state and experiences a reward, the old Q
 \caption{Policy Network for Super Mario} \label{fig:2}
 \end{figure}
 
-For Super Mario, the state is represented as a pixel matrix of dimensions $(width \times height \times channels)$ where channels is the number of colour channels in the frame - 3 for RGB, 1 for grayscale. Given a state, the CNN performs a forward pass and assigns ranks to the possible actions Mario can take, e.g. left, right, jump etc. Ranks in this case are the Q-values of that state and so the best action is the output neuron with the highest Q-value.
+For Super Mario, the state is represented as a pixel matrix of dimensions $(width \times height \times channels)$ where channels is the number of colour channels in the frame - 3 for RGB, 1 for grayscale. Given a state, the CNN performs a forward pass and assigns ranks to the possible actions Mario can take, e.g. left, right, jump etc. The network has an output neuron for each possible action Mario can take in the game. Ranks in this case are the Q-values of that state and so the best action is the output neuron with the highest Q-value. 
 
 \subsubsection{Target Networks}
-The improvement made by replacing the Q-table with a neural network is significant, however an issue arises when calculating the network loss. The loss is computed as the difference between the targeted Q-values of the next state, i.e. $Q(s^\prime, a^\prime)$, and the Q-values outputted by the network for the current state, i.e. $Q(s,a)$. Goal is for $Q(s,a)$ to approximate $Q(s^\prime, a^\prime)$, though because the policy network is used to calculate both values, any weight updates to the network will shift both $Q(s,a)$ and $Q(s^\prime, a^\prime)$. At each iteration, $Q(s,a)$ will move closer to the targeted Q-value., However the targeted $Q(s^\prime, a^\prime)$ will move as well and we end up chasing a moving target. Ultimately, this causes overestimation of the Q-values and leads to learning instabilities resulting in poor policies. The solution is to use a separate target network with the frozen weights of the policy network to calculate the target Q-values. Therefore, target Q-values remain stationary when being approximated and the network does not overestimate Q-values. Periodically, the policy network's weights are copied to the target network so that they accurately reflect the learning process.
+The improvement made by replacing the Q-table with a neural network is significant, however an issue arises when calculating the network loss in the Q-value update (see \ref{eq:q_update}). The loss is computed as the difference between the targeted Q-values of the next state, i.e. $Q(s^\prime, a^\prime)$, and the Q-values outputted by the network for the current state, i.e. $Q(s,a)$. Goal is for $Q(s,a)$ to approximate $Q(s^\prime, a^\prime)$, though because the policy network is used to calculate both values, any weight updates to the network will shift both $Q(s,a)$ and $Q(s^\prime, a^\prime)$. At each iteration, $Q(s,a)$ will move closer to the targeted Q-value., However the targeted $Q(s^\prime, a^\prime)$ will move as well and we end up chasing a moving target. Ultimately, this causes overestimation of the Q-values and leads to learning instabilities resulting in poor policies. The solution is to use a separate target network with the frozen weights of the policy network to calculate the target Q-values. Therefore, target Q-values remain stationary when being approximated and the network does not overestimate Q-values. Periodically, the policy network's weights are copied to the target network so that they accurately reflect the learning process.
 
 
 \begin{figure}[!htb]
@@ -124,7 +127,7 @@ The improvement made by replacing the Q-table with a neural network is significa
 \end{figure}
 
 \subsubsection{Experience Replay}
-In traditional Reinforcement Learning, observations of the environment are immediately discarded after the Q-values have been updated. Experiencing the environment as a consecutive stream of temporally sequential observations becomes problematic because samples are highly correlated and training on correlated data may get you stuck in a local minimum. Furthermore, because observations are not kept, each one of them can only be used in a single weight update which makes learning less efficient. Therefore, most Deep Q Learning algorithms attempt to break correlation between samples and reuse them for weight updates with a \textit{replay memory} \cite{lin1993reinforcement}. The replay memory is a buffer of size $N$ where the agent stores experience tuples $e_t = (s_t, a_t, r_{t+1}, s_{t+1})$. Once the memory has been filled with enough samples, the agent randomly samples a batch and uses it to train the policy network. 
+In traditional Reinforcement Learning, observations of the environment are immediately discarded after the Q-values have been updated. Experiencing the environment as a consecutive stream of temporally sequential observations becomes problematic because samples are highly correlated and training on correlated data may get you stuck in a local minimum. Furthermore, because observations are not kept, each one of them can only be used in a single weight update which makes learning less efficient. Therefore, most Deep Q Learning algorithms attempt to break correlation between samples and reuse them for weight updates with a \textit{replay memory} \cite{lin1993reinforcement}. The replay memory is a buffer of size $N$ where the agent stores experience tuples $e_t = (s_t, a_t, r_{t+1}, s_{t+1})$. Until the agent has collected a sufficient number of samples, it will execute random actions. Once the memory has been filled with enough samples, the agent randomly samples a batch and uses it to train the policy network. 
 
 
 \subsection{Hierarchical Reinforcement Learning}
@@ -184,11 +187,17 @@ The following section specifies the requirements to be fulfilled by the system:
 	\item \textbf{Custom Levels}\\
 	Using custom levels means that we can better investigate Mario's generalisation abilities. The agent can learn specific skills in specially designed levels and slowly expand their skillset. This is also the main reason for choosing the Mario AI Tenth Anniversary Edition framework over the OpenAI Gym library. OpenAI Gym only provides the original Super Mario levels and therefore makes the skill stacking with Hierarchical Reinforcement Learning algorithms less transparent.
 	
+	\item \textbf{Reward Function}\\
+	
+	
 	\item \textbf{Java-Python Bridge}\\
 	Because the chosen Super Mario game framework is written in Java and Python is the de facto lingua franca of Reinforcement Learning, the system needs to have a communication bridge between the languages. The system needs to train for longer periods of time, so avoiding unnecessary overhead whereever possible is important. Getting the two languages "as close" as possible to each other is therefore vital. A client-server architecture using HTTP to send JSON is easy to implement, however comes with too much overhead. The Jython \cite{jython} and JPype \cite{jpype} frameworks are directly embedded in the JVM to reduce latency, however they are not as out of the box user friendly. The Py4J \cite{py4j} framework on the other hand uses sockets to communicate with the Java API which leads to a slight performance decrease. Though it is nearly effortless to setup and easy to use which is why it is the best choice for the system.
 	
 	\item \textbf{Deep Learning Libraries}\\
 	Contemporary Reinforcement Learning algorithms rely on Neural Networks to learn behaviour. The system needs to be able to initialise and train neural networks by making use of existing libraries. PyTorch is the most suitable option as it offers a good balance between low-level granularity and easy to use high-level API. Additionally, PyTorch has their own Reinforcement Learning tutorials.
+	
+	\item \textbf{Python Game Interface}\\
+	The different Reinforcement Learning agents of this project all need to interact with the Super Mario Java game emulator. Writing a Python interface that bridges to the emulator and provides standard operations for the agents to use will reduce code duplication on the agents' part and decouple them from the emulator logic.
 	
 	\item \textbf{Preprocessing}\\
 	The environment as observed by the Reinforcement Learning agent is a pixel matrix of the current frame of the game. Commonly, frames are cropped and scaled before being passed to the neural network. Cropping removes unnecessary information such as the score and timer counters at the top of the screen. Scaling reduces the complexity of the image and the number of neurons needed in the network. For to reduce latency, cropping and scaling will need to be done on the Java side of the system.
@@ -203,9 +212,20 @@ The following section specifies the requirements to be fulfilled by the system:
 
 	
 
-\section{System Design}
+\section{System Implementation}
 The following section will describe the system architecture in detail as it was implemented from the requirements section.
 
+
+\subsection{Overall Architecture}
+The system follows a client-server model where the Reinforcement Learning client uses the Py4J bridge to execute actions on the game emulator server and observe states and rewards. The client first initiates the environment via the game interface and receiving back the start state of the MDP (note that this process is not displayed in the game server diagram). Having chosen an action according to their policy, the agent passes a \textit{tensor} with said action to the game interface which encodes it as a \textit{boolean action vector}, e.g. $\begin{bmatrix} false & true & false & true & false\end{bmatrix}$ for going right. When the action vector is received by the Game Server via Py4J, the action is executed in the environment $k$ times (see section \ref{frame_stacking_skipping} for frame skipping). The final frame of the action sequence is cropped and resized (see section \ref{frame_preprocessing}) and the reward is calculated using the environment's reward function (see section \ref{reward_function}). The reward and the frame are then marshalled back to the client using Py4J.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[trim={0 2cm 0 2cm},clip,width=1\linewidth]{figs/system_architecture.png}
+\caption{System Architecture}
+\end{figure}
+
+The game server is a \textit{jar} file built using \textit{maven} exposing a port for the client to interact with. It is based on the 
 
 
 \subsection{Reward Function} \label{reward_function}
@@ -214,7 +234,7 @@ A Reinforcement Learning agent learns to distinguish between desirable and undes
 
 Luckily, simple video games such as Super Mario often have clear criteria for success and failure, meaning that reward function design is of relatively low complexity. We want to incentivise Mario to reach the flag at the end of the level (success) and avoid anything that results in death (failure). Giving Mario positive rewards for moving right in the level and negative rewards for moving left forces Mario to keep moving right. Additionally, providing large negative rewards in terminal failure states and large positive rewards in terminal success states further forces Mario to stay alive and move towards the flag. Positive rewards encourage the agent to keep playing and accumulating those rewards. However, an agent may potentially avoid a terminal state to keep racking up rewards. Therefore, it is important to have positive terminal state values which make the agent choose the terminal state over reward hacking. Negative rewards on the other hand encourage the agent to finish the level as quickly as possible. Besides death, the agent is also penalised each time step $t$ to avoid him standing still. Thus, the agent will want to reach a terminal state as quickly as possible. Rewards are usually bounded to avoid exploding gradients in the neural networks.
 \linebreak
-The reward function used in this project is inspired by the  \textit{openai gym} Super Mario Bros framework. It is composed of three variables $v, c, d$:
+The reward function used in this project is inspired by the  \textit{openai gym} Super Mario Bros framework \cite{pypi}. It is composed of three variables $v, c, d$:
 
 \begin{itemize}
 
@@ -245,7 +265,7 @@ A major challenge within Reinforcement Learning is to strike a balance between g
 A popular policy for choosing between exploitation and exploration is the $\epsilon$-greedy algorithm \cite{white2012bandit}. At each timestep, the agent chooses the best action to exploit the environment with $1-\epsilon$ probability. Exploration is more desirable at the beginning of the learning process because the agent does not possess enough information about the environment yet. Hence, the value for $\epsilon$ is usually decayed over time to reflect this. Methods for decaying $\epsilon$ can be linear \cite{mnih2015human}, exponential \cite{maroti2019rbed} and sinusoidal  \cite{chuchro2017game}.
 
 
-\subsection{Frame Preprocessing}
+\subsection{Frame Preprocessing} \label{frame_preprocessing}
 Preprocessing data is a step all Machine Learning systems go through prior to starting the actual learning. For a Reinforcement Learning network, the input is a pixel matrix representing a game frame. For Super Mario, the dimensions of the raw image as returned by the game are $240 \times 256 \times 3$. Before the raw image can be passed to the network however, it needs to go through a series of preprocessing steps aimed at reducing its dimensionality and making learning less computationally demanding. First, unnecessary information such as the score, lives, and timer and cropped out because they do not provide relevant clues to the agent. Second, the image is resized to $84 \times 84 \times 3$ using bilinear interpolation \cite{gribbon2004novel} to further reduce the size of the neural network needed for training. The dimensions $84 \times 84$ are taken from DeepMind's \textit{Playing Atari with Reinforcement Learning} paper \cite{DBLP:journals/corr/MnihKSGAWR13}. Converting the image to grayscale is another often applied preprocessing step. Though models tend to perform lower on grayscale \cite{lample2017playing}.
 
 \begin{figure}[!htb]
@@ -298,7 +318,7 @@ The goal of this project is to investigate whether introducing hierarchies and t
 
 \pagebreak
 
-\bibliographystyle{apacite}
+\bibliographystyle{ieeetran}
 \bibliography{references}
 
 Abbeel, P. and Schulman, J. (2015). CS 294: Deep Reinforcement Learning, Fall 2015. UC Berkely.\\\\

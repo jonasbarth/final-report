@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  13 APR 2020 14:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  14 APR 2020 15:51
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -253,64 +253,55 @@ LaTeX Warning: Command \markboth  has changed.
 LaTeX Warning: Command \markright  has changed.
                Check if current package is valid.
 
-) ("C:\Program Files\MikTex\tex/latex/apacite\apacite.sty"
-Package: apacite 2013/07/21 v6.03 APA citation
-\c@BibCnt=\count129
-\bibleftmargin=\skip57
-\bibindent=\skip58
-\bibparsep=\skip59
-\bibitemsep=\skip60
-\biblabelsep=\skip61
-)
-("C:\Program Files\MikTex\tex/latex/algorithm2e\algorithm2e.sty"
+) ("C:\Program Files\MikTex\tex/latex/algorithm2e\algorithm2e.sty"
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count130
+\c@AlgoLine=\count129
 
 ("C:\Program Files\MikTex\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\algocf@hangindent=\skip62
+\algocf@hangindent=\skip57
 
 ("C:\Program Files\MikTex\tex/latex/ifoddpage\ifoddpage.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count131
+\c@checkoddpage=\count130
 )
 ("C:\Program Files\MikTex\tex/latex/relsize\relsize.sty"
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip63
-\skiplinenumber=\skip64
-\skiprule=\skip65
-\skiphlne=\skip66
-\skiptext=\skip67
-\skiplength=\skip68
-\algomargin=\skip69
-\skipalgocfslide=\skip70
+\skiptotal=\skip58
+\skiplinenumber=\skip59
+\skiprule=\skip60
+\skiphlne=\skip61
+\skiptext=\skip62
+\skiplength=\skip63
+\algomargin=\skip64
+\skipalgocfslide=\skip65
 \algowidth=\dimen126
 \inoutsize=\dimen127
 \inoutindent=\dimen128
 \interspacetitleruled=\dimen129
 \interspacealgoruled=\dimen130
 \interspacetitleboxruled=\dimen131
-\algocf@ruledwidth=\skip71
+\algocf@ruledwidth=\skip66
 \algocf@inoutbox=\box31
 \algocf@inputbox=\box32
-\AlCapSkip=\skip72
-\AlCapHSkip=\skip73
-\algoskipindent=\skip74
+\AlCapSkip=\skip67
+\AlCapHSkip=\skip68
+\algoskipindent=\skip69
 \algocf@nlbox=\box33
 \algocf@hangingbox=\box34
 \algocf@untilbox=\box35
-\algocf@skipuntil=\skip75
+\algocf@skipuntil=\skip70
 \algocf@capbox=\box36
-\algocf@lcaptionbox=\skip76
-\algoheightruledefault=\skip77
-\algoheightrule=\skip78
-\algotitleheightruledefault=\skip79
-\algotitleheightrule=\skip80
-\c@algocfline=\count132
-\c@algocfproc=\count133
-\c@algocf=\count134
+\algocf@lcaptionbox=\skip71
+\algoheightruledefault=\skip72
+\algoheightrule=\skip73
+\algotitleheightruledefault=\skip74
+\algotitleheightrule=\skip75
+\c@algocfline=\count131
+\c@algocfproc=\count132
+\c@algocf=\count133
 \algocf@algoframe=\box37
 \algocf@algobox=\box38
 )
@@ -327,9 +318,9 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files\MikTex\tex/generic/ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count135
-\Gm@cntv=\count136
-\c@Gm@tempcnt=\count137
+\Gm@cnth=\count134
+\Gm@cntv=\count135
+\c@Gm@tempcnt=\count136
 \Gm@bindingoffset=\dimen132
 \Gm@wd@mp=\dimen133
 \Gm@odd@mp=\dimen134
@@ -345,7 +336,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \tf@default=\write3
 \openout3 = `final_report.idx'.
 
-Package index Info: Writing index file final_report.idx on input line 24.
+Package index Info: Writing index file final_report.idx on input line 25.
  (final_report.aux
 
 LaTeX Warning: Label `fig:2' multiply defined.
@@ -359,22 +350,22 @@ LaTeX Warning: Label `fig:4' multiply defined.
 )
 \openout1 = `final_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 28.
+LaTeX Info: Redefining \microtypecontext on input line 29.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -390,16 +381,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 ("C:\Program Files\MikTex\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count138
+\scratchcounter=\count137
 \scratchdimen=\dimen140
 \scratchbox=\box39
-\nofMPsegments=\count139
-\nofMParguments=\count140
+\nofMPsegments=\count138
+\nofMParguments=\count139
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count141
+\MPscratchCnt=\count140
 \MPscratchDim=\dimen141
-\MPnumerator=\count142
-\makeMPintoPDFobject=\count143
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
 \everyMPtoPDFconversion=\toks27
 ) ("C:\Program Files\MikTex\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -444,13 +435,6 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\c@maskedRefs=\count144
-
-("C:\Program Files\MikTex\tex/latex/apacite\english.apc"
-File: english.apc 2013/07/21 v6.03 apacite language file
-LaTeX Info: Redefining \BPBI on input line 129.
-LaTeX Info: Redefining \BHBI on input line 130.
-)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -485,14 +469,14 @@ LaTeX Info: Redefining \BHBI on input line 130.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 35.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
 ("C:\Program Files\MikTex\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 ("C:\Program Files\MikTex\tex/latex/microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 35.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 ("C:\Program Files\MikTex\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -502,11 +486,11 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 46.
+less on input line 47.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 49.
+less on input line 50.
 
 [1
 
@@ -516,285 +500,277 @@ less on input line 49.
 \openout4 = `final_report.toc'.
 
  [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 79.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 80.
  ("C:\Program Files\MikTex\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
 
 [1]
 <figs/mdp_detail.png, id=18, 654.64575pt x 277.63725pt>
 File: figs/mdp_detail.png Graphic file (type png)
 <use figs/mdp_detail.png>
-Package pdftex.def Info: figs/mdp_detail.png  used on input line 90.
+Package pdftex.def Info: figs/mdp_detail.png  used on input line 91.
 (pdftex.def)             Requested size: 241.84842pt x 102.56741pt.
  [2 <./figs/mdp_detail.png>]
 <figs/deep_rl_video_game.png, id=30, 963.6pt x 542.025pt>
 File: figs/deep_rl_video_game.png Graphic file (type png)
 <use figs/deep_rl_video_game.png>
-Package pdftex.def Info: figs/deep_rl_video_game.png  used on input line 110.
+Package pdftex.def Info: figs/deep_rl_video_game.png  used on input line 113.
 (pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
+
+
+LaTeX Warning: Reference `eq:q_update' on page 3 undefined on input line 120.
+
 <figs/policy_target_nn.png, id=32, 963.6pt x 542.025pt>
 File: figs/policy_target_nn.png Graphic file (type png)
 <use figs/policy_target_nn.png>
-Package pdftex.def Info: figs/policy_target_nn.png  used on input line 122.
+Package pdftex.def Info: figs/policy_target_nn.png  used on input line 125.
 (pdftex.def)             Requested size: 483.69684pt x 186.38464pt.
- [3 <./figs/deep_rl_video_game.png>]
+[3 <./figs/deep_rl_video_game.png>]
 <figs/hrl_smdp.png, id=38, 2006.49625pt x 1030.85126pt>
 File: figs/hrl_smdp.png Graphic file (type png)
 <use figs/hrl_smdp.png>
-Package pdftex.def Info: figs/hrl_smdp.png  used on input line 137.
+Package pdftex.def Info: figs/hrl_smdp.png  used on input line 140.
 (pdftex.def)             Requested size: 241.84842pt x 124.24734pt.
  [4 <./figs/policy_target_nn.png>]
 <figs/option_critic_architecture.png, id=44, 413.74574pt x 383.63326pt>
 File: figs/option_critic_architecture.png Graphic file (type png)
 <use figs/option_critic_architecture.png>
 Package pdftex.def Info: figs/option_critic_architecture.png  used on input lin
-e 157.
+e 160.
 (pdftex.def)             Requested size: 241.84842pt x 224.25186pt.
  [5 <./figs/hrl_smdp.png> <./figs/option_critic_architecture.png>]
 <figs/fun_architecture.png, id=51, 804.606pt x 410.13225pt>
 File: figs/fun_architecture.png Graphic file (type png)
 <use figs/fun_architecture.png>
-Package pdftex.def Info: figs/fun_architecture.png  used on input line 168.
+Package pdftex.def Info: figs/fun_architecture.png  used on input line 171.
 (pdftex.def)             Requested size: 362.77263pt x 184.9145pt.
- [6 <./figs/fun_architecture.png>] [7] [8]
-<figs/frame_preprocessing.png, id=62, 963.6pt x 542.025pt>
+ [6 <./figs/fun_architecture.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
+
+ []
+
+[7]
+<figs/system_architecture.png, id=59, 963.6pt x 542.025pt>
+File: figs/system_architecture.png Graphic file (type png)
+<use figs/system_architecture.png>
+Package pdftex.def Info: figs/system_architecture.png  used on input line 224.
+(pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
+ [8 <./figs/system_architecture.png>]
+
+LaTeX Warning: Citation `pypi' on page 9 undefined on input line 237.
+
+[9]
+<figs/frame_preprocessing.png, id=68, 963.6pt x 542.025pt>
 File: figs/frame_preprocessing.png Graphic file (type png)
 <use figs/frame_preprocessing.png>
-Package pdftex.def Info: figs/frame_preprocessing.png  used on input line 253.
+Package pdftex.def Info: figs/frame_preprocessing.png  used on input line 273.
 (pdftex.def)             Requested size: 483.69684pt x 136.39644pt.
- [9 <./figs/frame_preprocessing.png>]
-<figs/frame_stacking_nn.png, id=68, 963.6pt x 542.025pt>
+<figs/frame_stacking_nn.png, id=70, 963.6pt x 542.025pt>
 File: figs/frame_stacking_nn.png Graphic file (type png)
 <use figs/frame_stacking_nn.png>
-Package pdftex.def Info: figs/frame_stacking_nn.png  used on input line 264.
+Package pdftex.def Info: figs/frame_stacking_nn.png  used on input line 284.
 (pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
-<figs/frame_skipping.png, id=70, 963.6pt x 542.025pt>
+ [10 <./figs/frame_preprocessing.png>]
+<figs/frame_skipping.png, id=76, 963.6pt x 542.025pt>
 File: figs/frame_skipping.png Graphic file (type png)
 <use figs/frame_skipping.png>
-Package pdftex.def Info: figs/frame_skipping.png  used on input line 273.
+Package pdftex.def Info: figs/frame_skipping.png  used on input line 293.
 (pdftex.def)             Requested size: 483.69684pt x 157.81995pt.
- [10 <./figs/frame_stacking_nn.png> <./figs/frame_skipping.png>]
-[11] (final_report.bbl
+ [11 <./figs/frame_stacking_nn.png> <./figs/frame_skipping.png>] [12] (final_re
+port.bbl
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 230.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Underfull \hbox (badness 2564) in paragraph at lines 364--376
-[]\OT1/cmr/m/n/10.95 (+20) Khalifa, A.  (2019).  \OT1/cmr/m/it/10.95 (+20) Mari
-o ai frame-work 10th an-niver-sary edi-tion.  \OT1/cmr/m/n/10.95 (+20) Re-triev
-ed from
- []
-
-
-Underfull \hbox (badness 7740) in paragraph at lines 644--666
-[]\OT1/cmr/m/n/10.95 (+20) Silver, D., Huang, A., Mad-di-son, C. J., Guez, A., 
-Sifre, L., van den Driess-
- []
-
-
-Underfull \hbox (badness 5563) in paragraph at lines 644--666
-\OT1/cmr/m/n/10.95 (+20) che, G., ... Has-s-abis, D.  (2016).  Mas-ter-ing the 
-game of go with deep
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 644--666
-\OT1/cmr/m/n/10.95 (+20) neu-ral net-works and tree search.  \OT1/cmr/m/it/10.9
-5 (+20) Na-ture\OT1/cmr/m/n/10.95 (+20) , \OT1/cmr/m/it/10.95 (+20) 529\OT1/cmr
-/m/n/10.95 (+20) , 484--503.  Re-trieved from
- []
-
-[12])
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
+ [13])
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Overfull \hbox (21.08598pt too wide) in paragraph at lines 304--344
+Overfull \hbox (21.08598pt too wide) in paragraph at lines 324--364
 \OT1/cmr/m/n/10.95 (-20) Borges, D. (2018). The Curse of Di-men-sion-al-ity!. [
 on-line] Medium. Avail-able at: https://medium.com/diogo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Overfull \hbox (58.81161pt too wide) in paragraph at lines 304--344
+Overfull \hbox (58.81161pt too wide) in paragraph at lines 324--364
 \OT1/cmr/m/n/10.95 (-20) Edi-tion). [on-line] Plato.stanford.edu. Avail-able at
 : https://plato.stanford.edu/archives/win2017/entries/empiricism-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--344
+Underfull \hbox (badness 10000) in paragraph at lines 324--364
 
  []
 
-[13] [14] [15] (final_report.aux)
+[14] [15] [16] (final_report.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8565 strings out of 492895
- 131028 string characters out of 3135335
- 274536 words of memory out of 3000000
- 12209 multiletter control sequences out of 15000+200000
- 16233 words of font info for 105 fonts, out of 3000000 for 9000
+ 8085 strings out of 492895
+ 124576 string characters out of 3135335
+ 265286 words of memory out of 3000000
+ 11731 multiletter control sequences out of 15000+200000
+ 16389 words of font info for 107 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,43p,1559b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,43p,1559b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
 m Files/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MikT
 ex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MikTex/fonts/typ
@@ -805,11 +781,11 @@ ogram Files/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/Mi
 kTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MikTex/fonts/t
 ype1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MikTex/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:
-/Program Files/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on final_report.pdf (17 pages, 1320971 bytes).
+ti10.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b>
+Output written on final_report.pdf (18 pages, 1356986 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
+ 140 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13388 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 12887 words of extra memory for PDF output out of 14400 (max. 10000000)
 

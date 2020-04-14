@@ -19,6 +19,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Agent takes an action to move to the next state and observe a reward \cite {franccois2018introduction}\relax }}{2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:2}{{1}{2}}
+\newlabel{q_update}{{2}{2}}
 \citation{lin1993reinforcement}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Policy Network for Super Mario\relax }}{3}\protected@file@percent }
 \newlabel{fig:2}{{2}{3}}
@@ -58,10 +59,14 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3}Specifications}{7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}System Requirements}{7}\protected@file@percent }
 \citation{siebert2001kobra}
-\@writefile{toc}{\contentsline {section}{\numberline {4}System Design}{8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Reward Function}{8}\protected@file@percent }
-\newlabel{reward_function}{{4.1}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}System Implementation}{8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overall Architecture}{8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces System Architecture\relax }}{8}\protected@file@percent }
+\citation{pypi}
 \citation{sutton2011reinforcement}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Reward Function}{9}\protected@file@percent }
+\newlabel{reward_function}{{4.2}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Exploitation vs Exploration}{9}\protected@file@percent }
 \citation{white2012bandit}
 \citation{mnih2015human}
 \citation{maroti2019rbed}
@@ -70,87 +75,54 @@
 \citation{DBLP:journals/corr/MnihKSGAWR13}
 \citation{lample2017playing}
 \citation{DBLP:journals/corr/MnihKSGAWR13}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Exploitation vs Exploration}{9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Frame Preprocessing}{9}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Frame Preprocessing Pipeline\relax }}{9}\protected@file@percent }
 \citation{braylan2015frame}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Frame Stacking and Frame Skipping}{10}\protected@file@percent }
-\newlabel{frame_stacking_skipping}{{4.4}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Stacked frames are given as input to the neural network. The dimension of the input thus becomes $84 \times 84 \times 3 \times 4$\relax }}{10}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The agent selects action $a$ to be executed $k$ times in the emulator and observes the $k^{th}$ frame\relax }}{10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Custom Levels}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Frame Preprocessing}{10}\protected@file@percent }
+\newlabel{frame_preprocessing}{{4.4}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Frame Preprocessing Pipeline\relax }}{10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Frame Stacking and Frame Skipping}{10}\protected@file@percent }
+\newlabel{frame_stacking_skipping}{{4.5}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Stacked frames are given as input to the neural network. The dimension of the input thus becomes $84 \times 84 \times 3 \times 4$\relax }}{11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The agent selects action $a$ to be executed $k$ times in the emulator and observes the $k^{th}$ frame\relax }}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Custom Levels}{11}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5}Experiments and Results}{11}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Experiment Design}{11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}DQN Agent}{11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Option-Critic Agent}{11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Feudal Agent}{11}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation of Results}{11}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Critical Assessment of Project}{11}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{11}\protected@file@percent }
-\bibstyle{apacite}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}DQN Agent}{12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Option-Critic Agent}{12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Feudal Agent}{12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation of Results}{12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Critical Assessment of Project}{12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{12}\protected@file@percent }
+\bibstyle{ieeetran}
 \bibdata{references}
-\bibcite{arulkumaran2019alphastar}{\citeauthoryear {Arulkumaran, Cully,{}\ \BBA{} Togelius}{Arulkumaran\ \BOthers {.}}{{\APACyear {2019}}}}
-\APACbibcite{arulkumaran2019alphastar}{\citeauthoryear {Arulkumaran, Cully,{}\ \BBA{} Togelius}{Arulkumaran\ \BOthers {.}}{{\APACyear {2019}}}}
-\bibcite{bacon2017option}{\citeauthoryear {Bacon, Harb,{}\ \BBA{} Precup}{Bacon\ \BOthers {.}}{{\APACyear {2017}}}}
-\APACbibcite{bacon2017option}{\citeauthoryear {Bacon, Harb,{}\ \BBA{} Precup}{Bacon\ \BOthers {.}}{{\APACyear {2017}}}}
-\bibcite{bellemare2017distributional}{\citeauthoryear {Bellemare, Dabney,{}\ \BBA{} Munos}{Bellemare\ \BOthers {.}}{{\APACyear {2017}}}}
-\APACbibcite{bellemare2017distributional}{\citeauthoryear {Bellemare, Dabney,{}\ \BBA{} Munos}{Bellemare\ \BOthers {.}}{{\APACyear {2017}}}}
-\bibcite{braylan2015frame}{\citeauthoryear {Braylan, Hollenbeck, Meyerson,{}\ \BBA{} Miikkulainen}{Braylan\ \BOthers {.}}{{\APACyear {2015}}}}
-\APACbibcite{braylan2015frame}{\citeauthoryear {Braylan, Hollenbeck, Meyerson,{}\ \BBA{} Miikkulainen}{Braylan\ \BOthers {.}}{{\APACyear {2015}}}}
-\bibcite{chuchro2017game}{\citeauthoryear {Chuchro\ \BBA{} Gupta}{Chuchro\ \BBA{} Gupta}{{\APACyear {2017}}}}
-\APACbibcite{chuchro2017game}{\citeauthoryear {Chuchro\ \BBA{} Gupta}{Chuchro\ \BBA{} Gupta}{{\APACyear {2017}}}}
-\bibcite{cobbe2018quantifying}{\citeauthoryear {Cobbe, Klimov, Hesse, Kim,{}\ \BBA{} Schulman}{Cobbe\ \BOthers {.}}{{\APACyear {2018}}}}
-\APACbibcite{cobbe2018quantifying}{\citeauthoryear {Cobbe, Klimov, Hesse, Kim,{}\ \BBA{} Schulman}{Cobbe\ \BOthers {.}}{{\APACyear {2018}}}}
-\bibcite{dayan1993feudal}{\citeauthoryear {Dayan\ \BBA{} Hinton}{Dayan\ \BBA{} Hinton}{{\APACyear {1993}}}}
-\APACbibcite{dayan1993feudal}{\citeauthoryear {Dayan\ \BBA{} Hinton}{Dayan\ \BBA{} Hinton}{{\APACyear {1993}}}}
-\bibcite{franccois2018introduction}{\citeauthoryear {Fran{\c {c}}ois-Lavet\ \BOthers {.}}{Fran{\c {c}}ois-Lavet\ \BOthers {.}}{{\APACyear {2018}}}}
-\APACbibcite{franccois2018introduction}{\citeauthoryear {Fran{\c {c}}ois-Lavet\ \BOthers {.}}{Fran{\c {c}}ois-Lavet\ \BOthers {.}}{{\APACyear {2018}}}}
-\bibcite{geirhos2018generalisation}{\citeauthoryear {Geirhos\ \BOthers {.}}{Geirhos\ \BOthers {.}}{{\APACyear {2018}}}}
-\APACbibcite{geirhos2018generalisation}{\citeauthoryear {Geirhos\ \BOthers {.}}{Geirhos\ \BOthers {.}}{{\APACyear {2018}}}}
-\bibcite{gribbon2004novel}{\citeauthoryear {Gribbon\ \BBA{} Bailey}{Gribbon\ \BBA{} Bailey}{{\APACyear {2004}}}}
-\APACbibcite{gribbon2004novel}{\citeauthoryear {Gribbon\ \BBA{} Bailey}{Gribbon\ \BBA{} Bailey}{{\APACyear {2004}}}}
-\bibcite{hessel2018rainbow}{\citeauthoryear {Hessel\ \BOthers {.}}{Hessel\ \BOthers {.}}{{\APACyear {2018}}}}
-\APACbibcite{hessel2018rainbow}{\citeauthoryear {Hessel\ \BOthers {.}}{Hessel\ \BOthers {.}}{{\APACyear {2018}}}}
-\bibcite{jpype}{\citeauthoryear {{\em  JPype\/}}{{\em  JPype\/}}{{\APACyear {{\bibnodate {}}}}}}
-\APACbibcite{jpype}{\citeauthoryear {{\em  JPype\/}}{{\em  JPype\/}}{{\APACyear {{\bibnodate {}}}}}}
-\bibcite{jython}{\citeauthoryear {{\em  Jython\/}}{{\em  Jython\/}}{{\APACyear {{\bibnodate {}}}}}}
-\APACbibcite{jython}{\citeauthoryear {{\em  Jython\/}}{{\em  Jython\/}}{{\APACyear {{\bibnodate {}}}}}}
-\bibcite{marioai}{\citeauthoryear {Khalifa}{Khalifa}{{\APACyear {2019}}}}
-\APACbibcite{marioai}{\citeauthoryear {Khalifa}{Khalifa}{{\APACyear {2019}}}}
-\bibcite{lample2017playing}{\citeauthoryear {Lample\ \BBA{} Chaplot}{Lample\ \BBA{} Chaplot}{{\APACyear {2017}}}}
-\APACbibcite{lample2017playing}{\citeauthoryear {Lample\ \BBA{} Chaplot}{Lample\ \BBA{} Chaplot}{{\APACyear {2017}}}}
-\bibcite{lin1993reinforcement}{\citeauthoryear {Lin}{Lin}{{\APACyear {1993}}}}
-\APACbibcite{lin1993reinforcement}{\citeauthoryear {Lin}{Lin}{{\APACyear {1993}}}}
-\bibcite{maroti2019rbed}{\citeauthoryear {Maroti}{Maroti}{{\APACyear {2019}}}}
-\APACbibcite{maroti2019rbed}{\citeauthoryear {Maroti}{Maroti}{{\APACyear {2019}}}}
-\bibcite{DBLP:journals/corr/MnihKSGAWR13}{\citeauthoryear {Mnih\ \BOthers {.}}{Mnih\ \BOthers {.}}{{\APACyear {2013}}}}
-\APACbibcite{DBLP:journals/corr/MnihKSGAWR13}{\citeauthoryear {Mnih\ \BOthers {.}}{Mnih\ \BOthers {.}}{{\APACyear {2013}}}}
-\bibcite{mnih2015human}{\citeauthoryear {Mnih\ \BOthers {.}}{Mnih\ \BOthers {.}}{{\APACyear {2015}}}}
-\APACbibcite{mnih2015human}{\citeauthoryear {Mnih\ \BOthers {.}}{Mnih\ \BOthers {.}}{{\APACyear {2015}}}}
-\bibcite{nachum2019does}{\citeauthoryear {Nachum\ \BOthers {.}}{Nachum\ \BOthers {.}}{{\APACyear {2019}}}}
-\APACbibcite{nachum2019does}{\citeauthoryear {Nachum\ \BOthers {.}}{Nachum\ \BOthers {.}}{{\APACyear {2019}}}}
-\bibcite{puterman2014markov}{\citeauthoryear {Puterman}{Puterman}{{\APACyear {2014}}}}
-\APACbibcite{puterman2014markov}{\citeauthoryear {Puterman}{Puterman}{{\APACyear {2014}}}}
-\bibcite{py4j}{\citeauthoryear {{\em  Py4J\/}}{{\em  Py4J\/}}{{\APACyear {{\bibnodate {}}}}}}
-\APACbibcite{py4j}{\citeauthoryear {{\em  Py4J\/}}{{\em  Py4J\/}}{{\APACyear {{\bibnodate {}}}}}}
-\bibcite{ribas2011neural}{\citeauthoryear {Ribas-Fernandes\ \BOthers {.}}{Ribas-Fernandes\ \BOthers {.}}{{\APACyear {2011}}}}
-\APACbibcite{ribas2011neural}{\citeauthoryear {Ribas-Fernandes\ \BOthers {.}}{Ribas-Fernandes\ \BOthers {.}}{{\APACyear {2011}}}}
-\bibcite{siebert2001kobra}{\citeauthoryear {Siebert}{Siebert}{{\APACyear {2001}}}}
-\APACbibcite{siebert2001kobra}{\citeauthoryear {Siebert}{Siebert}{{\APACyear {2001}}}}
-\bibcite{alpha_go}{\citeauthoryear {Silver\ \BOthers {.}}{Silver\ \BOthers {.}}{{\APACyear {2016}}}}
-\APACbibcite{alpha_go}{\citeauthoryear {Silver\ \BOthers {.}}{Silver\ \BOthers {.}}{{\APACyear {2016}}}}
-\@writefile{toc}{\contentsline {section}{References}{12}\protected@file@percent }
-\bibcite{sutton1996generalization}{\citeauthoryear {Sutton}{Sutton}{{\APACyear {1996}}}}
-\APACbibcite{sutton1996generalization}{\citeauthoryear {Sutton}{Sutton}{{\APACyear {1996}}}}
-\bibcite{sutton2011reinforcement}{\citeauthoryear {Sutton\ \BBA{} Barto}{Sutton\ \BBA{} Barto}{{\APACyear {2011}}}}
-\APACbibcite{sutton2011reinforcement}{\citeauthoryear {Sutton\ \BBA{} Barto}{Sutton\ \BBA{} Barto}{{\APACyear {2011}}}}
-\bibcite{sutton1999between}{\citeauthoryear {Sutton, Precup,{}\ \BBA{} Singh}{Sutton\ \BOthers {.}}{{\APACyear {1999}}}}
-\APACbibcite{sutton1999between}{\citeauthoryear {Sutton, Precup,{}\ \BBA{} Singh}{Sutton\ \BOthers {.}}{{\APACyear {1999}}}}
-\bibcite{van2017hybrid}{\citeauthoryear {Van~Seijen\ \BOthers {.}}{Van~Seijen\ \BOthers {.}}{{\APACyear {2017}}}}
-\APACbibcite{van2017hybrid}{\citeauthoryear {Van~Seijen\ \BOthers {.}}{Van~Seijen\ \BOthers {.}}{{\APACyear {2017}}}}
-\bibcite{vezhnevets2017feudal}{\citeauthoryear {Vezhnevets\ \BOthers {.}}{Vezhnevets\ \BOthers {.}}{{\APACyear {2017}}}}
-\APACbibcite{vezhnevets2017feudal}{\citeauthoryear {Vezhnevets\ \BOthers {.}}{Vezhnevets\ \BOthers {.}}{{\APACyear {2017}}}}
-\bibcite{watkins1992q}{\citeauthoryear {Watkins\ \BBA{} Dayan}{Watkins\ \BBA{} Dayan}{{\APACyear {1992}}}}
-\APACbibcite{watkins1992q}{\citeauthoryear {Watkins\ \BBA{} Dayan}{Watkins\ \BBA{} Dayan}{{\APACyear {1992}}}}
-\bibcite{white2012bandit}{\citeauthoryear {White}{White}{{\APACyear {2012}}}}
-\APACbibcite{white2012bandit}{\citeauthoryear {White}{White}{{\APACyear {2012}}}}
+\bibcite{DBLP:journals/corr/MnihKSGAWR13}{1}
+\bibcite{alpha_go}{2}
+\bibcite{arulkumaran2019alphastar}{3}
+\bibcite{hessel2018rainbow}{4}
+\bibcite{bellemare2017distributional}{5}
+\bibcite{nachum2019does}{6}
+\bibcite{puterman2014markov}{7}
+\bibcite{franccois2018introduction}{8}
+\bibcite{watkins1992q}{9}
+\bibcite{lin1993reinforcement}{10}
+\bibcite{geirhos2018generalisation}{11}
+\bibcite{sutton1996generalization}{12}
+\bibcite{van2017hybrid}{13}
+\bibcite{cobbe2018quantifying}{14}
+\bibcite{sutton1999between}{15}
+\bibcite{ribas2011neural}{16}
+\bibcite{bacon2017option}{17}
+\bibcite{vezhnevets2017feudal}{18}
+\bibcite{dayan1993feudal}{19}
+\bibcite{marioai}{20}
+\bibcite{jython}{21}
+\bibcite{jpype}{22}
+\bibcite{py4j}{23}
+\bibcite{siebert2001kobra}{24}
+\bibcite{sutton2011reinforcement}{25}
+\bibcite{white2012bandit}{26}
+\bibcite{mnih2015human}{27}
+\bibcite{maroti2019rbed}{28}
+\bibcite{chuchro2017game}{29}
+\bibcite{gribbon2004novel}{30}
+\bibcite{lample2017playing}{31}
+\bibcite{braylan2015frame}{32}
