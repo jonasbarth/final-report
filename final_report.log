@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  14 APR 2020 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  14 APR 2020 19:07
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -547,211 +547,212 @@ File: figs/fun_architecture.png Graphic file (type png)
 <use figs/fun_architecture.png>
 Package pdftex.def Info: figs/fun_architecture.png  used on input line 171.
 (pdftex.def)             Requested size: 362.77263pt x 184.9145pt.
- [6 <./figs/fun_architecture.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
-
- []
-
-[7]
+ [6 <./figs/fun_architecture.png>] [7]
 <figs/system_architecture.png, id=59, 963.6pt x 542.025pt>
 File: figs/system_architecture.png Graphic file (type png)
 <use figs/system_architecture.png>
-Package pdftex.def Info: figs/system_architecture.png  used on input line 224.
+Package pdftex.def Info: figs/system_architecture.png  used on input line 223.
 (pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
  [8 <./figs/system_architecture.png>]
 
-LaTeX Warning: Citation `pypi' on page 9 undefined on input line 237.
+LaTeX Warning: Citation `pypi' on page 9 undefined on input line 236.
 
 [9]
-<figs/frame_preprocessing.png, id=68, 963.6pt x 542.025pt>
+<figs/epsilon_decay.png, id=68, 462.528pt x 346.896pt>
+File: figs/epsilon_decay.png Graphic file (type png)
+<use figs/epsilon_decay.png>
+Package pdftex.def Info: figs/epsilon_decay.png  used on input line 267.
+(pdftex.def)             Requested size: 232.17241pt x 174.13039pt.
+<figs/frame_preprocessing.png, id=69, 963.6pt x 542.025pt>
 File: figs/frame_preprocessing.png Graphic file (type png)
 <use figs/frame_preprocessing.png>
-Package pdftex.def Info: figs/frame_preprocessing.png  used on input line 273.
+Package pdftex.def Info: figs/frame_preprocessing.png  used on input line 282.
 (pdftex.def)             Requested size: 483.69684pt x 136.39644pt.
-<figs/frame_stacking_nn.png, id=70, 963.6pt x 542.025pt>
+ [10 <./figs/frame_preprocessing.png> <./figs/epsilon_decay.png>]
+<figs/frame_stacking_nn.png, id=76, 963.6pt x 542.025pt>
 File: figs/frame_stacking_nn.png Graphic file (type png)
 <use figs/frame_stacking_nn.png>
-Package pdftex.def Info: figs/frame_stacking_nn.png  used on input line 284.
+Package pdftex.def Info: figs/frame_stacking_nn.png  used on input line 293.
 (pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
- [10 <./figs/frame_preprocessing.png>]
-<figs/frame_skipping.png, id=76, 963.6pt x 542.025pt>
+<figs/frame_skipping.png, id=78, 963.6pt x 542.025pt>
 File: figs/frame_skipping.png Graphic file (type png)
 <use figs/frame_skipping.png>
-Package pdftex.def Info: figs/frame_skipping.png  used on input line 293.
+Package pdftex.def Info: figs/frame_skipping.png  used on input line 302.
 (pdftex.def)             Requested size: 483.69684pt x 157.81995pt.
  [11 <./figs/frame_stacking_nn.png> <./figs/frame_skipping.png>] [12] (final_re
 port.bbl
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
- [13])
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+
+[13])
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Overfull \hbox (21.08598pt too wide) in paragraph at lines 324--364
+Overfull \hbox (21.08598pt too wide) in paragraph at lines 333--373
 \OT1/cmr/m/n/10.95 (-20) Borges, D. (2018). The Curse of Di-men-sion-al-ity!. [
 on-line] Medium. Avail-able at: https://medium.com/diogo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Overfull \hbox (58.81161pt too wide) in paragraph at lines 324--364
+Overfull \hbox (58.81161pt too wide) in paragraph at lines 333--373
 \OT1/cmr/m/n/10.95 (-20) Edi-tion). [on-line] Plato.stanford.edu. Avail-able at
 : https://plato.stanford.edu/archives/win2017/entries/empiricism-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--364
+Underfull \hbox (badness 10000) in paragraph at lines 333--373
 
  []
 
@@ -764,10 +765,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8085 strings out of 492895
- 124576 string characters out of 3135335
+ 8091 strings out of 492895
+ 124722 string characters out of 3135335
  265286 words of memory out of 3000000
- 11731 multiletter control sequences out of 15000+200000
+ 11736 multiletter control sequences out of 15000+200000
  16389 words of font info for 107 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,43p,1559b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -783,9 +784,9 @@ ype1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MikTex/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on final_report.pdf (18 pages, 1356986 bytes).
+Output written on final_report.pdf (18 pages, 1391047 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
+ 142 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 12887 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 12892 words of extra memory for PDF output out of 14400 (max. 10000000)
 
