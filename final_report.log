@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  15 APR 2020 19:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=latex 2020.3.31)  23 APR 2020 19:18
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -142,10 +142,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ("C:\Program Files\MikTex\tex/latex/graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: dvips.def on input line 99.
 
-("C:\Program Files\MikTex\tex/latex/graphics-def\pdftex.def"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+("C:\Program Files\MikTex\tex/latex/graphics-def\dvips.def"
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 ))
 \Gin@req@height=\dimen114
 \Gin@req@width=\dimen115
@@ -240,10 +240,57 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+("C:\Program Files\MikTex\tex/latex/adjustbox\adjustbox.sty"
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Program Files\MikTex\tex/latex/xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Program Files\MikTex\tex/generic/xkeyval\xkeyval.tex"
+("C:\Program Files\MikTex\tex/generic/xkeyval\xkvutils.tex"
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
+)
+\XKV@depth=\count129
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Program Files\MikTex\tex/latex/adjustbox\adjcalc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Program Files\MikTex\tex/latex/adjustbox\trimclip.sty"
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+
+("C:\Program Files\MikTex\tex/latex/collectbox\collectbox.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box31
+)
+\tc@llx=\dimen126
+\tc@lly=\dimen127
+\tc@urx=\dimen128
+\tc@ury=\dimen129
+Package trimclip Info: Using driver 'tc-dvips.def'.
+
+("C:\Program Files\MikTex\tex/latex/adjustbox\tc-dvips.def"
+File: tc-dvips.def 2019/01/04 v2.2 Clipping driver for dvips
+))
+\adjbox@Width=\dimen130
+\adjbox@Height=\dimen131
+\adjbox@Depth=\dimen132
+\adjbox@Totalheight=\dimen133
+\adjbox@pwidth=\dimen134
+\adjbox@pheight=\dimen135
+\adjbox@pdepth=\dimen136
+\adjbox@ptotalheight=\dimen137
+
+("C:\Program Files\MikTex\tex/latex/ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count130
+))
 ("C:\Program Files\MikTex\tex/latex/index\index.sty"
 Package: index 2004/01/20 v4.2beta Improved index support (dmj)
 \@indexbox=\insert199
-\indexproofstyle=\toks23
+\indexproofstyle=\toks25
 
 
 LaTeX Warning: Command \markboth  has changed.
@@ -255,17 +302,13 @@ LaTeX Warning: Command \markright  has changed.
 
 ) ("C:\Program Files\MikTex\tex/latex/algorithm2e\algorithm2e.sty"
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count129
+\c@AlgoLine=\count131
 
 ("C:\Program Files\MikTex\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \algocf@hangindent=\skip57
 
-("C:\Program Files\MikTex\tex/latex/ifoddpage\ifoddpage.sty"
-Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count130
-)
 ("C:\Program Files\MikTex\tex/latex/relsize\relsize.sty"
 Package: relsize 2013/03/29 ver 4.1
 )
@@ -277,33 +320,33 @@ Package: relsize 2013/03/29 ver 4.1
 \skiplength=\skip63
 \algomargin=\skip64
 \skipalgocfslide=\skip65
-\algowidth=\dimen126
-\inoutsize=\dimen127
-\inoutindent=\dimen128
-\interspacetitleruled=\dimen129
-\interspacealgoruled=\dimen130
-\interspacetitleboxruled=\dimen131
+\algowidth=\dimen138
+\inoutsize=\dimen139
+\inoutindent=\dimen140
+\interspacetitleruled=\dimen141
+\interspacealgoruled=\dimen142
+\interspacetitleboxruled=\dimen143
 \algocf@ruledwidth=\skip66
-\algocf@inoutbox=\box31
-\algocf@inputbox=\box32
+\algocf@inoutbox=\box32
+\algocf@inputbox=\box33
 \AlCapSkip=\skip67
 \AlCapHSkip=\skip68
 \algoskipindent=\skip69
-\algocf@nlbox=\box33
-\algocf@hangingbox=\box34
-\algocf@untilbox=\box35
+\algocf@nlbox=\box34
+\algocf@hangingbox=\box35
+\algocf@untilbox=\box36
 \algocf@skipuntil=\skip70
-\algocf@capbox=\box36
+\algocf@capbox=\box37
 \algocf@lcaptionbox=\skip71
 \algoheightruledefault=\skip72
 \algoheightrule=\skip73
 \algotitleheightruledefault=\skip74
 \algotitleheightrule=\skip75
-\c@algocfline=\count131
-\c@algocfproc=\count132
-\c@algocf=\count133
-\algocf@algoframe=\box37
-\algocf@algobox=\box38
+\c@algocfline=\count132
+\c@algocfproc=\count133
+\c@algocf=\count134
+\algocf@algoframe=\box38
+\algocf@algobox=\box39
 )
 ("C:\Program Files\MikTex\tex/latex/geometry\geometry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
@@ -318,127 +361,59 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files\MikTex\tex/generic/ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count134
-\Gm@cntv=\count135
-\c@Gm@tempcnt=\count136
-\Gm@bindingoffset=\dimen132
-\Gm@wd@mp=\dimen133
-\Gm@odd@mp=\dimen134
-\Gm@even@mp=\dimen135
-\Gm@layoutwidth=\dimen136
-\Gm@layoutheight=\dimen137
-\Gm@layouthoffset=\dimen138
-\Gm@layoutvoffset=\dimen139
-\Gm@dimlist=\toks24
+\Gm@cnth=\count135
+\Gm@cntv=\count136
+\c@Gm@tempcnt=\count137
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
+\Gm@dimlist=\toks26
 
 ("C:\Program Files\MikTex\tex/latex/geometry\geometry.cfg"))
-\idxtitle@default=\toks25
+\idxtitle@default=\toks27
 \tf@default=\write3
 \openout3 = `final_report.idx'.
 
-Package index Info: Writing index file final_report.idx on input line 25.
- (final_report.aux
-
-LaTeX Warning: Label `fig:2' multiply defined.
-
-
-LaTeX Warning: Label `fig:2' multiply defined.
-
-
-LaTeX Warning: Label `fig:4' multiply defined.
-
-)
+Package index Info: Writing index file final_report.idx on input line 27.
+ (final_report.aux)
 \openout1 = `final_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 29.
-Package microtype Info: Generating PDF output.
+LaTeX Info: Redefining \microtypecontext on input line 31.
+Package microtype Info: Generating DVI output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No font expansion.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- ("C:\Program Files\MikTex\tex/latex/microtype\mt-cmr.cfg"
+("C:\Program Files\MikTex\tex/latex/microtype\mt-cmr.cfg"
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-("C:\Program Files\MikTex\tex/context/base/mkii\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count137
-\scratchdimen=\dimen140
-\scratchbox=\box39
-\nofMPsegments=\count138
-\nofMParguments=\count139
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count140
-\MPscratchDim=\dimen141
-\MPnumerator=\count141
-\makeMPintoPDFobject=\count142
-\everyMPtoPDFconversion=\toks27
-) ("C:\Program Files\MikTex\tex/latex/oberdiek\epstopdf-base.sty"
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-("C:\Program Files\MikTex\tex/generic/oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Program Files\MikTex\tex/latex/oberdiek\grfext.sty"
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-("C:\Program Files\MikTex\tex/generic/oberdiek\kvdefinekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-("C:\Program Files\MikTex\tex/generic/oberdiek\ltxcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-("C:\Program Files\MikTex\tex/latex/oberdiek\kvoptions.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Program Files\MikTex\tex/generic/oberdiek\kvsetkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Program Files\MikTex\tex/generic/oberdiek\etexcmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Program Files\MikTex\tex/generic/oberdiek\ifluatex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-))))
-("C:\Program Files\MikTex\tex/generic/oberdiek\pdftexcmds.sty"
-Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-)
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: dvips
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -469,14 +444,14 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 36.
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
 ("C:\Program Files\MikTex\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 ("C:\Program Files\MikTex\tex/latex/microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 36.
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
 
 ("C:\Program Files\MikTex\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -486,306 +461,720 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 47.
+less on input line 49.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 50.
+less on input line 52.
 
 [1
 
-{C:/Users/Jonas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(final_report.toc)
+] (final_report.toc)
 \tf@toc=\write4
 \openout4 = `final_report.toc'.
 
  [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 80.
- ("C:\Program Files\MikTex\tex/latex/base\omscmr.fd"
+
+LaTeX Warning: Citation `DBLP:journals/corr/MnihKSGAWR13' on page 1 undefined o
+n input line 60.
+
+
+LaTeX Warning: Citation `alpha_go' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `arulkumaran2019alphastar' on page 1 undefined on input
+ line 60.
+
+
+LaTeX Warning: Citation `hessel2018rainbow' on page 1 undefined on input line 6
+5.
+
+
+LaTeX Warning: Citation `bellemare2017distributional' on page 1 undefined on in
+put line 66.
+
+
+LaTeX Warning: Citation `nachum2019does' on page 1 undefined on input line 69.
+
+
+LaTeX Warning: Citation `puterman2014markov' on page 1 undefined on input line 
+79.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 82.
+("C:\Program Files\MikTex\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
+ [1]
 
-[1]
-<figs/mdp_detail.png, id=18, 654.64575pt x 277.63725pt>
-File: figs/mdp_detail.png Graphic file (type png)
-<use figs/mdp_detail.png>
-Package pdftex.def Info: figs/mdp_detail.png  used on input line 91.
-(pdftex.def)             Requested size: 241.84842pt x 102.56741pt.
- [2 <./figs/mdp_detail.png>]
-<figs/deep_rl_video_game.png, id=30, 963.6pt x 542.025pt>
-File: figs/deep_rl_video_game.png Graphic file (type png)
-<use figs/deep_rl_video_game.png>
-Package pdftex.def Info: figs/deep_rl_video_game.png  used on input line 113.
-(pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
+LaTeX Warning: Reference `reward_function' on page 2 undefined on input line 85
+.
 
 
-LaTeX Warning: Reference `eq:q_update' on page 3 undefined on input line 120.
+! LaTeX Error: Cannot determine size of graphic in figs/X p_detail.png (no Boun
+dingBox).
 
-<figs/policy_target_nn.png, id=32, 963.6pt x 542.025pt>
-File: figs/policy_target_nn.png Graphic file (type png)
-<use figs/policy_target_nn.png>
-Package pdftex.def Info: figs/policy_target_nn.png  used on input line 125.
-(pdftex.def)             Requested size: 483.69684pt x 186.38464pt.
-[3 <./figs/deep_rl_video_game.png>]
-<figs/hrl_smdp.png, id=38, 2006.49625pt x 1030.85126pt>
-File: figs/hrl_smdp.png Graphic file (type png)
-<use figs/hrl_smdp.png>
-Package pdftex.def Info: figs/hrl_smdp.png  used on input line 140.
-(pdftex.def)             Requested size: 241.84842pt x 124.24734pt.
- [4 <./figs/policy_target_nn.png>]
-<figs/option_critic_architecture.png, id=44, 413.74574pt x 383.63326pt>
-File: figs/option_critic_architecture.png Graphic file (type png)
-<use figs/option_critic_architecture.png>
-Package pdftex.def Info: figs/option_critic_architecture.png  used on input lin
-e 160.
-(pdftex.def)             Requested size: 241.84842pt x 224.25186pt.
- [5 <./figs/hrl_smdp.png>]
-<figs/fun_architecture.png, id=50, 804.606pt x 410.13225pt>
-File: figs/fun_architecture.png Graphic file (type png)
-<use figs/fun_architecture.png>
-Package pdftex.def Info: figs/fun_architecture.png  used on input line 171.
-(pdftex.def)             Requested size: 362.77263pt x 184.9145pt.
- [6 <./figs/option_critic_architecture.png> <./figs/fun_architecture.png>] [7]
-<figs/system_architecture.png, id=59, 963.6pt x 542.025pt>
-File: figs/system_architecture.png Graphic file (type png)
-<use figs/system_architecture.png>
-Package pdftex.def Info: figs/system_architecture.png  used on input line 223.
-(pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
- [8]
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 ...s[width=.5\linewidth]{figs/mdp_detail.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-LaTeX Warning: Citation `pypi' on page 9 undefined on input line 236.
+File: figs/mdp_detail.png Graphic file (type eps)
+<figs/mdp_detail.png>
 
-[9 <./figs/system_architecture.png>]
-<figs/epsilon_decay.png, id=68, 462.528pt x 346.896pt>
-File: figs/epsilon_decay.png Graphic file (type png)
-<use figs/epsilon_decay.png>
-Package pdftex.def Info: figs/epsilon_decay.png  used on input line 267.
-(pdftex.def)             Requested size: 232.17241pt x 174.13039pt.
-<figs/frame_preprocessing.png, id=69, 963.6pt x 542.025pt>
-File: figs/frame_preprocessing.png Graphic file (type png)
-<use figs/frame_preprocessing.png>
-Package pdftex.def Info: figs/frame_preprocessing.png  used on input line 282.
-(pdftex.def)             Requested size: 483.69684pt x 136.39644pt.
-<figs/frame_stacking_nn.png, id=71, 963.6pt x 542.025pt>
-File: figs/frame_stacking_nn.png Graphic file (type png)
-<use figs/frame_stacking_nn.png>
-Package pdftex.def Info: figs/frame_stacking_nn.png  used on input line 293.
-(pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
- [10 <./figs/epsilon_decay.png>]
-<figs/frame_skipping.png, id=77, 963.6pt x 542.025pt>
-File: figs/frame_skipping.png Graphic file (type png)
-<use figs/frame_skipping.png>
-Package pdftex.def Info: figs/frame_skipping.png  used on input line 302.
-(pdftex.def)             Requested size: 483.69684pt x 157.81995pt.
- [11 <./figs/frame_preprocessing.png> <./figs/frame_stacking_nn.png>] [12 <./fi
-gs/frame_skipping.png>] (final_report.bbl
+LaTeX Warning: Citation `franccois2018introduction' on page 2 undefined on inpu
+t line 94.
+
+
+LaTeX Warning: Citation `franccois2018introduction' on page 2 undefined on inpu
+t line 94.
+
+
+LaTeX Warning: Citation `watkins1992q' on page 2 undefined on input line 97.
+
+[2]
+
+! LaTeX Error: Cannot determine size of graphic in figs/deep_rl_video_game.png 
+(no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 ...1\linewidth]{figs/deep_rl_video_game.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/deep_rl_video_game.png Graphic file (type eps)
+<figs/deep_rl_video_game.png>
+
+LaTeX Warning: Reference `q_update' on page 3 undefined on input line 119.
+
+
+LaTeX Warning: Reference `eq:q_update' on page 3 undefined on input line 122.
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/policy_target_nn.png (n
+o BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127 ...h=1\linewidth]{figs/policy_target_nn.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/policy_target_nn.png Graphic file (type eps)
+<figs/policy_target_nn.png>
+
+LaTeX Warning: Citation `lin1993reinforcement' on page 3 undefined on input lin
+e 132.
+
+[3]
+
+LaTeX Warning: Citation `geirhos2018generalisation' on page 4 undefined on inpu
+t line 136.
+
+
+LaTeX Warning: Citation `sutton1996generalization' on page 4 undefined on input
+ line 136.
+
+
+LaTeX Warning: Citation `van2017hybrid' on page 4 undefined on input line 136.
+
+
+LaTeX Warning: Citation `cobbe2018quantifying' on page 4 undefined on input lin
+e 136.
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/hrl_smdp.png (no Boundi
+ngBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.141 ...s[width=0.4\textwidth]{figs/hrl_smdp.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/hrl_smdp.png Graphic file (type eps)
+<figs/hrl_smdp.png>
+
+LaTeX Warning: Citation `ribas2011neural' on page 4 undefined on input line 144
+.
+
+
+LaTeX Warning: Citation `ribas2011neural' on page 4 undefined on input line 144
+.
+
+
+LaTeX Warning: Citation `sutton1999between' on page 4 undefined on input line 1
+47.
+
+
+LaTeX Warning: Citation `sutton1999between' on page 4 undefined on input line 1
+50.
+
+[4]
+
+LaTeX Warning: Citation `bacon2017option' on page 5 undefined on input line 159
+.
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/option_critic_architect
+ure.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 ...dth]{figs/option_critic_architecture.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/option_critic_architecture.png Graphic file (type eps)
+<figs/option_critic_architecture.png>
+
+LaTeX W8]
+
+! LaTeX Error: Can011neural' on page 5 undefined on input line 169
+.
+
+
+LaTeX Warning: Citation `ribas2011neural' on page 5 undefined on input line 169
+.
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 172--173
+[][]\OT1/cmr/m/n/10.95 At each timestep, the mas-ter pol-icy $\OML/cmm/m/it/10.
+95 []$
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 172--173
+\OT1/cmr/m/n/10.95 chooses an op-tion/subpolicy $\OML/cmm/m/it/10.95 ![]$\OT1/c
+mr/m/n/10.95 . We fol-low
+ []
+
+
+Underfull \hbox (badness 3386) in paragraph at lines 172--173
+\OT1/cmr/m/n/10.95 the reg-u-lar MDP struc-ture where the op-
+ []
+
+
+LaTeX Warning: Citation `vezhnevets2017feudal' on page 5 undefined on input lin
+e 175.
+
+
+LaTeX Warning: Citation `dayan1993feudal' on page 5 undefined on input line 175
+.
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/fun_architecture.png (n
+o BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 ...=.5\textwidth]{figs/fun_architecture.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/fun_architecture.png Graphic file (type eps)
+<figs/fun_architecture.png>
+
+LaTeX Warning: Citation `vezhnevets2017feudal' on page 5 undefined on input lin
+e 181.
+
+
+LaTeX Warning: Citation `vezhnevets2017feudal' on page 5 undefined on input lin
+e 181.
+
+[5]
+
+LaTeX Warning: Citation `DBLP:journals/corr/MnihKSGAWR13' on page 6 undefined o
+n input line 185.
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 185--186
+\OT1/cmr/m/n/10.95 the reg-u-lar DQN and Option-Critic sys-tems.
+ []
+
+
+LaTeX Warning: Citation `marioai' on page 6 undefined on input line 194.
+
+
+LaTeX Warning: Citation `jython' on page 6 undefined on input line 203.
+
+
+LaTeX Warning: Citation `jpype' on page 6 undefined on input line 203.
+
+
+LaTeX Warning: Citation `py4j' on page 6 undefined on input line 203.
+
+[6]
+
+LaTeX Warning: Reference `frame_stacking_skipping' on page 7 undefined on input
+ line 229.
+
+
+LaTeX Warning: Reference `frame_preprocessing' on page 7 undefined on input lin
+e 229.
+
+
+LaTeX Warning: Reference `reward_function' on page 7 undefined on input line 22
+9.
+
+[7]
+
+! LaTeX Error: Cannot determine size of graphic in figs/system_architecture.png
+ (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.233 ...\linewidth]{figs/system_architecture.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/system_architecture.png Graphic file (type eps)
+<figs/system_architecture.png>
+
+LaTeX Warning: Citation `marioai' on page 8 undefined on input line 237.
+
+
+LaTeX Warning: Citation `siebert2001kobra' on page 8 undefined on input line 24
+2.
+
+
+LaTeX Warning: Citation `pypi' on page 8 undefined on input line 246.
+
+
+LaTeX Warning: Reference `frame_stacking_skipping' on page 8 undefined on input
+ line 252.
+
+[8]
+
+LaTeX Warning: Citation `sutton2011reinforcement' on page 9 undefined on input 
+line 272.
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/epsilon_decay.png (no B
+oundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.277 ...h=0.48\textwidth]{figs/epsilon_decay.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/epsilon_decay.png Graphic file (type eps)
+<figs/epsilon_decay.png>
+
+LaTeX Warning: Citation `white2012bandit' on page 9 undefined on input line 284
+.
+
+
+LaTeX Warning: Citation `mnih2015human' on page 9 undefined on input line 284.
+
+                  
+                                          on input line 284.
+
+
+
+LaTeX Warning: Citation `chuchro2017game' on page 9 undefined on input line 284
+.
+
+
+LaTeX Warning: Citation `gribbon2004novel' on page 9 undefined on input line 28
+8.
+
+
+LaTeX Warning: Citation `DBLP:journals/corr/MnihKSGAWR13' on page 9 undefined o
+n input line 288.
+
+
+LaTeX Warning: Citation `lample2017playing' on page 9 undefined on input line 2
+88.
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/frame_preprocessing.png
+ (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 ...\linewidth]{figs/frame_preprocessing.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/frame_preprocessing.png Graphic file (type eps)
+<figs/frame_preprocessing.png>
+
+LaTeX Warning: Citation `DBLP:journals/corr/MnihKSGAWR13' on page 9 undefined o
+n input line 299.
+
+[9]
+
+! LaTeX Error: Cannot determine size of graphic in figs/frame_stacking_nn.png (
+no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.303 ...75\linewidth]{figs/frame_stacking_nn.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/frame_stacking_nn.png Graphic file (type eps)
+<figs/frame_stacking_nn.png>
+
+LaTeX Warning: Citation `braylan2015frame' on page 10 undefined on input line 3
+07.
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/frame_skipping.png (no 
+BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.324 ...dth=1\linewidth]{figs/frame_skipping.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/frame_skipping.png Graphic file (type eps)
+<figs/frame_skipping.png>
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/steps_gap_level.png (no
+ BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.346 ...dth=\linewidth]{figs/steps_gap_level.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/steps_gap_level.png Graphic file (type eps)
+<figs/steps_gap_level.png>
+Underfull \hbox (badness 1253) in paragraph at lines 347--347
+[]\OT1/cmr/m/n/10.95 Figure 12: |Steps with
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/two_pipe_level.png (no 
+BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.350 ...idth=\linewidth]{figs/two_pipe_level.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/two_pipe_level.png Graphic file (type eps)
+<figs/two_pipe_level.png>
+Underfull \hbox (badness 1215) in paragraph at lines 351--351
+[]\OT1/cmr/m/n/10.95 Figure 13: |Two Pipes
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/steps_pipe_level.png (n
+o BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.354 ...th=\linewidth]{figs/steps_pipe_level.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/steps_pipe_level.png Graphic file (type eps)
+<figs/steps_pipe_level.png>
+Underfull \hbox (badness 1253) in paragraph at lines 355--355
+[]\OT1/cmr/m/n/10.95 Figure 14: |Steps with
+ []
+
+[10]
+
+LaTeX Warning: Reference `custom_levels' on page 11 undefined on input line 364
+.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Citation `bacon2017option' on page 11 undefined on input line 41
+2.
+
+
+LaTeX Warning: Citation `kulkarni2016hierarchical' on page 11 undefined on inpu
+t line 412.
+
+
+LaTeX Warning: Citation `hessel2018rainbow' on page 11 undefined on input line 
+412.
+
+
+LaTeX Warning: Citation `levy2017learning' on page 11 undefined on input line 4
+12.
+
+
+LaTeX Warning: Reference `deep_rl' on page 11 undefined on input line 412.
+
+
+LaTeX Warning: Citation `lecun2015deep' on page 11 undefined on input line 412.
+
+
+
+LaTeX Warning: Citation `ramachandran2017searching' on page 11 undefined on inp
+ut line 412.
+
+
+! LaTeX Error: Cannot determine size of graphic in figs/dqn.png (no BoundingBox
+).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.417 ...}, clip, width=1\linewidth]{figs/dqn.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: figs/dqn.png Graphic file (type eps)
+<figs/dqn.png> [11]
+Overfull \hbox (2.72104pt too wide) in paragraph at lines 423--439
+[][] 
+ []
+
+[12] (final_report.bbl [13]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
- [13])
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+ [14])
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Overfull \hbox (21.08598pt too wide) in paragraph at lines 333--373
-\OT1/cmr/m/n/10.95 (-20) Borges, D. (2018). The Curse of Di-men-sion-al-ity!. [
-on-line] Medium. Avail-able at: https://medium.com/diogo-
+Overfull \hbox (30.73724pt too wide) in paragraph at lines 457--497
+\OT1/cmr/m/n/10.95 Borges, D. (2018). The Curse of Di-men-sion-al-ity!. [on-lin
+e] Medium. Avail-able at: https://medium.com/diogo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Overfull \hbox (58.81161pt too wide) in paragraph at lines 333--373
-\OT1/cmr/m/n/10.95 (-20) Edi-tion). [on-line] Plato.stanford.edu. Avail-able at
-: https://plato.stanford.edu/archives/win2017/entries/empiricism-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Overfull \hbox (93.64911pt too wide) in paragraph at lines 457--497
+\OT1/cmr/m/n/10.95 2017 Edi-tion). [on-line] Plato.stanford.edu. Avail-able at:
+ https://plato.stanford.edu/archives/win2017/entries/empiricism-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--373
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
 
  []
 
-[14] [15] [16] (final_report.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--497
+
+ []
+
+[15] [16] [17] (final_report.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 8091 strings out of 492895
- 124722 string characters out of 3135335
- 265286 words of memory out of 3000000
- 11736 multiletter control sequences out of 15000+200000
- 16389 words of font info for 107 fonts, out of 3000000 for 9000
+ 8054 strings out of 492896
+ 125719 string characters out of 3135361
+ 271032 words of memory out of 3000000
+ 11827 multiletter control sequences out of 15000+200000
+ 12481 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,43p,1559b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
-m Files/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MikT
-ex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MikTex/fonts/typ
-e1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MikTex/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmr
-10.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
-ogram Files/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/Mi
-kTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MikTex/fonts/t
-ype1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MikTex/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b>
-Output written on final_report.pdf (18 pages, 1391474 bytes).
-PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 12892 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 42i,9n,77p,2560b,416s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+Output written on final_report.dvi (19 pages, 80172 bytes).

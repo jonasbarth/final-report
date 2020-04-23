@@ -13,58 +13,59 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Objectives}{1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Theoretical Background}{1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Deep Reinforcement Learning}{1}\protected@file@percent }
+\newlabel{deep_rl}{{2.1}{1}}
 \citation{franccois2018introduction}
 \citation{franccois2018introduction}
 \citation{watkins1992q}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Agent takes an action to move to the next state and observe a reward \cite {franccois2018introduction}\relax }}{2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:2}{{1}{2}}
-\newlabel{q_update}{{2}{2}}
 \citation{lin1993reinforcement}
+\newlabel{q_update}{{2}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Policy Network for Super Mario (not to scale)\relax }}{3}\protected@file@percent }
 \newlabel{fig:2}{{2}{3}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Target Networks}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Policy and Target Networks\relax }}{3}\protected@file@percent }
+\newlabel{fig:2}{{3}{3}}
 \citation{geirhos2018generalisation}
 \citation{sutton1996generalization}
 \citation{van2017hybrid}
 \citation{cobbe2018quantifying}
+\citation{ribas2011neural}
+\citation{ribas2011neural}
 \citation{sutton1999between}
-\citation{ribas2011neural}
-\citation{ribas2011neural}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Policy and Target Networks\relax }}{4}\protected@file@percent }
-\newlabel{fig:2}{{3}{4}}
+\citation{sutton1999between}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Experience Replay}{4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Hierarchical Reinforcement Learning}{4}\protected@file@percent }
-\citation{sutton1999between}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The Hierarchical RL Semi Markov Decision Process \cite {ribas2011neural}\relax }}{4}\protected@file@percent }
+\newlabel{fig:4}{{4}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Option-Critic}{4}\protected@file@percent }
 \citation{bacon2017option}
 \citation{ribas2011neural}
 \citation{ribas2011neural}
 \citation{vezhnevets2017feudal}
 \citation{dayan1993feudal}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The Hierarchical RL Semi Markov Decision Process \cite {ribas2011neural}\relax }}{5}\protected@file@percent }
-\newlabel{fig:3}{{4}{5}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Option-Critic}{5}\protected@file@percent }
+\citation{vezhnevets2017feudal}
+\citation{vezhnevets2017feudal}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Option-Critic Architecture \cite {ribas2011neural}\relax }}{5}\protected@file@percent }
+\newlabel{fig:4}{{5}{5}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Feudal Networks}{5}\protected@file@percent }
-\citation{vezhnevets2017feudal}
-\citation{vezhnevets2017feudal}
 \citation{DBLP:journals/corr/MnihKSGAWR13}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Option-Critic Architecture \cite {ribas2011neural}\relax }}{6}\protected@file@percent }
-\newlabel{fig:4}{{5}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces FuN Architecure \cite {vezhnevets2017feudal}\relax }}{6}\protected@file@percent }
-\newlabel{fig:4}{{6}{6}}
 \citation{marioai}
 \citation{jython}
 \citation{jpype}
 \citation{py4j}
-\@writefile{toc}{\contentsline {section}{\numberline {3}System Requirements}{7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces FuN Architecure \cite {vezhnevets2017feudal}\relax }}{6}\protected@file@percent }
+\newlabel{fig:4}{{6}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}System Requirements}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}System Implementation}{7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overall Architecture}{7}\protected@file@percent }
 \citation{marioai}
 \citation{siebert2001kobra}
-\@writefile{toc}{\contentsline {section}{\numberline {4}System Implementation}{8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overall Architecture}{8}\protected@file@percent }
+\citation{pypi}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces System Architecture\relax }}{8}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Reward Function}{8}\protected@file@percent }
 \newlabel{reward_function}{{4.2}{8}}
-\citation{pypi}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces System Architecture\relax }}{9}\protected@file@percent }
 \citation{sutton2011reinforcement}
 \citation{white2012bandit}
 \citation{mnih2015human}
@@ -74,20 +75,34 @@
 \citation{DBLP:journals/corr/MnihKSGAWR13}
 \citation{lample2017playing}
 \citation{DBLP:journals/corr/MnihKSGAWR13}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Exploitation vs Exploration}{9}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Variants of $\epsilon $ Decay\relax }}{9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Frame Preprocessing}{9}\protected@file@percent }
+\newlabel{frame_preprocessing}{{4.4}{9}}
 \citation{braylan2015frame}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Exploitation vs Exploration}{10}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Variants of $\epsilon $ Decay\relax }}{10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Frame Preprocessing}{10}\protected@file@percent }
-\newlabel{frame_preprocessing}{{4.4}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Frame Preprocessing Pipeline\relax }}{10}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Frame Stacking and Frame Skipping}{10}\protected@file@percent }
 \newlabel{frame_stacking_skipping}{{4.5}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Frame Preprocessing Pipeline\relax }}{11}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Stacked frames are given as input to the neural network. The dimension of the input thus becomes $84 \times 84 \times 3 \times 4$\relax }}{11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Custom Levels}{11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Stacked frames are given as input to the neural network. The dimension of the input thus becomes $84 \times 84 \times 3 \times 4$\relax }}{10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces The agent selects action $a$ to be executed $k$ times in the emulator and observes the $k^{th}$ frame\relax }}{10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Custom Levels}{10}\protected@file@percent }
+\newlabel{custom_levels}{{4.6}{10}}
+\citation{bacon2017option}
+\citation{kulkarni2016hierarchical}
+\citation{hessel2018rainbow}
+\citation{levy2017learning}
+\citation{lecun2015deep}
+\citation{ramachandran2017searching}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Steps with Gap Level\relax }}{11}\protected@file@percent }
+\newlabel{fig:steps_gap_level}{{12}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Two Pipes Level\relax }}{11}\protected@file@percent }
+\newlabel{fig:}{{13}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Steps with Gap + Two Pipes\relax }}{11}\protected@file@percent }
+\newlabel{fig:awesome_image3}{{14}{11}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Experiments and Results}{11}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Experiment Design}{11}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces The agent selects action $a$ to be executed $k$ times in the emulator and observes the $k^{th}$ frame\relax }}{12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}DQN Agent}{12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}DQN Agent}{11}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Experiments carried out for the project. Progressive indicates whether the model has been pretrained on another level already.\relax }}{12}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Option-Critic Agent}{12}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Feudal Agent}{12}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation of Results}{12}\protected@file@percent }
@@ -100,6 +115,7 @@
 \bibcite{arulkumaran2019alphastar}{3}
 \bibcite{hessel2018rainbow}{4}
 \bibcite{bellemare2017distributional}{5}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Illustration of the CNN used by the DQN Agent.\relax }}{13}\protected@file@percent }
 \bibcite{nachum2019does}{6}
 \bibcite{puterman2014markov}{7}
 \bibcite{franccois2018introduction}{8}
@@ -109,9 +125,10 @@
 \bibcite{sutton1996generalization}{12}
 \bibcite{van2017hybrid}{13}
 \bibcite{cobbe2018quantifying}{14}
-\bibcite{sutton1999between}{15}
-\bibcite{ribas2011neural}{16}
+\bibcite{ribas2011neural}{15}
+\bibcite{sutton1999between}{16}
 \bibcite{bacon2017option}{17}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces DQN Hyperparameters}}{14}\protected@file@percent }
 \bibcite{vezhnevets2017feudal}{18}
 \bibcite{dayan1993feudal}{19}
 \bibcite{marioai}{20}
@@ -119,11 +136,16 @@
 \bibcite{jpype}{22}
 \bibcite{py4j}{23}
 \bibcite{siebert2001kobra}{24}
-\bibcite{sutton2011reinforcement}{25}
-\bibcite{white2012bandit}{26}
-\bibcite{mnih2015human}{27}
-\bibcite{maroti2019rbed}{28}
-\bibcite{chuchro2017game}{29}
-\bibcite{gribbon2004novel}{30}
-\bibcite{lample2017playing}{31}
-\bibcite{braylan2015frame}{32}
+\bibcite{pypi}{25}
+\bibcite{sutton2011reinforcement}{26}
+\bibcite{white2012bandit}{27}
+\bibcite{mnih2015human}{28}
+\bibcite{maroti2019rbed}{29}
+\bibcite{chuchro2017game}{30}
+\bibcite{gribbon2004novel}{31}
+\bibcite{lample2017playing}{32}
+\bibcite{braylan2015frame}{33}
+\bibcite{kulkarni2016hierarchical}{34}
+\bibcite{levy2017learning}{35}
+\bibcite{lecun2015deep}{36}
+\bibcite{ramachandran2017searching}{37}

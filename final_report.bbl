@@ -103,15 +103,15 @@ K.~Cobbe, O.~Klimov, C.~Hesse, T.~Kim, and J.~Schulman, ``Quantifying
   generalization in reinforcement learning,'' \emph{arXiv preprint
   arXiv:1812.02341}, 2018.
 
-\bibitem{sutton1999between}
-R.~S. Sutton, D.~Precup, and S.~Singh, ``Between mdps and semi-mdps: A
-  framework for temporal abstraction in reinforcement learning,''
-  \emph{Artificial intelligence}, vol. 112, no. 1-2, pp. 181--211, 1999.
-
 \bibitem{ribas2011neural}
 J.~J. Ribas-Fernandes, A.~Solway, C.~Diuk, J.~T. McGuire, A.~G. Barto, Y.~Niv,
   and M.~M. Botvinick, ``A neural signature of hierarchical reinforcement
   learning,'' \emph{Neuron}, vol.~71, no.~2, pp. 370--379, 2011.
+
+\bibitem{sutton1999between}
+R.~S. Sutton, D.~Precup, and S.~Singh, ``Between mdps and semi-mdps: A
+  framework for temporal abstraction in reinforcement learning,''
+  \emph{Artificial intelligence}, vol. 112, no. 1-2, pp. 181--211, 1999.
 
 \bibitem{bacon2017option}
 P.-L. Bacon, J.~Harb, and D.~Precup, ``The option-critic architecture,'' in
@@ -153,6 +153,12 @@ A.~Khalifa, ``Mario ai framework 10th anniversary edition,'' 2019. [Online].
 H.~Siebert, \emph{Der Kobra-Effekt: Wie man Irrwege der Wirtschaftspolitik
   vermeidet}.\hskip 1em plus 0.5em minus 0.4em\relax Dt. Verlag-Anst., 2001.
 
+\bibitem{pypi}
+\BIBentryALTinterwordspacing
+``Pypi gym super mario bros.'' [Online]. Available:
+  \url{https://pypi.org/project/gym-super-mario-bros/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{sutton2011reinforcement}
 R.~S. Sutton and A.~G. Barto, ``Reinforcement learning: An introduction,''
   2011.
@@ -190,5 +196,23 @@ G.~Lample and D.~S. Chaplot, ``Playing fps games with deep reinforcement
 A.~Braylan, M.~Hollenbeck, E.~Meyerson, and R.~Miikkulainen, ``Frame skip is a
   powerful parameter for learning to play atari,'' in \emph{Workshops at the
   Twenty-Ninth AAAI Conference on Artificial Intelligence}, 2015.
+
+\bibitem{kulkarni2016hierarchical}
+T.~D. Kulkarni, K.~Narasimhan, A.~Saeedi, and J.~Tenenbaum, ``Hierarchical deep
+  reinforcement learning: Integrating temporal abstraction and intrinsic
+  motivation,'' in \emph{Advances in neural information processing systems},
+  2016, pp. 3675--3683.
+
+\bibitem{levy2017learning}
+A.~Levy, G.~Konidaris, R.~Platt, and K.~Saenko, ``Learning multi-level
+  hierarchies with hindsight,'' \emph{arXiv preprint arXiv:1712.00948}, 2017.
+
+\bibitem{lecun2015deep}
+Y.~LeCun, Y.~Bengio, and G.~Hinton, ``Deep learning,'' \emph{nature}, vol. 521,
+  no. 7553, pp. 436--444, 2015.
+
+\bibitem{ramachandran2017searching}
+P.~Ramachandran, B.~Zoph, and Q.~V. Le, ``Searching for activation functions,''
+  \emph{arXiv preprint arXiv:1710.05941}, 2017.
 
 \end{thebibliography}
