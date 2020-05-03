@@ -122,11 +122,11 @@ The input first passes through a couple of convolutional layers designed to dete
 The improvement made by replacing the Q-table with a neural network is significant, however an issue arises when calculating the network loss in the Q-value update (see \ref{eq:q_update}). The loss is computed as the difference between the targeted Q-values of the next state, i.e. $Q(s^\prime, a^\prime)$, and the Q-values outputted by the network for the current state, i.e. $Q(s,a)$. Goal is for $Q(s,a)$ to approximate $Q(s^\prime, a^\prime)$, though because the policy network is used to calculate both values, any weight updates to the network will shift both $Q(s,a)$ and $Q(s^\prime, a^\prime)$. At each iteration, $Q(s,a)$ will move closer to the targeted Q-value., However the targeted $Q(s^\prime, a^\prime)$ will move as well and we end up chasing a moving target. Ultimately, this causes overestimation of the Q-values and leads to learning instabilities resulting in poor policies. The solution is to use a separate target network with the frozen weights of the policy network to calculate the target Q-values. Therefore, target Q-values remain stationary when being approximated and the network does not overestimate Q-values. Periodically, the policy network's weights are copied to the target network so that they accurately reflect the learning process.
 
 
-\begin{figure}[!htb]
-\centering
-\includegraphics[trim={0 3cm 0 3cm},clip,width=1\linewidth]{figs/policy_target_nn.png}
-\caption{Policy and Target Networks} \label{fig:2}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[trim={0 3cm 0 3cm},clip,width=1\linewidth]{figs/policy_target_nn.png}
+%\caption{Policy and Target Networks} \label{fig:2}
+%\end{figure}
 
 \subsubsection{Experience Replay}
 In traditional Reinforcement Learning, observations of the environment are immediately discarded after the Q-values have been updated. Experiencing the environment as a consecutive stream of temporally sequential observations becomes problematic because samples are highly correlated and training on correlated data may get you stuck in a local minimum. Furthermore, because observations are not kept, each one of them can only be used in a single weight update which makes learning less efficient. Therefore, most Deep Q Learning algorithms attempt to break correlation between samples and reuse them for weight updates with a \textit{replay memory} \cite{lin1993reinforcement}. The replay memory is a buffer of size $N$ where the agent stores experience tuples $e_t = (s_t, a_t, r_{t+1}, s_{t+1})$. Until the agent has collected a sufficient number of samples, it will execute random actions. Once the memory has been filled with enough samples, the agent randomly samples a batch and uses it to train the policy network. 
@@ -371,25 +371,25 @@ Determining the stopping criterion, i.e. when the model should stop learning, wa
  \hline
  \textbf{Model} & \textbf{Level} & \textbf{Progressive} & \textbf{Frames} & \textbf{Runtime}\\
  \hline 
- DQN & Steps with Gap & False & $2 \times 10^5$\\ 
+ DQN & Steps with Gap & False & $2 \times 10^5$ & 1d 3h 54m 59s\\ 
  \hline
- DQN & Two Pipes & False & $2 \times 10^5$\\ 
+ DQN & Two Pipes & False & $2 \times 10^5$ & 1d 5h 31m 54s\\ 
  \hline
- DQN & Steps with Gap + Two Pipes & False & $2 \times 10^5$\\ 
+ DQN & Steps with Gap + Two Pipes & False & $2 \times 10^5$ & 1d 5h 46m 34s \\ 
  \hline
-DQN & Two Pipes & True & $2 \times 10^5$\\ 
+DQN & Two Pipes & True & $2 \times 10^5$ & 1d 6h 58m 31s\\ 
  \hline
- DQN & Steps with Gap + Two Pipes & True & $2 \times 10^5$\\ 
+ DQN & Steps with Gap + Two Pipes & True & $2 \times 10^5$ & 1d 5h 59m 9s\\ 
  \hline 
- Option Critic & Steps with Gap & False & $2 \times 10^5$ \\ 
+ Option Critic & Steps with Gap & False & $2 \times 10^5$ & 1d 8h 33m 34s\\ 
  \hline
- Option Critic & Two Pipes & False & $2 \times 10^5$\\ 
+ Option Critic & Two Pipes & False & $2 \times 10^5$ & 1d 17h 35m 37s\\ 
  \hline
- Option Critic & Steps with Gap + Two Pipes & False & $2 \times 10^5$\\ 
+ Option Critic & Steps with Gap + Two Pipes & False & $2 \times 10^5$ & 1d 9h 32m 13s\\ 
  \hline
-Option Critic & Two Pipes & True & $2 \times 10^5$ \\ 
+Option Critic & Two Pipes & True & $2 \times 10^5$ & 1d 19h 33m 13s\\ 
  \hline
- Option Critic & Steps with Gap + Two Pipes & True & $2 \times 10^5$ \\ 
+ Option Critic & Steps with Gap + Two Pipes & True & $2 \times 10^5$ & 1d 13h 7m 29s\\ 
  \hline
  
   FuN & Steps with Gap & False & $2 \times 10^5$ & 1d 14h 40m 8s\\ 
@@ -407,7 +407,7 @@ FuN & Two Pipes & True & $2 \times 10^5$ & 1d 17h 14m 25s\\
 \caption{Experiments carried out for the project. Progressive indicates whether the model has been pretrained on another level already.}
 \end{table}
 
-All experiments were run once on a Google Cloud 4CPU 15GB RAM virtual machine. 
+All experiments were run once on a Google Cloud 4CPU 15GB RAM virtual machine. While it is desirable to run experiments multiple times to ensure that the observations do not represent noise, financial limitations and long training times only allowed a single run per experiment. 
 
 
 \subsection{DQN Agent}
@@ -418,10 +418,11 @@ Using a DQN as a comparison baseline is common in the Reinforcement Learning lit
 \centering
 \includegraphics[trim={0 0 0 0}, clip, width=1\linewidth]{figs/dqn.png}
 \vspace{-20pt}
-\caption{Illustration of the CNN used by the DQN Agent (not to scale). Stride is the number of pixels the convolutional filter moves. Kernel is the size of the filter.}.
+\caption{Illustration of the CNN used by the DQN Agent (not to scale). Stride is the number of pixels the convolutional filter moves. Kernel is the size of the filter.}
+\label{fig:dqn_cnn}
 \end{figure}
 
-Choosing the hyperparameters for a model is an important aspect. 
+Choosing the hyperparameters for a model is an important aspect. Performing a grid search (source) for optimising parameters would have been to costly considering the time it takes to run each experiment. Therefore, parameters values commonly appearing in the Reinforcement Learning literature and various implementations of the DQN algorithm were chosen.
 
 \begin{table}
 	\begin{tabular}{ |c|c|c|c|c|c|c|}
@@ -433,6 +434,7 @@ Choosing the hyperparameters for a model is an important aspect.
 	\end{tabular}
 	\captionsetup{singlelinecheck=off}
 	\caption[DQN Hyperparameters]{DQN Hyperparameters where: \begin{itemize}
+	\itemsep0em 
 		\item \textbf{$\alpha$}: Learning Rate.
 		\item \textbf{Batch Size}: The number of samples used to train the network each training epoch.
 		\item \textbf{$\gamma$}: Discount Factor.
@@ -441,87 +443,140 @@ Choosing the hyperparameters for a model is an important aspect.
 		\item \textbf{Learn Freq}: Frequency in timesteps the network is trained, e.g. every 4th frame.
 		\item \textbf{Learn Start}: When the agent should start sampling from the replay memory and train the network.
 	\end{itemize}}
+	\label{tbl:dqn_hyperparams}
 \end{table}
 
-\begin{figure}[!htb]
-\minipage{0.33\textwidth}
-  \includegraphics[width=\linewidth]{figs/dqn_results_1.png}
-\endminipage\hfill
-\minipage{0.33\textwidth}
-  \includegraphics[width=\linewidth]{figs/dqn_results_2.png}
-\endminipage\hfill
-\minipage{0.33\textwidth}%
-  \includegraphics[width=\linewidth]{figs/dqn_results_3.png}
-\endminipage
 
-\caption{DQN Performance on the three Super Mario levels measured in the average reward per played episode.}
+\begin{figure}[t]
+     \centering
+     \begin{subfigure}[t]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figs/dqn_results_1.png}
+         \caption{}
+         \label{fig:dqn_results_1}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[t]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figs/dqn_results_2.png}
+         \caption{}
+         \label{fig:dqn_results_2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[t]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figs/dqn_results_3.png}
+         \caption{}
+         \label{fig:dqn_results_3}
+     \end{subfigure}
+        \caption{DQN Performance on the three Super Mario levels measured in the average reward per played episode.}
+        \label{fig:dqn_results}
 \end{figure}
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{ |c|c|c|c|c|c| } 
 	\hline
-	\textbf{Levels} & Steps & Pipe with Progressive & Pipe & Steps + Pipe & Steps + Pipe with Progressive \\
+	\textbf{Levels} & Steps & Progressive Pipe & Pipe & Steps + Pipe & Progressive Steps + Pipe\\
+	\hline
+	\textbf{Final Rewards} & 242.34 & 225.76 & 322.24 & -25.0 & 242.34 \\
 	\hline
 	\textbf{Total Rewards} & 388.12 & 2485.56 & 4483.92 & -228.09 & 388.12 \\
 	\hline
 \end{tabular}
-\caption{The total sum of credits accumulated in each level by the DQN agent.}
+\caption{Rewards accumulated by the DQN agent in each level. Final rewards are the total rewards acquired in the final episode of the run. Total rewards is the sum of all rewards of the run.}
 \end{table}
 
+The DQN agent was able to mostly find successful policies for all three levels, accumulating mostly positive rewards in all except the Steps + Pipe level when trained from scratch. A successful policy should lead to a net positive reward for the agent in the very last episode of the run. In the last episode, the agent is fully exploiting the environment by only choosing optimal actions. Hence, if the agent has learned a successful policy it is expected that the total reward in the last episode is positive. The results also show that a progressive agent who has been trained on the steps level is able to accumulate rewards faster at first in the pipe level when compared to an agent who has to learn the level from scratch (see the first 250 episodes in \ref{fig:dqn_results_2}). Thereafter, the two models have nearly identical reward curves however. The non-progressive agent manages to accumulate a higher reward in the final episode of the run, suggesting that the model learned a better policy. Looking at the total rewards per run, it can be confirmed that the non-progressive model accumulated more in total as well. In the final level where the steps and pipes were combined to test Mario's abilities to reuse information (\ref{fig:dqn_results_3}), both the progressive and non-progressive model learned at about equal speeds. Although here the progressive model appears to have found a more successful policy as it has more rewards in the final episode as well as over the entire run.
 
 
 \subsection{Option-Critic Agent}
+The Option Critic implementation follows that of a DQN with the addition of the options framework on top. It is an added layer of complexity, which shows in the experiment runtimes - learning the additional subpolicies takes extra time. Option Critic uses a CNN with the same structure as the DQN (see \ref{fig:dqn_cnn}) to learn policies and utilises a policy and target network to avoid overestimating Q-values. Additionally, it also uses the concept of experience replay with a replay buffer of size 100,000 to store observation tuples in and utilises the DQN values for the rest of the hyperparameters as well (see \ref{tbl:dqn_hyperparams}). Lastly, the number of options to be learned was specified at 2, taking after the authors of the Option Critic paper \cite{bacon2017option}. 
 
-\begin{figure}[!htb]
-\minipage{0.33\textwidth}
-  \includegraphics[width=\linewidth]{figs/oc_results_1.png}
-\endminipage\hfill
-\minipage{0.33\textwidth}
-  \includegraphics[width=\linewidth]{figs/oc_results_2.png}
-\endminipage\hfill
-\minipage{0.33\textwidth}%
-  \includegraphics[width=\linewidth]{figs/oc_results_3.png}
-\endminipage
 
-\caption{Option Critic Performance on the three Super Mario levels measured in the average reward per played episode.}
+\begin{figure}[t]
+     \centering
+     \begin{subfigure}[t]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figs/oc_results_1.png}
+         \caption{}
+         \label{fig:oc_results_1}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[t]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figs/oc_results_2.png}
+         \caption{}
+         \label{fig:oc_results_2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[t]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figs/oc_results_3.png}
+         \caption{}
+         \label{fig:oc_results_3}
+     \end{subfigure}
+        \caption{Option Critic Performance on the three Super Mario levels measured in the average reward per played episode.}
+        \label{fig:oc_results}
 \end{figure}
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{ |c|c|c|c|c|c| } 
 	\hline
-	\textbf{Levels} & Steps & Pipe with Progressive & Pipe & Steps + Pipe & Steps + Pipe with Progressive \\
+	\textbf{Levels} & Steps & Progressive Pipe  & Pipe & Steps + Pipe & Progressive Steps + Pipe \\
+	\hline
+	\textbf{Final Rewards} & 342.47 & 336.71 & 420.62 & -309.0 & -629.0\\
 	\hline
 	\textbf{Total Rewards} & -471.95 & 186.54 & 4492.79 &  -2687.05 & -3870.95 \\
 	\hline
 \end{tabular}
 \caption{The total sum of credits accumulated in each level by the Option Critic agent.}
-
+\label{tbl:oc_rewards}
 \end{table}
 
-\subsection{Feudal Agent}
+Overall, the performance of the Option Critic is very erratic and unstable in all levels. The average reward obtained per episode goes through extreme fluctuations from values just below zero up to values of thirty. As the episode count goes up the agent is meant to slowly converge on a master policy which returns more rewards than a policy earlier in the run. Though Option Critic agent appears to only be showing minimal improvement over the duration of a run, its final policies actually outperform the DQN on the Steps, Progressive Pipe, and Pipe runs (see Final Rewards in Table \ref{tbl:oc_rewards}). Like the DQN, the results show that a progressive agent who has been trained on a previous level is to quicker to adapt to the new environment (see the first 250 episodes \ref{fig:oc_results_2}). Adapting quickly means to require fewer episodes to finding actions which return larger rewards. Though again, the non-progressive model outperforms the progressive model in the late stages of the run for both the Pipe and Steps + Pipe levels (see final and total rewards in Table \ref{tbl:oc_rewards}).
 
 
-\begin{figure}[!htb]
-\minipage{0.33\textwidth}
-  \includegraphics[width=\linewidth]{figs/fun_results_1.png}
-\endminipage\hfill
-\minipage{0.33\textwidth}
-  \includegraphics[width=\linewidth]{figs/fun_results_2.png}
-\endminipage\hfill
-\minipage{0.33\textwidth}%
-  \includegraphics[width=\linewidth]{figs/fun_results_3.png}
-\endminipage
+%Why OC failed?
+%* not enough options
+%* only tested on a simple domains
 
-\caption{FuN Performance on the three Super Mario levels measured in the average reward per played episode.}
+
+\begin{figure}[t]
+     \centering
+     \begin{subfigure}[t]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figs/fun_results_1.png}
+         \caption{}
+         \label{fig:fun_results_1}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[t]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figs/fun_results_2.png}
+         \caption{}
+         \label{fig:fun_results_2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[t]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figs/fun_results_3.png}
+         \caption{}
+         \label{fig:fun_results_3}
+     \end{subfigure}
+        \caption{FuN Performance on the three Super Mario levels measured in the average reward per played episode.}
+        \label{fig:fun_results}
+        
 \end{figure}
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{ |c|c|c|c|c|c| } 
 	\hline
-	\textbf{Levels} & Steps & Pipe with Progressive & Pipe & Steps + Pipe & Steps + Pipe with Progressive \\
+	\textbf{Levels} & Steps & Progressive Pipe  & Pipe & Steps + Pipe & Progressive Steps + Pipe \\
+	\hline
+	\textbf{Final Reward} & 330.47 & 408.62 & 283.04 & -409.73 & -629.0 \\
 	\hline
 	\textbf{Total Rewards} & 6595.49 & 11032.36 & 2166.36 & 694.201 & -2541.22 \\
 	\hline

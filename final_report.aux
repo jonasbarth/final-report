@@ -32,38 +32,36 @@
 \citation{ribas2011neural}
 \citation{ribas2011neural}
 \citation{sutton1999between}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Policy and Target Networks\relax }}{4}\protected@file@percent }
-\newlabel{fig:2}{{3}{4}}
+\citation{sutton1999between}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Experience Replay}{4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Hierarchical Reinforcement Learning}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The Hierarchical RL Semi Markov Decision Process \cite {ribas2011neural}\relax }}{4}\protected@file@percent }
-\newlabel{fig:4}{{4}{4}}
-\citation{sutton1999between}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The Hierarchical RL Semi Markov Decision Process \cite {ribas2011neural}\relax }}{4}\protected@file@percent }
+\newlabel{fig:4}{{3}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Option-Critic}{4}\protected@file@percent }
 \citation{bacon2017option}
 \citation{ribas2011neural}
 \citation{ribas2011neural}
 \citation{vezhnevets2017feudal}
 \citation{dayan1993feudal}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Option-Critic}{5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Option-Critic Architecture \cite {ribas2011neural}\relax }}{5}\protected@file@percent }
-\newlabel{fig:4}{{5}{5}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Feudal Networks}{5}\protected@file@percent }
 \citation{vezhnevets2017feudal}
 \citation{vezhnevets2017feudal}
 \citation{DBLP:journals/corr/MnihKSGAWR13}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Option-Critic Architecture \cite {ribas2011neural}\relax }}{5}\protected@file@percent }
+\newlabel{fig:4}{{4}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Feudal Networks}{5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces FuN Architecure \cite {vezhnevets2017feudal}\relax }}{5}\protected@file@percent }
+\newlabel{fig:4}{{5}{5}}
 \citation{marioai}
 \citation{jython}
 \citation{jpype}
 \citation{py4j}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces FuN Architecure \cite {vezhnevets2017feudal}\relax }}{6}\protected@file@percent }
-\newlabel{fig:4}{{6}{6}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}System Requirements}{6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}System Implementation}{7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overall Architecture}{7}\protected@file@percent }
 \citation{marioai}
 \citation{siebert2001kobra}
+\@writefile{toc}{\contentsline {section}{\numberline {4}System Implementation}{7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overall Architecture}{7}\protected@file@percent }
 \citation{pypi}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces System Architecture\relax }}{8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces System Architecture\relax }}{8}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Reward Function}{8}\protected@file@percent }
 \newlabel{reward_function}{{4.2}{8}}
 \citation{sutton2011reinforcement}
@@ -71,49 +69,75 @@
 \citation{mnih2015human}
 \citation{maroti2019rbed}
 \citation{chuchro2017game}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Exploitation vs Exploration}{9}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Variants of $\epsilon $ Decay\relax }}{9}\protected@file@percent }
 \citation{gribbon2004novel}
 \citation{DBLP:journals/corr/MnihKSGAWR13}
 \citation{lample2017playing}
 \citation{DBLP:journals/corr/MnihKSGAWR13}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Exploitation vs Exploration}{9}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Variants of $\epsilon $ Decay\relax }}{9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Frame Preprocessing}{9}\protected@file@percent }
+\newlabel{frame_preprocessing}{{4.4}{9}}
 \citation{braylan2015frame}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Frame Preprocessing}{10}\protected@file@percent }
-\newlabel{frame_preprocessing}{{4.4}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Frame Preprocessing Pipeline\relax }}{10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Frame Preprocessing Pipeline\relax }}{10}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Frame Stacking and Frame Skipping}{10}\protected@file@percent }
 \newlabel{frame_stacking_skipping}{{4.5}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Stacked frames are given as input to the neural network. The dimension of the input thus becomes $84 \times 84 \times 3 \times 4$\relax }}{10}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces The agent selects action $a$ to be executed $k$ times in the emulator and observes the $k^{th}$ frame\relax }}{11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Custom Levels}{11}\protected@file@percent }
-\newlabel{custom_levels}{{4.6}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Stacked frames are given as input to the neural network. The dimension of the input thus becomes $84 \times 84 \times 3 \times 4$\relax }}{10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Custom Levels}{10}\protected@file@percent }
+\newlabel{custom_levels}{{4.6}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The agent selects action $a$ to be executed $k$ times in the emulator and observes the $k^{th}$ frame\relax }}{11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Steps with Gap Level\relax }}{11}\protected@file@percent }
+\newlabel{fig:steps_gap_level}{{11}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Two Pipes Level\relax }}{11}\protected@file@percent }
+\newlabel{fig:}{{12}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Steps with Gap + Two Pipes\relax }}{11}\protected@file@percent }
+\newlabel{fig:awesome_image3}{{13}{11}}
 \citation{bacon2017option}
 \citation{kulkarni2016hierarchical}
 \citation{hessel2018rainbow}
 \citation{levy2017learning}
 \citation{lecun2015deep}
 \citation{ramachandran2017searching}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Steps with Gap Level\relax }}{12}\protected@file@percent }
-\newlabel{fig:steps_gap_level}{{12}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Two Pipes Level\relax }}{12}\protected@file@percent }
-\newlabel{fig:}{{13}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Steps with Gap + Two Pipes\relax }}{12}\protected@file@percent }
-\newlabel{fig:awesome_image3}{{14}{12}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Experiments and Results}{12}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Experiment Design}{12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}DQN Agent}{12}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Experiments carried out for the project. Progressive indicates whether the model has been pretrained on another level already.\relax }}{13}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Illustration of the CNN used by the DQN Agent (not to scale). Stride is the number of pixels the convolutional filter moves. Kernel is the size of the filter.\relax }}{13}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces DQN Hyperparameters}}{14}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces DQN Performance on the three Super Mario levels measured in the average reward per played episode.\relax }}{14}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces The total sum of credits accumulated in each level by the DQN agent.\relax }}{14}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Option Critic Performance on the three Super Mario levels measured in the average reward per played episode.\relax }}{14}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces The total sum of credits accumulated in each level by the Option Critic agent.\relax }}{14}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Experiments carried out for the project. Progressive indicates whether the model has been pretrained on another level already.\relax }}{12}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces DQN Hyperparameters}}{13}\protected@file@percent }
+\newlabel{tbl:dqn_hyperparams}{{2}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}DQN Agent}{13}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Illustration of the CNN used by the DQN Agent (not to scale). Stride is the number of pixels the convolutional filter moves. Kernel is the size of the filter.\relax }}{13}\protected@file@percent }
+\newlabel{fig:dqn_cnn}{{14}{13}}
+\citation{bacon2017option}
+\newlabel{fig:dqn_results_1}{{15a}{14}}
+\newlabel{sub@fig:dqn_results_1}{{a}{14}}
+\newlabel{fig:dqn_results_2}{{15b}{14}}
+\newlabel{sub@fig:dqn_results_2}{{b}{14}}
+\newlabel{fig:dqn_results_3}{{15c}{14}}
+\newlabel{sub@fig:dqn_results_3}{{c}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces DQN Performance on the three Super Mario levels measured in the average reward per played episode.\relax }}{14}\protected@file@percent }
+\newlabel{fig:dqn_results}{{15}{14}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Rewards accumulated by the DQN agent in each level. Final rewards are the total rewards acquired in the final episode of the run. Total rewards is the sum of all rewards of the run.\relax }}{14}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Option-Critic Agent}{14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Feudal Agent}{14}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation of Results}{14}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Critical Assessment of Project}{14}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{14}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces The total sum of credits accumulated in each level by the Option Critic agent.\relax }}{14}\protected@file@percent }
+\newlabel{tbl:oc_rewards}{{4}{14}}
+\newlabel{fig:oc_results_1}{{16a}{15}}
+\newlabel{sub@fig:oc_results_1}{{a}{15}}
+\newlabel{fig:oc_results_2}{{16b}{15}}
+\newlabel{sub@fig:oc_results_2}{{b}{15}}
+\newlabel{fig:oc_results_3}{{16c}{15}}
+\newlabel{sub@fig:oc_results_3}{{c}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Option Critic Performance on the three Super Mario levels measured in the average reward per played episode.\relax }}{15}\protected@file@percent }
+\newlabel{fig:oc_results}{{16}{15}}
+\newlabel{fig:fun_results_1}{{17a}{15}}
+\newlabel{sub@fig:fun_results_1}{{a}{15}}
+\newlabel{fig:fun_results_2}{{17b}{15}}
+\newlabel{sub@fig:fun_results_2}{{b}{15}}
+\newlabel{fig:fun_results_3}{{17c}{15}}
+\newlabel{sub@fig:fun_results_3}{{c}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces FuN Performance on the three Super Mario levels measured in the average reward per played episode.\relax }}{15}\protected@file@percent }
+\newlabel{fig:fun_results}{{17}{15}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces The total sum of credits accumulated in each level by the FuN agent.\relax }}{15}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation of Results}{15}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Critical Assessment of Project}{15}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{15}\protected@file@percent }
 \bibstyle{ieeetran}
 \bibdata{references}
 \bibcite{DBLP:journals/corr/MnihKSGAWR13}{1}
@@ -123,8 +147,6 @@
 \bibcite{bellemare2017distributional}{5}
 \bibcite{nachum2019does}{6}
 \bibcite{puterman2014markov}{7}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces FuN Performance on the three Super Mario levels measured in the average reward per played episode.\relax }}{15}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces The total sum of credits accumulated in each level by the FuN agent.\relax }}{15}\protected@file@percent }
 \bibcite{franccois2018introduction}{8}
 \bibcite{watkins1992q}{9}
 \bibcite{lin1993reinforcement}{10}
