@@ -361,14 +361,15 @@ The project is confined to only teaching Mario navigation tasks, hence why none 
 \section{Experiments and Results}
 
 \subsection{Experiment Design}
-The goal of this project is to investigate whether introducing hierarchies and temporal abstraction into Reinforcement Learning speeds up the learning process. A good indicator of a model's learning process is how quickly it is able to accumulate rewards. Models that learn quickly, will have discovered actions which return large rewards sooner than slow learning models. Therefore, the main metric used to compare the different Reinforcement Learning models will be the average reward per episode. In conjunction with the reward, looking at the loss of each model over time will also be telling of how quickly the model converges to a policy. To judge whether learning hierarchies is beneficial to learning speed, the same Mario model first learns specific skills in specially designed levels (section \ref{custom_levels}). The model is then placed in a level which requires all the previously learned skills to be solved. An agent which has learned reusable hierarchies should in theory adopt to the new environment faster than a flat-learning agent. In addition to comparing the different learning agents against each other in the new environment, the agents will also be compared against versions of themselves which have not been trained on previous levels. 
-Determining the stopping criterion, i.e. when the model should stop learning, was grounds to some experimentation. Using the number of episodes played the agent is common, however episodes vary in length across different levels as well as in the same level. This variation means that agents will have had different amount of playtime as better agents would finish sooner and there is no guarantee that agents get the same experience. The goal was to let all agents experience the same number of frames of the game to better predict training times and to use the number of episodes as a metric of success instead. A fast-learning agent will be able to play through more episodes using the same number of timesteps than a slow-learning agent. Thus, the completed number of episodes after $t$ timesteps can also be used to compare the different Reinforcement Learning models. To summarise, an agent which learns quickly should achieve more rewards in fewer episodes.
+The goal of this project is to investigate whether introducing hierarchies and temporal abstraction into Reinforcement Learning speeds up the learning process. A good indicator of a model's learning process is how quickly it is able to accumulate rewards. Models that learn quickly, will have discovered actions which return large rewards sooner than slow learning models. Therefore, the main metric used to compare the different Reinforcement Learning models will be the average reward per episode. To judge whether learning hierarchies is beneficial to learning speed, the same Mario model first learns specific skills in specially designed levels (section \ref{custom_levels}). The model is then placed in a level which requires all the previously learned skills to be solved. An agent which has learned reusable hierarchies should in theory adopt to the new environment faster than a flat-learning agent. Adopting in this sense means to acquire rewards faster. In addition to comparing the different learning agents against each other in the new environment, the agents will also be compared against versions of themselves which have not been trained on previous levels. The purpose of this comparison is to investigate whether training agents \textit{progressively} is beneficial over flat learning.
+
+Determining the stopping criterion, i.e. when the model should stop learning, was grounds to some experimentation. Using the number of episodes played the agent is common, however episodes vary in length across different levels as well as in the same level. This variation means that agents will have had different amount of playtime as better agents would finish sooner and there is no guarantee that agents get the same experience. The goal was to let all agents experience the same number of frames of the game to better predict training times and to use the number of episodes as a metric of success instead. A fast-learning agent should be able to play through more episodes using the same number of timesteps than a slow-learning agent. Thus, the completed number of episodes after $t$ timesteps can also be used to compare the different Reinforcement Learning models. To summarise, an agent which learns quickly should achieve more rewards in fewer episodes.
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{ |c|c|c|c|c|c| } 
  \hline
- \textbf{Model} & \textbf{Level} & \textbf{Progressive} & \textbf{Frames}\\
+ \textbf{Model} & \textbf{Level} & \textbf{Progressive} & \textbf{Frames} & \textbf{Runtime}\\
  \hline 
  DQN & Steps with Gap & False & $2 \times 10^5$\\ 
  \hline
@@ -391,33 +392,36 @@ Option Critic & Two Pipes & True & $2 \times 10^5$ \\
  Option Critic & Steps with Gap + Two Pipes & True & $2 \times 10^5$ \\ 
  \hline
  
-  FuN & Steps with Gap & False & $2 \times 10^5$\\ 
+  FuN & Steps with Gap & False & $2 \times 10^5$ & 1d 14h 40m 8s\\ 
  \hline
- FuN & Two Pipes & False & $2 \times 10^5$\\ 
+ FuN & Two Pipes & False & $2 \times 10^5$ & 1d 13h 58m 52s\\ 
  \hline
- FuN & Steps with Gap + Two Pipes & False & $2 \times 10^5$ \\ 
+ FuN & Steps with Gap + Two Pipes & False & $2 \times 10^5$ & 1d 12h 13m 18s\\ 
  \hline
-FuN & Two Pipes & True & $2 \times 10^5$\\ 
+FuN & Two Pipes & True & $2 \times 10^5$ & 1d 17h 14m 25s\\ 
  \hline
- FuN & Steps with Gap + Two Pipes & True & $2 \times 10^5$\\ 
+ FuN & Steps with Gap + Two Pipes & True & $2 \times 10^5$ & 1d 14h 4m 24s\\ 
  \hline
  
 \end{tabular}
 \caption{Experiments carried out for the project. Progressive indicates whether the model has been pretrained on another level already.}
 \end{table}
 
+All experiments were run once on a Google Cloud 4CPU 15GB RAM virtual machine. 
 
 
 \subsection{DQN Agent}
-Using a DQN as a comparison baseline is common in the Reinforcement Learning literature \cite{bacon2017option, kulkarni2016hierarchical, hessel2018rainbow, levy2017learning}, thus this project will follow the trend. This section will show how the Deep Reinforcement Learning theory from section \ref{deep_rl} was used to construct a DQN agent. The DQN agent uses a policy and target network, both of which are CNNs with three convolutional layers followed by two linear layers. The activation function used between the layers is a Rectified Linear Unit (ReLu) \cite{lecun2015deep}, which over the past years established itself as the most popular activation function for training neural networks \cite{ramachandran2017searching}. The agent also makes use of experience replay with a buffer of size 100,000. 
+Using a DQN as a comparison baseline is common in the Reinforcement Learning literature \cite{bacon2017option, kulkarni2016hierarchical, hessel2018rainbow, levy2017learning}, thus this project will follow the trend. This section will show how the Deep Reinforcement Learning theory from section \ref{deep_rl} was used to construct a DQN agent and compare the average reward per episode for progressive and non-progressive models. The DQN agent uses a policy and target network, both of which are CNNs with three convolutional layers followed by two linear layers. The activation function used between the layers is a Rectified Linear Unit (ReLu) \cite{lecun2015deep}, which over the past years established itself as the most popular activation function for training neural networks \cite{ramachandran2017searching}. The agent also makes use of experience replay with a buffer of size 100,000. 
 
 \begin{figure}[!htb]
 \vspace{-40pt}
 \centering
 \includegraphics[trim={0 0 0 0}, clip, width=1\linewidth]{figs/dqn.png}
 \vspace{-20pt}
-\caption{Illustration of the CNN used by the DQN Agent.}.
+\caption{Illustration of the CNN used by the DQN Agent (not to scale). Stride is the number of pixels the convolutional filter moves. Kernel is the size of the filter.}.
 \end{figure}
+
+Choosing the hyperparameters for a model is an important aspect. 
 
 \begin{table}
 	\begin{tabular}{ |c|c|c|c|c|c|c|}
@@ -439,11 +443,105 @@ Using a DQN as a comparison baseline is common in the Reinforcement Learning lit
 	\end{itemize}}
 \end{table}
 
+\begin{figure}[!htb]
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{figs/dqn_results_1.png}
+\endminipage\hfill
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{figs/dqn_results_2.png}
+\endminipage\hfill
+\minipage{0.33\textwidth}%
+  \includegraphics[width=\linewidth]{figs/dqn_results_3.png}
+\endminipage
+
+\caption{DQN Performance on the three Super Mario levels measured in the average reward per played episode.}
+\end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ |c|c|c|c|c|c| } 
+	\hline
+	\textbf{Levels} & Steps & Pipe with Progressive & Pipe & Steps + Pipe & Steps + Pipe with Progressive \\
+	\hline
+	\textbf{Total Rewards} & 388.12 & 2485.56 & 4483.92 & -228.09 & 388.12 \\
+	\hline
+\end{tabular}
+\caption{The total sum of credits accumulated in each level by the DQN agent.}
+\end{table}
+
+
+
 \subsection{Option-Critic Agent}
+
+\begin{figure}[!htb]
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{figs/oc_results_1.png}
+\endminipage\hfill
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{figs/oc_results_2.png}
+\endminipage\hfill
+\minipage{0.33\textwidth}%
+  \includegraphics[width=\linewidth]{figs/oc_results_3.png}
+\endminipage
+
+\caption{Option Critic Performance on the three Super Mario levels measured in the average reward per played episode.}
+\end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ |c|c|c|c|c|c| } 
+	\hline
+	\textbf{Levels} & Steps & Pipe with Progressive & Pipe & Steps + Pipe & Steps + Pipe with Progressive \\
+	\hline
+	\textbf{Total Rewards} & -471.95 & 186.54 & 4492.79 &  -2687.05 & -3870.95 \\
+	\hline
+\end{tabular}
+\caption{The total sum of credits accumulated in each level by the Option Critic agent.}
+
+\end{table}
 
 \subsection{Feudal Agent}
 
+
+\begin{figure}[!htb]
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{figs/fun_results_1.png}
+\endminipage\hfill
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{figs/fun_results_2.png}
+\endminipage\hfill
+\minipage{0.33\textwidth}%
+  \includegraphics[width=\linewidth]{figs/fun_results_3.png}
+\endminipage
+
+\caption{FuN Performance on the three Super Mario levels measured in the average reward per played episode.}
+\end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ |c|c|c|c|c|c| } 
+	\hline
+	\textbf{Levels} & Steps & Pipe with Progressive & Pipe & Steps + Pipe & Steps + Pipe with Progressive \\
+	\hline
+	\textbf{Total Rewards} & 6595.49 & 11032.36 & 2166.36 & 694.201 & -2541.22 \\
+	\hline
+\end{tabular}
+\caption{The total sum of credits accumulated in each level by the FuN agent.}
+
+\end{table}
+
 \section{Evaluation of Results}
+
+\begin{figure}[!htb]
+\minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{figs/all_results_1.png}
+\endminipage\hfill
+\minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{figs/all_results_2.png}
+\endminipage\hfill
+\end{figure}
+
+
 
 \section{Critical Assessment of Project}
 
