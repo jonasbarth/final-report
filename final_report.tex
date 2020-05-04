@@ -405,6 +405,7 @@ FuN & Two Pipes & True & $2 \times 10^5$ & 1d 17h 14m 25s\\
  
 \end{tabular}
 \caption{Experiments carried out for the project. Progressive indicates whether the model has been pretrained on another level already.}
+\label{tbl:experiments}
 \end{table}
 
 All experiments were run once on a Google Cloud 4CPU 15GB RAM virtual machine. While it is desirable to run experiments multiple times to ensure that the observations do not represent noise, financial limitations and long training times only allowed a single run per experiment. 
@@ -494,7 +495,7 @@ The DQN agent was able to mostly find successful policies for all three levels, 
 The Option Critic implementation follows that of a DQN with the addition of the options framework on top. It is an added layer of complexity, which shows in the experiment runtimes - learning the additional subpolicies takes extra time. Option Critic uses a CNN with the same structure as the DQN (see \ref{fig:dqn_cnn}) to learn policies and utilises a policy and target network to avoid overestimating Q-values. Additionally, it also uses the concept of experience replay with a replay buffer of size 100,000 to store observation tuples in and utilises the DQN values for the rest of the hyperparameters as well (see \ref{tbl:dqn_hyperparams}). Lastly, the number of options to be learned was specified at 2, taking after the authors of the Option Critic paper \cite{bacon2017option}. 
 
 
-\begin{figure}[t]
+\begin{figure}[htb!]
      \centering
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
@@ -520,7 +521,7 @@ The Option Critic implementation follows that of a DQN with the addition of the 
         \label{fig:oc_results}
 \end{figure}
 
-\begin{table}[h!]
+\begin{table}[htb!]
 \centering
 \begin{tabular}{ |c|c|c|c|c|c| } 
 	\hline
@@ -535,15 +536,17 @@ The Option Critic implementation follows that of a DQN with the addition of the 
 \label{tbl:oc_rewards}
 \end{table}
 
-Overall, the performance of the Option Critic is very erratic and unstable in all levels. The average reward obtained per episode goes through extreme fluctuations from values just below zero up to values of thirty. As the episode count goes up the agent is meant to slowly converge on a master policy which returns more rewards than a policy earlier in the run. Though Option Critic agent appears to only be showing minimal improvement over the duration of a run, its final policies actually outperform the DQN on the Steps, Progressive Pipe, and Pipe runs (see Final Rewards in Table \ref{tbl:oc_rewards}). Like the DQN, the results show that a progressive agent who has been trained on a previous level is to quicker to adapt to the new environment (see the first 250 episodes \ref{fig:oc_results_2}). Adapting quickly means to require fewer episodes to finding actions which return larger rewards. Though again, the non-progressive model outperforms the progressive model in the late stages of the run for both the Pipe and Steps + Pipe levels (see final and total rewards in Table \ref{tbl:oc_rewards}).
+Overall, the performance of the Option Critic is very erratic and unstable in all levels. The average reward obtained per episode goes through extreme fluctuations from values just below zero up to values of thirty. As the episode count goes up the agent is meant to slowly converge on a master policy which returns more rewards than a policy earlier in the run. Though Option Critic agent appears to only be showing minimal improvement over the duration of a run, its final policies actually outperform the DQN on the Steps, Progressive Pipe, and Pipe runs (see Final Rewards in Table \ref{tbl:oc_rewards}). Like the DQN, the results show that a progressive agent who has been trained on a previous level is to quicker to adapt to the new environment (see the first 250 episodes in \ref{fig:oc_results_2}). Adapting quickly means to require fewer episodes to finding actions which return larger rewards. However, the non-progressive model outperforms the progressive model in the late stages of the run for both the Pipe and Steps + Pipe levels (see final and total rewards in Table \ref{tbl:oc_rewards}). Occasionally, the Option Critic gets stuck in local minima which can be seen as the flat sections with low reward values in the reward curve (see progressive \ref{fig:oc_results_2} and progressive \ref{fig:oc_results_3}). It indicates that Mario has gotten stuck somewhere in the level and keeps accumulating the negative reward for letting the time pass. The agent manages to leave the local minimum in the Pipe level but not in the Steps + Pipe level.
 
 
 %Why OC failed?
 %* not enough options
 %* only tested on a simple domains
 
+\subsection{FuN Agent}
+The implementation of the FuN agent differs from that of the DQN and Option Critic. Though it also has a CNN with ReLu activation functions, the number of layers as well as values for stride and kernel are different. This is because the CNN does not compute the Q-values but an intermediate state representation that is to be used further down the processing pipeline. Because FuN uses recurrent networks in the form of LSTMs to compute an action distribution for the agent, the architecture can do without the concept of memory replay and target networks. Hence, FuN has a lower memory footprint than both the DQN and Option Critic which might have to store millions of experiences for more complex problems. The intricate design of the FuN agent is more computationally expensive however as can be seen in the experiment runtimes (see Table \ref{tbl:experiments}).
 
-\begin{figure}[t]
+\begin{figure}[htb!]
      \centering
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
@@ -570,7 +573,7 @@ Overall, the performance of the Option Critic is very erratic and unstable in al
         
 \end{figure}
 
-\begin{table}[h!]
+\begin{table}[htb!]
 \centering
 \begin{tabular}{ |c|c|c|c|c|c| } 
 	\hline
@@ -583,9 +586,13 @@ Overall, the performance of the Option Critic is very erratic and unstable in al
 \end{tabular}
 \caption{The total sum of credits accumulated in each level by the FuN agent.}
 
+
 \end{table}
 
+Out of the three agents, the FuN agent was able to accumulate the most total rewards in the Steps, Progressive Pipe and Steps + Pipe level. It also outperformed the DQN on the final rewards in the Steps and the Progressive Pipe level. As with the DQN and Option Critic, the progressive model which was trained on the Steps level outperforms that of a model which learns the level from scratch (see the first 1000 episodes in \ref{fig:fun_results_2}). Whereas the progressive DQN and Option Critic models were outperformed by the non-progressive counterparts later in the run, the progressive FuN does better than the non-progressive FuN in the final reward and total reward. Much like the the Option Critic, FuN has a worse performance than the DQN on the final Steps + Pipe level. 
+
 \section{Evaluation of Results}
+Comparing the progressive models against non-progressive models showed that progressive models have an initial advantage over non-progressive models when being placed in a new environment. They accumulate rewards quicker in the beginning because the weights of the policy network have already been trained on a somewhat related environment. Thus, the models becomes equipped with previous knowledge they can use to their favour. A flat learning agent like the DQN should accumulate knowledge of lower quality than the the hierarchical agents because it does not have temporally abstract actions available. Quality of knowledge in this case is measured by its reusability. Knowledge which can be transferred to new spaces is highly reusable and of high quality. Likewise, knowledge which is only applicable to a narrow space is of poor reusability and thus low quality. The Option Critic and FuN agent are expected to learn reusable subpolicies which should translate to higher quality knowledge and therefore more rewards in the novel environment.
 
 \begin{figure}[!htb]
 \minipage{0.48\textwidth}

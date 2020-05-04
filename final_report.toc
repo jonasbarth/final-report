@@ -21,6 +21,7 @@
 \contentsline {subsection}{\numberline {5.1}Experiment Design}{12}% 
 \contentsline {subsection}{\numberline {5.2}DQN Agent}{13}% 
 \contentsline {subsection}{\numberline {5.3}Option-Critic Agent}{14}% 
-\contentsline {section}{\numberline {6}Evaluation of Results}{15}% 
-\contentsline {section}{\numberline {7}Critical Assessment of Project}{15}% 
-\contentsline {section}{\numberline {8}Conclusion}{15}% 
+\contentsline {subsection}{\numberline {5.4}FuN Agent}{15}% 
+\contentsline {section}{\numberline {6}Evaluation of Results}{16}% 
+\contentsline {section}{\numberline {7}Critical Assessment of Project}{16}% 
+\contentsline {section}{\numberline {8}Conclusion}{16}% 
