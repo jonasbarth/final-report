@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  4 MAY 2020 14:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  6 MAY 2020 18:04
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -390,6 +390,12 @@ LaTeX Warning: Label `fig:4' multiply defined.
 
 LaTeX Warning: Label `fig:4' multiply defined.
 
+
+LaTeX Warning: Label `fig:fun_results_2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:fun_results_2' multiply defined.
+
 )
 \openout1 = `final_report.aux'.
 
@@ -542,359 +548,360 @@ less on input line 52.
 \tf@toc=\write4
 \openout4 = `final_report.toc'.
 
- [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 82.
+ [2] [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 80.
  ("C:\Program Files\MikTex\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
-
-[1]
-<figs/mdp_detail.png, id=18, 654.64575pt x 277.63725pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
+<figs/mdp_detail.png, id=16, 654.64575pt x 277.63725pt>
 File: figs/mdp_detail.png Graphic file (type png)
 <use figs/mdp_detail.png>
-Package pdftex.def Info: figs/mdp_detail.png  used on input line 93.
+Package pdftex.def Info: figs/mdp_detail.png  used on input line 91.
 (pdftex.def)             Requested size: 241.84842pt x 102.56741pt.
- [2 <./figs/mdp_detail.png>]
-<figs/deep_rl_video_game.png, id=30, 963.6pt x 542.025pt>
+[2 <./figs/mdp_detail.png>]
+<figs/deep_rl_video_game.png, id=29, 963.6pt x 542.025pt>
 File: figs/deep_rl_video_game.png Graphic file (type png)
 <use figs/deep_rl_video_game.png>
-Package pdftex.def Info: figs/deep_rl_video_game.png  used on input line 115.
+Package pdftex.def Info: figs/deep_rl_video_game.png  used on input line 113.
 (pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
 
 
-LaTeX Warning: Reference `eq:q_update' on page 3 undefined on input line 122.
+LaTeX Warning: Reference `eq:q_update' on page 3 undefined on input line 120.
 
 [3 <./figs/deep_rl_video_game.png>]
 <figs/hrl_smdp.png, id=36, 2006.49625pt x 1030.85126pt>
 File: figs/hrl_smdp.png Graphic file (type png)
 <use figs/hrl_smdp.png>
-Package pdftex.def Info: figs/hrl_smdp.png  used on input line 141.
+Package pdftex.def Info: figs/hrl_smdp.png  used on input line 139.
 (pdftex.def)             Requested size: 193.47577pt x 99.39473pt.
  [4 <./figs/hrl_smdp.png>]
 <figs/option_critic_architecture.png, id=41, 413.74574pt x 383.63326pt>
 File: figs/option_critic_architecture.png Graphic file (type png)
 <use figs/option_critic_architecture.png>
 Package pdftex.def Info: figs/option_critic_architecture.png  used on input lin
-e 166.
+e 164.
 (pdftex.def)             Requested size: 193.47577pt x 179.39445pt.
-<figs/fun_architecture.png, id=42, 804.606pt x 410.13225pt>
+ [5 <./figs/option_critic_architecture.png>]
+<figs/fun_architecture.png, id=47, 804.606pt x 410.13225pt>
 File: figs/fun_architecture.png Graphic file (type png)
 <use figs/fun_architecture.png>
-Package pdftex.def Info: figs/fun_architecture.png  used on input line 179.
+Package pdftex.def Info: figs/fun_architecture.png  used on input line 177.
 (pdftex.def)             Requested size: 241.84842pt x 123.27843pt.
- [5 <./figs/option_critic_architecture.png> <./figs/fun_architecture.png>] [6]
-<figs/system_architecture.png, id=52, 963.6pt x 542.025pt>
+ [6 <./figs/fun_architecture.png>] [7]
+<figs/system_architecture.png, id=55, 963.6pt x 542.025pt>
 File: figs/system_architecture.png Graphic file (type png)
 <use figs/system_architecture.png>
-Package pdftex.def Info: figs/system_architecture.png  used on input line 233.
+Package pdftex.def Info: figs/system_architecture.png  used on input line 235.
 (pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
- [7] [8 <./figs/system_architecture.png>]
+ [8 <./figs/system_architecture.png>]
 <figs/epsilon_decay.png, id=61, 462.528pt x 346.896pt>
 File: figs/epsilon_decay.png Graphic file (type png)
 <use figs/epsilon_decay.png>
-Package pdftex.def Info: figs/epsilon_decay.png  used on input line 277.
+Package pdftex.def Info: figs/epsilon_decay.png  used on input line 279.
 (pdftex.def)             Requested size: 232.17241pt x 174.13039pt.
-<figs/frame_preprocessing.png, id=62, 963.6pt x 542.025pt>
+ [9]
+<figs/frame_preprocessing.png, id=65, 963.6pt x 542.025pt>
 File: figs/frame_preprocessing.png Graphic file (type png)
 <use figs/frame_preprocessing.png>
-Package pdftex.def Info: figs/frame_preprocessing.png  used on input line 292.
+Package pdftex.def Info: figs/frame_preprocessing.png  used on input line 294.
 (pdftex.def)             Requested size: 483.69684pt x 136.39644pt.
- [9 <./figs/epsilon_decay.png>]
-<figs/frame_stacking_nn.png, id=68, 963.6pt x 542.025pt>
+<figs/frame_stacking_nn.png, id=67, 963.6pt x 542.025pt>
 File: figs/frame_stacking_nn.png Graphic file (type png)
 <use figs/frame_stacking_nn.png>
-Package pdftex.def Info: figs/frame_stacking_nn.png  used on input line 303.
+Package pdftex.def Info: figs/frame_stacking_nn.png  used on input line 305.
 (pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
-<figs/frame_skipping.png, id=70, 963.6pt x 542.025pt>
+ [10 <./figs/frame_preprocessing.png> <./figs/epsilon_decay.png>]
+<figs/frame_skipping.png, id=74, 963.6pt x 542.025pt>
 File: figs/frame_skipping.png Graphic file (type png)
 <use figs/frame_skipping.png>
-Package pdftex.def Info: figs/frame_skipping.png  used on input line 324.
+Package pdftex.def Info: figs/frame_skipping.png  used on input line 326.
 (pdftex.def)             Requested size: 483.69684pt x 157.81995pt.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [10 <./figs/frame_preprocessing.png> <./figs/frame_stacking_nn.png>]
-<figs/steps_gap_level.png, id=77, 256.96pt x 240.9pt>
+ [11 <./figs/frame_stacking_nn.png> <./figs/frame_skipping.png>]
+<figs/steps_gap_level.png, id=83, 256.96pt x 240.9pt>
 File: figs/steps_gap_level.png Graphic file (type png)
 <use figs/steps_gap_level.png>
-Package pdftex.def Info: figs/steps_gap_level.png  used on input line 346.
+Package pdftex.def Info: figs/steps_gap_level.png  used on input line 348.
 (pdftex.def)             Requested size: 120.92421pt x 113.36636pt.
-<figs/two_pipe_level.png, id=78, 256.96pt x 240.9pt>
+<figs/two_pipe_level.png, id=84, 256.96pt x 240.9pt>
 File: figs/two_pipe_level.png Graphic file (type png)
 <use figs/two_pipe_level.png>
-Package pdftex.def Info: figs/two_pipe_level.png  used on input line 350.
+Package pdftex.def Info: figs/two_pipe_level.png  used on input line 352.
 (pdftex.def)             Requested size: 120.92421pt x 113.36636pt.
-<figs/steps_pipe_level.png, id=79, 256.96pt x 240.9pt>
+<figs/steps_pipe_level.png, id=85, 256.96pt x 240.9pt>
 File: figs/steps_pipe_level.png Graphic file (type png)
 <use figs/steps_pipe_level.png>
-Package pdftex.def Info: figs/steps_pipe_level.png  used on input line 354.
+Package pdftex.def Info: figs/steps_pipe_level.png  used on input line 356.
 (pdftex.def)             Requested size: 120.92421pt x 113.36636pt.
- [11 <./figs/frame_skipping.png> <./figs/steps_gap_level.png> <./figs/two_pipe_
-level.png> <./figs/steps_pipe_level.png>] [12]
-<figs/dqn.png, id=89, 963.6pt x 542.025pt>
-File: figs/dqn.png Graphic file (type png)
-<use figs/dqn.png>
-Package pdftex.def Info: figs/dqn.png  used on input line 420.
-(pdftex.def)             Requested size: 483.69684pt x 272.07874pt.
 
-Overfull \hbox (2.72104pt too wide) in paragraph at lines 429--446
-[][] 
- []
-
-<figs/dqn_results_1.png, id=91, 433.62pt x 289.08pt>
-File: figs/dqn_results_1.png Graphic file (type png)
-<use figs/dqn_results_1.png>
-Package pdftex.def Info: figs/dqn_results_1.png  used on input line 455.
-(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
-<figs/dqn_results_2.png, id=92, 433.62pt x 289.08pt>
-File: figs/dqn_results_2.png Graphic file (type png)
-<use figs/dqn_results_2.png>
-Package pdftex.def Info: figs/dqn_results_2.png  used on input line 462.
-(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
-<figs/dqn_results_3.png, id=93, 433.62pt x 289.08pt>
-File: figs/dqn_results_3.png Graphic file (type png)
-<use figs/dqn_results_3.png>
-Package pdftex.def Info: figs/dqn_results_3.png  used on input line 469.
-(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13 <./figs/dqn.png>]
-<figs/oc_results_1.png, id=98, 433.62pt x 289.08pt>
-File: figs/oc_results_1.png Graphic file (type png)
-<use figs/oc_results_1.png>
-Package pdftex.def Info: figs/oc_results_1.png  used on input line 502.
-(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
-<figs/oc_results_2.png, id=99, 433.62pt x 289.08pt>
-File: figs/oc_results_2.png Graphic file (type png)
-<use figs/oc_results_2.png>
-Package pdftex.def Info: figs/oc_results_2.png  used on input line 509.
-(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
-<figs/oc_results_3.png, id=100, 433.62pt x 289.08pt>
-File: figs/oc_results_3.png Graphic file (type png)
-<use figs/oc_results_3.png>
-Package pdftex.def Info: figs/oc_results_3.png  used on input line 516.
-(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
+[12 <./figs/steps_gap_level.png> <./figs/two_pipe_level.png> <./figs/steps_pipe
+_level.png>]
+<figs/dqn.png, id=89, 963.6pt x 542.025pt>
+File: figs/dqn.png Graphic file (type png)
+<use figs/dqn.png>
+Package pdftex.def Info: figs/dqn.png  used on input line 422.
+(pdftex.def)             Requested size: 483.69684pt x 272.07874pt.
 
-Overfull \hbox (1.3476pt too wide) in paragraph at lines 526--535
- [][] 
+
+LaTeX Warning: Reference `bergstra2012random' on page 13 undefined on input lin
+e 428.
+
+[13 <./figs/dqn.png>]
+Overfull \hbox (2.72104pt too wide) in paragraph at lines 431--448
+[][] 
  []
 
+<figs/dqn_results_1.png, id=95, 433.62pt x 289.08pt>
+File: figs/dqn_results_1.png Graphic file (type png)
+<use figs/dqn_results_1.png>
+Package pdftex.def Info: figs/dqn_results_1.png  used on input line 457.
+(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
+<figs/dqn_results_2.png, id=96, 433.62pt x 289.08pt>
+File: figs/dqn_results_2.png Graphic file (type png)
+<use figs/dqn_results_2.png>
+Package pdftex.def Info: figs/dqn_results_2.png  used on input line 464.
+(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
+<figs/dqn_results_3.png, id=97, 433.62pt x 289.08pt>
+File: figs/dqn_results_3.png Graphic file (type png)
+<use figs/dqn_results_3.png>
+Package pdftex.def Info: figs/dqn_results_3.png  used on input line 471.
+(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
 [14 <./figs/dqn_results_1.png> <./figs/dqn_results_2.png> <./figs/dqn_results_3
 .png>]
-<figs/fun_results_1.png, id=107, 433.62pt x 289.08pt>
+<figs/oc_results_1.png, id=104, 433.62pt x 289.08pt>
+File: figs/oc_results_1.png Graphic file (type png)
+<use figs/oc_results_1.png>
+Package pdftex.def Info: figs/oc_results_1.png  used on input line 504.
+(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
+<figs/oc_results_2.png, id=105, 433.62pt x 289.08pt>
+File: figs/oc_results_2.png Graphic file (type png)
+<use figs/oc_results_2.png>
+Package pdftex.def Info: figs/oc_results_2.png  used on input line 511.
+(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
+<figs/oc_results_3.png, id=106, 433.62pt x 289.08pt>
+File: figs/oc_results_3.png Graphic file (type png)
+<use figs/oc_results_3.png>
+Package pdftex.def Info: figs/oc_results_3.png  used on input line 518.
+(pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
+ [15 <./figs/oc_results_1.png> <./figs/oc_results_2.png> <./figs/oc_results_3.p
+ng>]
+<figs/fun_results_1.png, id=113, 433.62pt x 289.08pt>
 File: figs/fun_results_1.png Graphic file (type png)
 <use figs/fun_results_1.png>
-Package pdftex.def Info: figs/fun_results_1.png  used on input line 553.
+Package pdftex.def Info: figs/fun_results_1.png  used on input line 555.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
-<figs/fun_results_2.png, id=108, 433.62pt x 289.08pt>
+<figs/fun_results_2.png, id=114, 433.62pt x 289.08pt>
 File: figs/fun_results_2.png Graphic file (type png)
 <use figs/fun_results_2.png>
-Package pdftex.def Info: figs/fun_results_2.png  used on input line 560.
+Package pdftex.def Info: figs/fun_results_2.png  used on input line 562.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
-<figs/fun_results_3.png, id=109, 433.62pt x 289.08pt>
+<figs/fun_results_3.png, id=115, 433.62pt x 289.08pt>
 File: figs/fun_results_3.png Graphic file (type png)
 <use figs/fun_results_3.png>
-Package pdftex.def Info: figs/fun_results_3.png  used on input line 567.
+Package pdftex.def Info: figs/fun_results_3.png  used on input line 569.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
-
-Overfull \hbox (3.1726pt too wide) in paragraph at lines 578--587
- [][] 
- []
-
-[15 <./figs/oc_results_1.png> <./figs/oc_results_2.png> <./figs/oc_results_3.pn
-g> <./figs/fun_results_1.png> <./figs/fun_results_2.png> <./figs/fun_results_3.
-png>]
-<figs/all_results_1.png, id=119, 433.62pt x 289.08pt>
+<figs/all_results_1.png, id=116, 433.62pt x 289.08pt>
 File: figs/all_results_1.png Graphic file (type png)
 <use figs/all_results_1.png>
-Package pdftex.def Info: figs/all_results_1.png  used on input line 599.
+Package pdftex.def Info: figs/all_results_1.png  used on input line 603.
 (pdftex.def)             Requested size: 232.17241pt x 154.78198pt.
-<figs/all_results_2.png, id=120, 433.62pt x 289.08pt>
+<figs/all_results_2.png, id=117, 433.62pt x 289.08pt>
 File: figs/all_results_2.png Graphic file (type png)
 <use figs/all_results_2.png>
-Package pdftex.def Info: figs/all_results_2.png  used on input line 602.
+Package pdftex.def Info: figs/all_results_2.png  used on input line 610.
 (pdftex.def)             Requested size: 232.17241pt x 154.78198pt.
- [16 <./figs/all_results_1.png> <./figs/all_results_2.png>]
-(final_report.bbl
+ [16 <./figs/fun_results_1.png> <./figs/fun_results_2.png> <./figs/fun_results_
+3.png>]
+<figs/good_policy.png, id=124, 433.62pt x 289.08pt>
+File: figs/good_policy.png Graphic file (type png)
+<use figs/good_policy.png>
+Package pdftex.def Info: figs/good_policy.png  used on input line 626.
+(pdftex.def)             Requested size: 232.17241pt x 154.78198pt.
+ [17 <./figs/all_results_1.png> <./figs/all_results_2.png> <./figs/good_policy.
+png>] [18] [19] (final_report.bbl
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
- [17])
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+ [20] [21])
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Overfull \hbox (21.08598pt too wide) in paragraph at lines 617--657
+Overfull \hbox (21.08598pt too wide) in paragraph at lines 677--717
 \OT1/cmr/m/n/10.95 (-20) Borges, D. (2018). The Curse of Di-men-sion-al-ity!. [
 on-line] Medium. Avail-able at: https://medium.com/diogo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Overfull \hbox (58.81161pt too wide) in paragraph at lines 617--657
+Overfull \hbox (58.81161pt too wide) in paragraph at lines 677--717
 \OT1/cmr/m/n/10.95 (-20) Edi-tion). [on-line] Plato.stanford.edu. Avail-able at
 : https://plato.stanford.edu/archives/win2017/entries/empiricism-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--657
+Underfull \hbox (badness 10000) in paragraph at lines 677--717
 
  []
 
-[18] [19] [20] (final_report.aux)
+[22] [23] [24] (final_report.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -903,13 +910,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9147 strings out of 492895
- 142825 string characters out of 3135335
- 284712 words of memory out of 3000000
- 12745 multiletter control sequences out of 15000+200000
- 16773 words of font info for 110 fonts, out of 3000000 for 9000
+ 9169 strings out of 492895
+ 143204 string characters out of 3135335
+ 282817 words of memory out of 3000000
+ 12762 multiletter control sequences out of 15000+200000
+ 16989 words of font info for 112 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,77p,1600b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,77p,2544b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
 m Files/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MikT
 ex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MikTex/fonts/typ
@@ -922,9 +929,9 @@ ype1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MikTex/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:
 /Program Files/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on final_report.pdf (22 pages, 1900222 bytes).
+Output written on final_report.pdf (26 pages, 1928620 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
+ 198 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13474 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 13479 words of extra memory for PDF output out of 14400 (max. 10000000)
 

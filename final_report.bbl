@@ -215,4 +215,27 @@ Y.~LeCun, Y.~Bengio, and G.~Hinton, ``Deep learning,'' \emph{nature}, vol. 521,
 P.~Ramachandran, B.~Zoph, and Q.~V. Le, ``Searching for activation functions,''
   \emph{arXiv preprint arXiv:1710.05941}, 2017.
 
+\bibitem{oc_github}
+\BIBentryALTinterwordspacing
+``Pytorch implementation of the option-critic framework.'' [Online]. Available:
+  \url{https://github.com/lweitkamp/option-critic-pytorch}
+\BIBentrySTDinterwordspacing
+
+\bibitem{fun_github}
+\BIBentryALTinterwordspacing
+``Feudal networks for hierarchical reinforcement learning.'' [Online].
+  Available: \url{https://github.com/vtalpaert/pytorch-feudal-network}
+\BIBentrySTDinterwordspacing
+
+\bibitem{kirkpatrick2017overcoming}
+J.~Kirkpatrick, R.~Pascanu, N.~Rabinowitz, J.~Veness, G.~Desjardins, A.~A.
+  Rusu, K.~Milan, J.~Quan, T.~Ramalho, A.~Grabska-Barwinska \emph{et~al.},
+  ``Overcoming catastrophic forgetting in neural networks,'' \emph{Proceedings
+  of the national academy of sciences}, vol. 114, no.~13, pp. 3521--3526, 2017.
+
+\bibitem{song2016measuring}
+J.~Song, Y.~Gao, H.~Wang, and B.~An, ``Measuring the distance between finite
+  markov decision processes,'' in \emph{Proceedings of the 2016 international
+  conference on autonomous agents \& multiagent systems}, 2016, pp. 468--476.
+
 \end{thebibliography}
