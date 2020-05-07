@@ -8,10 +8,10 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Experience Replay}{4}% 
 \contentsline {subsection}{\numberline {2.2}Hierarchical Reinforcement Learning}{4}% 
 \contentsline {subsubsection}{\numberline {2.2.1}Option-Critic}{5}% 
-\contentsline {subsubsection}{\numberline {2.2.2}Feudal Networks}{5}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Feudal Networks}{6}% 
 \contentsline {section}{\numberline {3}System Requirements}{6}% 
 \contentsline {section}{\numberline {4}System Implementation}{7}% 
-\contentsline {subsection}{\numberline {4.1}Super Mario Game}{7}% 
+\contentsline {subsection}{\numberline {4.1}Super Mario Game}{8}% 
 \contentsline {subsection}{\numberline {4.2}Overall Architecture}{8}% 
 \contentsline {subsection}{\numberline {4.3}Reward Function}{8}% 
 \contentsline {subsection}{\numberline {4.4}Exploitation vs Exploration}{9}% 
@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {5}Experiment Design}{12}% 
 \contentsline {section}{\numberline {6}Results}{13}% 
 \contentsline {subsection}{\numberline {6.1}DQN Agent}{13}% 
-\contentsline {subsection}{\numberline {6.2}Option-Critic Agent}{14}% 
+\contentsline {subsection}{\numberline {6.2}Option-Critic Agent}{15}% 
 \contentsline {subsection}{\numberline {6.3}FuN Agent}{16}% 
 \contentsline {subsection}{\numberline {6.4}Evaluation of Results}{16}% 
 \contentsline {subsection}{\numberline {6.5}Further Policy Analysis}{17}% 

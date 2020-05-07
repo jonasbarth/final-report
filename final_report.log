@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  7 MAY 2020 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.24)  7 MAY 2020 19:30
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -561,22 +561,21 @@ File: figs/mdp_detail.png Graphic file (type png)
 Package pdftex.def Info: figs/mdp_detail.png  used on input line 91.
 (pdftex.def)             Requested size: 241.84842pt x 102.56741pt.
 [2 <./figs/mdp_detail.png>]
-<figs/deep_rl_video_game.png, id=29, 963.6pt x 542.025pt>
+<figs/deep_rl_video_game.png, id=28, 963.6pt x 542.025pt>
 File: figs/deep_rl_video_game.png Graphic file (type png)
 <use figs/deep_rl_video_game.png>
 Package pdftex.def Info: figs/deep_rl_video_game.png  used on input line 113.
-(pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
+(pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
+ [3 <./figs/deep_rl_video_game.png>]
 
+LaTeX Warning: Reference `eq:q_update' on page 4 undefined on input line 120.
 
-LaTeX Warning: Reference `eq:q_update' on page 3 undefined on input line 120.
-
-[3 <./figs/deep_rl_video_game.png>]
 <figs/hrl_smdp.png, id=36, 2006.49625pt x 1030.85126pt>
 File: figs/hrl_smdp.png Graphic file (type png)
 <use figs/hrl_smdp.png>
 Package pdftex.def Info: figs/hrl_smdp.png  used on input line 139.
 (pdftex.def)             Requested size: 193.47577pt x 99.39473pt.
- [4 <./figs/hrl_smdp.png>]
+[4 <./figs/hrl_smdp.png>]
 <figs/option_critic_architecture.png, id=41, 413.74574pt x 383.63326pt>
 File: figs/option_critic_architecture.png Graphic file (type png)
 <use figs/option_critic_architecture.png>
@@ -595,13 +594,12 @@ File: figs/system_architecture.png Graphic file (type png)
 <use figs/system_architecture.png>
 Package pdftex.def Info: figs/system_architecture.png  used on input line 235.
 (pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
- [8 <./figs/system_architecture.png>]
-<figs/epsilon_decay.png, id=61, 462.528pt x 346.896pt>
+ [8 <./figs/system_architecture.png>] [9]
+<figs/epsilon_decay.png, id=64, 462.528pt x 346.896pt>
 File: figs/epsilon_decay.png Graphic file (type png)
 <use figs/epsilon_decay.png>
 Package pdftex.def Info: figs/epsilon_decay.png  used on input line 279.
 (pdftex.def)             Requested size: 232.17241pt x 174.13039pt.
- [9]
 <figs/frame_preprocessing.png, id=65, 963.6pt x 542.025pt>
 File: figs/frame_preprocessing.png Graphic file (type png)
 <use figs/frame_preprocessing.png>
@@ -623,27 +621,23 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [11 <./figs/frame_stacking_nn.png> <./figs/frame_skipping.png>]
-<figs/steps_gap_level.png, id=83, 256.96pt x 240.9pt>
+<figs/steps_gap_level.png, id=82, 256.96pt x 240.9pt>
 File: figs/steps_gap_level.png Graphic file (type png)
 <use figs/steps_gap_level.png>
 Package pdftex.def Info: figs/steps_gap_level.png  used on input line 348.
 (pdftex.def)             Requested size: 120.92421pt x 113.36636pt.
-<figs/two_pipe_level.png, id=84, 256.96pt x 240.9pt>
+<figs/two_pipe_level.png, id=83, 256.96pt x 240.9pt>
 File: figs/two_pipe_level.png Graphic file (type png)
 <use figs/two_pipe_level.png>
 Package pdftex.def Info: figs/two_pipe_level.png  used on input line 352.
 (pdftex.def)             Requested size: 120.92421pt x 113.36636pt.
-<figs/steps_pipe_level.png, id=85, 256.96pt x 240.9pt>
+<figs/steps_pipe_level.png, id=84, 256.96pt x 240.9pt>
 File: figs/steps_pipe_level.png Graphic file (type png)
 <use figs/steps_pipe_level.png>
 Package pdftex.def Info: figs/steps_pipe_level.png  used on input line 356.
 (pdftex.def)             Requested size: 120.92421pt x 113.36636pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12 <./figs/steps_gap_level.png> <./figs/two_pipe_level.png> <./figs/steps_pipe
-_level.png>]
+ [12 <./figs/steps_gap_level.png> <./figs/two_pipe_level.png> <./figs/steps_pip
+e_level.png>]
 <figs/dqn.png, id=89, 963.6pt x 542.025pt>
 File: figs/dqn.png Graphic file (type png)
 <use figs/dqn.png>
@@ -711,25 +705,25 @@ File: figs/fun_results_3.png Graphic file (type png)
 <use figs/fun_results_3.png>
 Package pdftex.def Info: figs/fun_results_3.png  used on input line 570.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
-<figs/all_results_1.png, id=116, 433.62pt x 289.08pt>
+ [16 <./figs/fun_results_1.png> <./figs/fun_results_2.png> <./figs/fun_results_
+3.png>]
+<figs/all_results_1.png, id=122, 433.62pt x 289.08pt>
 File: figs/all_results_1.png Graphic file (type png)
 <use figs/all_results_1.png>
 Package pdftex.def Info: figs/all_results_1.png  used on input line 604.
 (pdftex.def)             Requested size: 232.17241pt x 154.78198pt.
-<figs/all_results_2.png, id=117, 433.62pt x 289.08pt>
+<figs/all_results_2.png, id=123, 433.62pt x 289.08pt>
 File: figs/all_results_2.png Graphic file (type png)
 <use figs/all_results_2.png>
 Package pdftex.def Info: figs/all_results_2.png  used on input line 611.
 (pdftex.def)             Requested size: 232.17241pt x 154.78198pt.
- [16 <./figs/fun_results_1.png> <./figs/fun_results_2.png> <./figs/fun_results_
-3.png>]
 <figs/good_policy.png, id=124, 433.62pt x 289.08pt>
 File: figs/good_policy.png Graphic file (type png)
 <use figs/good_policy.png>
 Package pdftex.def Info: figs/good_policy.png  used on input line 627.
 (pdftex.def)             Requested size: 232.17241pt x 154.78198pt.
- [17 <./figs/all_results_1.png> <./figs/all_results_2.png> <./figs/good_policy.
-png>] [18]
+ [17 <./figs/all_results_1.png> <./figs/all_results_2.png>] [18 <./figs/good_po
+licy.png>]
 
 LaTeX Warning: Citation `byrne2008principle' on page 19 undefined on input line
  677.
@@ -918,11 +912,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9169 strings out of 492895
- 143204 string characters out of 3135335
- 286816 words of memory out of 3000000
+ 9167 strings out of 492895
+ 143186 string characters out of 3135335
+ 287817 words of memory out of 3000000
  12762 multiletter control sequences out of 15000+200000
- 16989 words of font info for 112 fonts, out of 3000000 for 9000
+ 16881 words of font info for 111 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,77p,2544b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
@@ -937,7 +931,7 @@ ype1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MikTex/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:
 /Program Files/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on final_report.pdf (27 pages, 1931293 bytes).
+Output written on final_report.pdf (27 pages, 1932978 bytes).
 PDF statistics:
  201 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
