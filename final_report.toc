@@ -18,12 +18,13 @@
 \contentsline {subsection}{\numberline {4.5}Frame Preprocessing}{10}% 
 \contentsline {subsection}{\numberline {4.6}Frame Stacking and Frame Skipping}{10}% 
 \contentsline {subsection}{\numberline {4.7}Custom Levels}{11}% 
-\contentsline {section}{\numberline {5}Experiments and Results}{12}% 
-\contentsline {subsection}{\numberline {5.1}Experiment Design}{12}% 
-\contentsline {subsection}{\numberline {5.2}DQN Agent}{13}% 
-\contentsline {subsection}{\numberline {5.3}Option-Critic Agent}{15}% 
-\contentsline {subsection}{\numberline {5.4}FuN Agent}{15}% 
-\contentsline {subsection}{\numberline {5.5}Evaluation of Results}{16}% 
-\contentsline {subsection}{\numberline {5.6}Further Policy Analysis}{17}% 
-\contentsline {section}{\numberline {6}Critical Assessment of Project}{18}% 
-\contentsline {section}{\numberline {7}Conclusion}{19}% 
+\contentsline {section}{\numberline {5}Experiment Design}{12}% 
+\contentsline {section}{\numberline {6}Results}{13}% 
+\contentsline {subsection}{\numberline {6.1}DQN Agent}{13}% 
+\contentsline {subsection}{\numberline {6.2}Option-Critic Agent}{14}% 
+\contentsline {subsection}{\numberline {6.3}FuN Agent}{16}% 
+\contentsline {subsection}{\numberline {6.4}Evaluation of Results}{16}% 
+\contentsline {subsection}{\numberline {6.5}Further Policy Analysis}{17}% 
+\contentsline {section}{\numberline {7}Deviations From Original Specifications}{18}% 
+\contentsline {section}{\numberline {8}Critical Assessment of Project}{18}% 
+\contentsline {section}{\numberline {9}Conclusion}{20}% 

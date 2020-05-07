@@ -280,7 +280,7 @@ A major challenge within Reinforcement Learning is to strike a balance between g
   \end{center}
   \vspace{-20pt}
   \caption{Variants of $\epsilon$ Decay}
-  \vspace{-40pt}
+  %\vspace{-40pt}
 \end{wrapfigure}
 
 A popular policy for choosing between exploitation and exploration is the $\epsilon$-greedy algorithm \cite{white2012bandit}. At each timestep, the agent chooses the best action to exploit the environment with $1-\epsilon$ probability. Exploration is more desirable at the beginning of the learning process because the agent does not possess enough information about the environment yet. Hence, the value for $\epsilon$ is usually decayed over time to reflect this. Methods for decaying $\epsilon$ can be linear \cite{mnih2015human}, exponential \cite{maroti2019rbed} and sinusoidal  \cite{chuchro2017game}. The algorithms that use an $\epsilon-Greedy$ policy in this project use a linear decay.
@@ -360,9 +360,9 @@ Investigating whether agents can learn skills and reuse is best done with custom
 
 The project is confined to only teaching Mario navigation tasks, hence why none of the levels include any enemies. The reasoning behind this is the state space associated with dynamic and static objects. Pipes, gaps, and steps are static objects that do not move around in the world. A Goomba or Koopa on the other hand is dynamic and forces Mario to learn more states before knowing how to act around it.
 
-\section{Experiments and Results}
 
-\subsection{Experiment Design}
+
+\section{Experiment Design}
 The goal of this project is to investigate whether introducing hierarchies and temporal abstraction into Reinforcement Learning speeds up the learning process. A good indicator of a model's learning process is how quickly it is able to accumulate rewards. Models that learn quickly, will have discovered actions which return large rewards sooner than slow learning models. Therefore, the main metric used to compare the different Reinforcement Learning models will be the average reward per episode. To judge whether learning hierarchies is beneficial to learning speed, the same Mario model is trained sequentially on three levels. The first two levels are designed for Mario learn specific skills - navigating steps and jumping over pipes respectively (section \ref{custom_levels}). The third level is a combination of the two previous levels and requires the previously learned skills to be solved. An agent which has learned reusable hierarchies should in theory adopt to the new environment faster than a flat-learning agent. Adopting in this sense means to acquire rewards faster. In addition to comparing the different learning agents against each other in the new environment, the agents will also be compared against versions of themselves which have not been trained on previous levels. The purpose of this comparison is to investigate whether training agents \textit{sequentially} is beneficial over learning from scratch.
 
 Determining the stopping criterion, i.e. when the model should stop learning, was grounds to some experimentation. Using the number of episodes played the agent is common, however episodes vary in length across different levels as well as in the same level. This variation means that agents will have had different amount of playtime as better agents would finish sooner and there is no guarantee that agents get the same experience. The goal was to let all agents experience the same number of frames of the game to better predict training times and to use the number of episodes as a metric of success instead. A fast-learning agent should be able to play through more episodes using the same number of timesteps than a slow-learning agent. Thus, the completed number of episodes after $t$ timesteps can also be used to compare the different Reinforcement Learning models. To summarise, an agent which learns quickly should achieve more rewards in fewer episodes.
@@ -412,6 +412,7 @@ FuN & Two Pipes & True & $2 \times 10^5$ & 1d 17h 14m 25s\\
 
 All experiments were run once on a Google Cloud 4CPU 15GB RAM virtual machine. While it is desirable to run experiments multiple times to ensure that the observations do not represent noise, financial limitations and long training times only allowed a single run per experiment. 
 
+\section{Results}
 
 \subsection{DQN Agent}\label{dqn_experiment}
 Using a DQN as a comparison baseline is common in the Reinforcement Learning literature \cite{bacon2017option, kulkarni2016hierarchical, hessel2018rainbow, levy2017learning}, thus this project will follow the trend. This section will show how the Deep Reinforcement Learning theory from section \ref{deep_rl} was used to construct a DQN agent and compare the average reward per episode for sequential and non-sequential models. The DQN agent uses a policy and target network, both of which are CNNs with three convolutional layers followed by two linear layers. The activation function used between the layers is a Rectified Linear Unit (ReLu) \cite{lecun2015deep}, which over the past years established itself as the most popular activation function for training neural networks \cite{ramachandran2017searching}. The agent also makes use of experience replay with a buffer of size 100,000. 
@@ -633,20 +634,31 @@ Comparing the average rewards per episode for all three sequentially trained alg
 
 Sequentially trained hierarchical agents are faster learners when being shown a new environment (atleast for a task sequence of length 2), but are they able to find better policies? An agent can have a fast learning speed but in the end only find suboptimal policies. It was postulated that an agent who is a fast learner will achieve more rewards faster and play more episodes in the same amount of frames. Using the number of completed episodes shows that the non sequential models were able to play more episodes with the exception of the sequential FuN on the pipe level and the sequential DQN on the steps + pipe level. However, only relying on the number of completed episodes is not a reliable indicator of a good policy. Playing more episodes does not necessarily correlate with finding a better policy, it just means that you are able to finish an episode faster. An agent acting according to a policy which forces them to commit suicide immediately is able to play many episodes, but will accumulate low rewards. Therefore, looking at the number of completed episodes as the only variable variable will give the illusion of a good policy. Only where the number of completed episodes correlates positively with an overall higher reward can it be concluded that the policy is superior. Figure \ref{fig:good_policy} shows a moderate positive correlation between the number of episodes completed by an agent and the averaged average reward per episode per run. Broadly speaking, the higher the number of episodes completed, the higher the average reward. Thus, an agent that plays more episodes generally ends up with a good policy too. Although, it cannot be concluded that the hierarchical models were able to find better policies than the DQN as figure \ref{fig:good_policy} shows no discernible pattern for the different algorithms.  
 
-
+\section{Deviations From Original Specifications}
+The project mostly adhered to the original specifications written down at the beginning with two exceptions. First, communication between the RL agents and game emulator was supposed to happen with JSON using HTTP requests. After trialling this method it was deemed to slow and exchanged for the faster Py4J bridge. Second, the set of hierarchical algorithms to be tested included the original Options framework and an approach called Multiplicative Compositional Policies (MCP). The Options framework was substituted for the Option Critic model which is a more recent extension of it and was therefore deemed more reflective of the contemporary Reinforcement Learning literature. The MCP was exchanged for DeepMind's Feudal Network because of the lack of information and code available, both of which spoke in DeepMind's favour instead.
 
 
 \section{Critical Assessment of Project}
-In retrospective, there are areas of the project which would have benefited the project if they were either changed or expanded upon. Most are connected to the long experiment runtimes.
+This section will assess various of the project to see whether any changes or expansions could have benefited the project. Moreover, there are additional components which if added could have positively contributed to the project. 
 
 \begin{itemize}
 	\item
 	\textbf{Experiment Runtimes}\\
-	A big problem with the project was the long runtime of the experiments. The cumulative and average runtime of all experiments was 22 days, 44 minutes, 20 seconds and 1 day, 11 hours, 14 minutes and 57 seconds respectively. As a consequence, each experiment could only be run once which means that very little data could be collected. Averaging the results of multiple runs would have given a more definitive representation of the effect that sequential learning and hierarchical algorithms have on the various agents' learning abilities. With a single run per experiment however, the collected data is less reliable unfortunately. More experiments could potentially have given answers to questions like why the DQN outperforms the Option Critic and FuN on the Steps + Pipe level or why the Option Critic tends to get stuck in local optima. Additionally, the excessively long runtimes denied the option of discovering good values for hyperparameters by experimenting. 
+	A big problem with the project was the long runtime of the experiments. The cumulative and average runtime of all experiments was 22 days, 44 minutes, 20 seconds and 1 day, 11 hours, 14 minutes and 57 seconds respectively. As a consequence, each experiment could only be run once which means that very little data could be collected. Averaging the results of multiple runs would have given a more definitive representation of the effect that sequential learning and hierarchical algorithms have on the various agents' learning abilities. With a single run per experiment however, the collected data is less reliable unfortunately. More experiments could potentially have given answers to questions like why the DQN outperforms the Option Critic and FuN on the Steps + Pipe level or why the Option Critic tends to get stuck in local optima. Additionally, the excessively long runtimes prevented discovering good values for hyperparameters which would have required further experiments. There are a number of reasons why experiments ran slow, some of which are outlined below.
+	
+	
+	
+	\item
+	\textbf{Emulator Development}\\
+	The Java framework used for the emulator did not meet the project requirements right out of the box. It was missing endpoints for the Python agents, classes for extracting the frames from the game as well as preprocessing, and methods for playing the game in a step by step manner. Although necessary for the success of the project, developing all of these functionalities took away valuable time from running experiments because finishing the emulator was a prerequisite for being able to run the entire system.
 	
 	\item
 	\textbf{Slow Game Emulator Speed}\\
-	Choosing the less popular \textit{marioai} Java version over the Python \textit{openaigym} version as a game emulator allowed for the easy creation of custom levels, however came at the cost of decreased emulator speed. First, the communication overhead from the Py4J bridge slowed down the agents because they had to wait for a response to be marshalled back to them. Second, the Java emulator had a ceiling for the maximum number of frames per second (fps). Thus, even with more powerful hardware the agents were constrained to a set speed and learning was slowed down. 
+	Choosing the less popular \textit{marioai} Java version over the Python \textit{openaigym} version as a game emulator allowed for the easy creation of custom levels, however came at the cost of decreased emulator speed. First, the communication overhead from the Py4J bridge slowed down the agents because they had to wait for a response to be marshalled back to them. Second, the Java emulator had a ceiling for the maximum number of frames per second (fps). Thus, even with more powerful hardware the agents were constrained to a set speed and learning was slowed down.
+	
+	%\item
+	%\textbf{Short Experiments}\\
+%	As a consequence of the slow emulator speed, each experiment only ran for 200,000 frames of the game. Reinforcement Learning's sample inefficiency however requires many more frames to be effective. 
 	
 	\item
 	\textbf{Additional Levels}\\
@@ -654,18 +666,23 @@ In retrospective, there are areas of the project which would have benefited the 
 	
 	\item	
 	\textbf{Exploration Function}\\
-	All agents used a linear function to calculate the exploration value $\epsilon$ (see section \ref{exploit_explore}). In multiple experiments, the Option Critic got stuck in local optima. While it is difficult to pin down the exact reason, trialing a non-linear exploration function such as the sinusoidal function \cite{chuchro2017game} which continously moves between more exploration to more exploitation over the course of an experiment. 
+	All agents used a linear function to calculate the exploration value $\epsilon$ (see section \ref{exploit_explore}). In multiple experiments, the Option Critic got stuck in local optima. While it is difficult to pin down the exact reason, trialing a non-linear exploration function such as the sinusoidal function \cite{chuchro2017game} which continously moves between more exploration to more exploitation over the course of an experiment could have produced different results. 
 	
 	\item
 	\textbf{Metric for MDP Distance}\\
 	An important thing to know when transferring knowledge from one environment to the next is how closely related they are. Figuring out the difference between the two environments makes it possible to assess the learning abilities in a more scientific manner. Using environments which are too similar might lead to an effect where agents perform well in the second environment because of chance and not because they learned something in the first one. Metrics such as the Hausdorff or Kantorovich metric which can be used to measure the distance between MDPs \cite{song2016measuring} could have been implemented to determine the difference between levels in Super Mario and construct levels of varying degree.
 	
+	\item
+	\textbf{Egocentric Learning} \\
+	The allocentric state representation for the MDP as an $84 \times 84$ RGB image could have been substituted for a lower-dimensional egocentric view of the game. In allocentric learning, the agent sees the entire environment (screen) whereas an egocentric agent only sees Mario's immediate surroundings. Using an egocentric view of the environment, Mario will only take into account the objects that are close to him when learning \cite{byrne2008principle}. This means that many more of the states in the state space are similar and will therefore invoke a similar response from the agent. The state space reduction means fewer states for the agent to learn and therefore a reduced experiment runtime.
+	
+	\item
+	\textbf{Visualise Options}\\
+	An interesting addition which would have helped with the analysis of the various algorithms is the visualisation of the hierarchies learned by the agents. The FuN and Option Critic agents both learned temporally abstract behaviour in the various levels, however just looking at the average reward episode does not tell when and where the agent used that behaviour. Additionally, just because the agent learned hierarchies does not mean that these hierarchies are useful. Therefore, showing which hierarchies the agents learned could have been useful in explaining the obtained results.
+	
 	
 \end{itemize}
 
-
-
-We need to run more experiments on different levels to see whether the assumption that learning breaks down after two levels. Measure the distance between levels.
 
 \section{Conclusion}
 
