@@ -3,6 +3,7 @@
 \usepackage{subcaption}
 \usepackage{caption}
 \usepackage[english]{babel}
+\usepackage{lmodern}
 \usepackage{blindtext}
 \usepackage{microtype}
 \usepackage{wrapfig}
@@ -16,7 +17,7 @@
 \usepackage{index} %for indexes
 %\usepackage{apacite} %APA referencing
 %\usepackage[style=numeric]{biblatex}
-\usepackage[ruled,vlined]{algorithm2e}
+
 
 \newcommand{\R}{\mathbb{R}}
 \pagenumbering{roman} 
@@ -57,95 +58,105 @@
 \pagebreak
 \pagenumbering{arabic}
 \section{Introduction}
-Reinforcement Learning is a subfield of Machine Learning where autonomous agents learn how to act optimally and maximise a reward within a given environment. Throughout the last decade, the field has achieved remarkable successes and gained significant medial and research attention. Algorithms have been shown to outperform the best human players on a wide range of Atari games \cite{DBLP:journals/corr/MnihKSGAWR13}, chess, Shogi and the strategy board game Go \cite{alpha_go}, and even Starcraft \cite{arulkumaran2019alphastar}. Super Mario as a domain is not as popular as the Atari games amongst researchers, though it shares many similarities with the Atari suite that make applying the vast Reinforcement Literature straightforward. The Mario domain is high-dimensional with relatively low gameplay complexity, i.e. the number of possible scenarios for Mario to be in is large, but the game mechanics are uncomplicated.
+Reinforcement Learning is a subfield of Machine Learning where autonomous agents learn how to act optimally and maximise a reward within a given environment. Throughout the last decade, the field has achieved remarkable success and gained significant medial and research attention. Algorithms have been shown to outperform the best human players on a wide range of Atari games \cite{DBLP:journals/corr/MnihKSGAWR13}, chess, Shogi and the strategy board game Go \cite{alpha_go}, and even Starcraft \cite{arulkumaran2019alphastar}. Super Mario as a domain is not as popular as the Atari games amongst researchers, though it shares many similarities with the Atari suite that make applying the vast Reinforcement Literature straightforward. The Mario domain is high-dimensional with relatively low gameplay complexity, i.e. the number of possible scenarios for Mario to be in is large, but the game mechanics are uncomplicated.
 
 
 
 \subsection{Motivation}
-Reinforcement Learning algorithms come in many flavours, however most do so called \textit{tabula-rasa} (blank-slate) learning. Humans are experts at reusing prior knowledge in new situations, e.g. if you see a ladder in a video game you have never played before, you know that you can climb that ladder because you know what a ladder is. A \textit{tabula-rasa} agent on the other hand will first have to learn concepts a human player already brings to the table. Moreover, even if the agent learns to climb the ladder, it has no concept thereof and will have to relearn what a ladder is and how to climb it in a new situation. The agent struggles with transferring knowledge between situations. For this reason, contemporary algorithms that play at a superhuman level require absurd amounts of training episodes on powerful hardware. Agents need to learn a vast array of different situations to play at human or superman level. For example, DeepMind's Rainbow architecture \cite{hessel2018rainbow} attains superhuman performance after experiencing 18 million frames, corresponding to 83 hours of Atari gameplay. Distributional RL \cite{bellemare2017distributional} surpasses human players after 70 million frames in Atari games. If agents were able to sequentially build up a pool of knowledge by abstracting away behaviour when learning and reuse already learned information when faced with new situations, the training time could be reduced. Additionally, breaking down the problem into chunks that the agent can learn sequentially could allow the agent to bootstrap themselves up using previous knowledge, also reducing the time it takes to learn.
+Reinforcement Learning algorithms come in many flavours, however most do so called \textit{tabula-rasa} (blank-slate) learning. Humans are experts at reusing prior knowledge in new situations, e.g. if you see a ladder in a video game you have never played before, you know that you can climb that ladder because you know what a ladder is. A \textit{tabula-rasa} agent on the other hand will first have to learn concepts a human player already brings to the table. Moreover, even if the agent learns to climb the ladder, it still does not know what a ladder is and will have to relearn how to climb it in a new situation. The agent struggles with transferring knowledge between situations because they fail to see the similarities between them. For this reason, contemporary algorithms that play at a superhuman level require absurd amounts of training episodes on powerful hardware. Agents need to learn a vast array of different situations to play at human or superman level. For example, DeepMind's Rainbow architecture \cite{hessel2018rainbow} attains superhuman performance after experiencing 18 million frames, corresponding to 83 hours of Atari gameplay. Distributional RL \cite{bellemare2017distributional} surpasses human players after 70 million frames in Atari games. If agents were able to sequentially build up a pool of knowledge by abstracting away behaviour when learning and reuse already learned information when faced with new situations, the training time could be reduced. 
 
-Hierarchical Reinforcement Learning is an area of Reinforcement Learning that works on introducing the abstraction of behaviour. Broadly speaking, abstracting behaviour means to create functions which solve some subtask in the environment. Instead of treating the solution to a Super Mario level purely as a sequence of primitive actions, e.g. pressing left, right, jump etc, Hierarchical Reinforcement Learning breaks down the solution into more abstract learnable chunks. These chunks operate at a higher \textit{temporal abstraction} and act as subgoals for an agent to achieve in the game. Intuitively, this is how a human player would approach the game as well. Playing the game, they would most likely not think in terms of button combinations, but in terms of jumping ravines, collecting coins and killing Goombas. To finish a level, Mario has to jump ravines, kill Goombas, avoid Fire Bars and climb steps - all of which are further decomposable into arrangements of primitive left, right, jump actions. Recent research \cite{nachum2019does} has shown that using an Hierarchical Approach to learning, results in up to 3 - 5 times fewer interactions with the environment. Thus, Hierarchical Reinforcement Learning comes with potential to alleviate the problem of long training times and generalisation. 
+Hierarchical Reinforcement Learning is an area of Reinforcement Learning that works on introducing the abstraction of behaviour. Broadly speaking, abstracting behaviour means to create functions which solve some subtask in the environment. Instead of treating the solution to a Super Mario level purely as a sequence of primitive actions, e.g. pressing left, right, jump etc, Hierarchical Reinforcement Learning breaks down the solution into more abstract learnable chunks. These chunks operate at a higher \textit{temporal abstraction} and act as subgoals for an agent to achieve in the game. Intuitively, this is how a human player would approach the game as well. Playing the game, they would most likely not think in terms of button combinations, but in terms of jumping ravines, collecting coins and killing Goombas. The functions required to finish a level could be to jump ravines, kill Goombas, avoid Fire Bars and climb steps - all of which are further decomposable into arrangements of primitive left, right, jump actions. \textit{Temporally abstract}  actions that do not exist on the game controller, they are aggregates of the lower level button combinations. Recent research \cite{nachum2019does} has shown that using an Hierarchical Approach to learning, results in up to 3 - 5 times fewer interactions with the environment. Thus, Hierarchical Reinforcement Learning comes with potential to alleviate the problem of long training times and generalisation and is a good choice for this project. 
 
 \subsection{Objectives}
-There are two main objectives this research project set out to achieve. First, compare the performance of sequentially and non-sequentially trained agents to measure their bootstrapping abilities. Two sets of agents are placed in learning scenarios where Super Mario levels are to be solved. The set of non-sequential agents are trained from scratch in each level - they have never interacted with the Super Mario environment before. The set of sequential agents learns the levels one after the other and have history of interactions with the Super Mario environment. The second objective is to compare the performance of sequential traditional and sequential hierarchical Reinforcement Learning algorithms. Both objectives serve to establish whether learning can be sped up by sequentially training agents and using hierarchical Reinforcement Learning.
+There are two main objectives this research project set out to achieve. First, compare the performance of sequentially and non-sequentially trained agents to measure their bootstrapping abilities. Two sets of agents are placed in learning scenarios where low-complexity Super Mario levels are to be solved. The set of non-sequential agents are trained from scratch in each level - they have never interacted with the Super Mario environment before. The set of sequential agents learns the levels one after the other and have history of interactions with the Super Mario environment. The second objective is to compare the performance of sequential traditional and sequential hierarchical Reinforcement Learning algorithms. Both objectives serve to establish whether learning can be sped up by sequentially training agents and using hierarchical Reinforcement Learning.
 
 \section{Literature Review}
 The following section will provide the theoretical underbody for the different Reinforcement Learning approaches used in this project. 
 
 
 \subsection{Deep Reinforcement Learning}\label{deep_rl}
-Deep Reinforcement Learning combines neural networks with the concepts of traditional Reinforcement Learning and is the contemporary go-to approach when building Reinforcement Learning agents. This section will outline the basic concepts of Reinforcement Learning and explain the improvements made by neural networks. Agents solve Reinforcement Learning problems by interacting with the environment they live in and receiving feedback on which actions are good and bag. Essentially, it is trial and error until the agent found actions that work. The environment in an RL-problem is typically modelled as a Markov-Decision-Process (MDP), a discrete stochastic sequential decision process \cite{puterman2014markov} formalised as a 5-part tuple $\langle S, A, T, R, \gamma \rangle$ where:
+Deep Reinforcement Learning combines neural networks with the concepts of traditional Reinforcement Learning and is the contemporary go-to approach when building Reinforcement Learning agents. This section will outline the basic concepts of Reinforcement Learning and explain the improvements made by neural networks. In a reinforcement learning problem, agents are tasked with executing a sequence of actions to maximise a score. In order to maximise that score, they need to optimise their behaviour. Agents solve Reinforcement Learning problems by interacting with the environment they live in and receiving feedback on which actions are good and bad. Essentially, it is trial and error until the agent found actions that lead to a high score. The environment in an RL-problem is typically modelled as a Markov-Decision-Process (MDP), a discrete stochastic sequential decision process \cite{puterman2014markov} formalised as a 5-part tuple $\langle S, A, T, R, \gamma \rangle$ where:
 
 \begin{itemize}[noitemsep]
 	\item $S$ is the state space, i.e. the set of all possible states. For Mario, each possible pixel configuration is a state.
 	\item $A$ is the action space, i.e. the set of all possible actions. For Mario, these are the different left, right, jump etc. actions.
 	\item $T : S \times A \times S \to [0,1]$ is a transition function. It gives conditional probabilities for state traversal.
-	\item $R : S \times A \times S \to \R$ is a reward function. It gives a real number for state traversal. The reward function used in this project is described in section \ref{reward_function}.
+	\item $R : S \times A \times S \to \R$ is a reward function. It gives a real number for state traversal. This is the score the agent wants to maximise. The reward function used in this project is described in section \ref{reward_function}.
 	\item $\gamma$ is a discount factor to prevent infinite rewards.
 \end{itemize}
 
-Agents in the MDP take actions to move between states in the state space in discrete timesteps. At a given point in time $t$, the agent performs an action $a_t$ in state $s_t$ and observes a reward $r_t$ and a new state $s_{t+1}$. Actions only last a single timestep, e.g. it is not possible to take action $a_t$ and move from state $s_t$ to state $s_{t+5}$. Moving from state $s_t$ to state $s_{t+1}$ is noisy and happens with probability $P(s_t, a_t | s_{t+1})$ as defined by the transition function $T$. While deterministic MDPs exist where the transition function always returns $1$, they are neither applicable to real-world scenarios nor to this project. Which action to perform in a given state is dictated by a policy $\pi$. A policy is a function that maps the state space to the action space. When provided with a state, it will tell the agent which action to take. Not all policies are equally good however. They are measured on how much reward they produce when the agent decides to use a certain policy. An optimal policy $\pi^*$ will always prescribe the action which gives the highest expected return of reward for every state in the state space.
+Agents in the MDP take actions to move between states in the state space in discrete timesteps. At a given point in time $t$, the agent performs an action $a_t$ in state $s_t$, observes a reward $r_t$ and a new state $s_{t+1}$. Actions only last a single timestep, e.g. it is not possible to take action $a_t$ and move from state $s_t$ to state $s_{t+5}$. Moving from state $s_t$ to state $s_{t+1}$ is noisy and happens with probability $P(s_t, a_t | s_{t+1})$ as defined by the transition function $T$. While deterministic MDPs exist where the transition function always returns $1$, they are neither applicable to real-world scenarios nor to this project. Which action to perform in a given state is dictated by a policy $\pi$. A policy is a function that maps the state space to the action space. When provided with a state, it will tell the agent which action to take. Not all policies are equally good however. They are measured on how much reward they produce when the agent decides to use a certain policy. Because the agent wants to maximise the reward signal, policies producing more rewards are better than policies that do not return as much reward. An optimal policy $\pi^*$ will always prescribe the action which gives the highest expected return of reward for every state in the state space. Goal of the agent is to figure out the best policy for the MDP.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=.5\linewidth]{figs/mdp_detail.png}
+\includegraphics[width=.5\linewidth]{figs/mdp_detail.eps}
 \caption{Agent takes an action to move to the next state and observe a reward \protect\cite{franccois2018introduction}} \label{fig:2}
 \end{figure}
 
-One of the most popular algorithms for learning optimal policies is Q-learning \cite{watkins1992q}. Q-learning is a model free algorithm which means that the agent does not bother with learning transition and reward functions but instead learns so called Q-values from which the best possible action can be deduced. Each state in the state space has state-action pairs called Q-values. The Q-value $Q(s,a)$ describes the rewards an agent can expect from taking taking action $a$ in state $s$. For instance, if Mario encounters a Goomba in his current state, the Q-value for taking an action running into the Goomba would be lower than the Q-value for taking an action killing the Goomba. This is because the reward function returns negative rewards for dying at the hands of a Goomba and positive rewards for killing it. The Q-value of a state-action pair can be described as the Q-value when given a specific policy. The Q-value under a policy $\pi$ is formalised as the expected sum of discounted rewards \textbf{given} state $s$ and action $a$:
+One of the most popular algorithms for learning optimal policies is Q-learning \cite{watkins1992q}. Q-learning is an off policy model free algorithm which means that the agent does not learn transition and reward functions but instead learns so called Q-values from which the best possible action can be deduced by taking random actions in the environment. Each state in the state space has state-action pairs called Q-values. The Q-value $Q(s,a)$ describes the rewards an agent can expect from taking taking action $a$ in state $s$. For instance, if Mario encounters a Goomba in his current state, the Q-value for taking an action running into the Goomba would be lower than the Q-value for taking an action killing the Goomba. This is because the reward function returns negative rewards for dying at the hands of a Goomba and positive rewards for killing it. The optimal Q-value is described with the \textit{Bellman Optimality Equation} \cite{bellman1966dynamic}. It states that the Q-value of a state-action pair $(s,a)$ at timestep $t$ is the expected reward of that pair $R_{t+1}$ plus the maximum discounted return of the next state-action pair $Q(s^\prime, a^\prime)$:
 
-\begin{equation}
- Q^\pi(s, a) = \E \left[ \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \Big| S_t = s, A_t = a \right]
+%\begin{equation}
+% Q^\pi(s, a) = \E \left[ \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \Big| S_t = s, A_t = a \right]
+%\end{equation}
+
+\begin{equation}\label{eq:optimal_q}
+Q^*(s,a) = \E \left[ R_{t+1} + \gamma \max\limits_{a^\prime} Q(s^\prime, a^\prime) \right]
 \end{equation}
 
 
-Because an optimal policy will choose the action which returns the highest reward and Q-values are mapped to actions, an optimal policy is therefore one which for each state chooses the action associated with the largest Q-value. To learn an optimal policy, an agent needs to learn the Q function: $Q : S \times A \to \R$ of the problem. Q-learning is \textit{off-policy}, i.e. the agent is acting randomly in the environment to learn the Q function without following a policy. Learning the Q-function is a process of continuously experiencing the environment and using the observations to update the Q-values until they converge. The following shows the Q-value update:
+Because an optimal policy will choose the action which returns the highest reward and Q-values tell us how much reward to expect from an action, an optimal policy chooses the action associated with the largest Q-value. Hence, to learn an optimal policy an agent needs to learn the Q function: $Q : S \times A \to \R$ of the problem. Learning the Q-function is a process of continuously experiencing the environment and using the observations to iteratively update the Q-values until they converge. Observations are the states and rewards associated with taking actions in the state space. The following shows the Q-value update:
 
-\begin{equation} \label{q_update}
+\begin{equation} \label{eq:q_update}
 	Q(s,a) \gets Q(s,a) + \alpha \left[ R + \gamma \max\limits_{a^\prime} Q(S^\prime, a^\prime) - Q(s,a) \right]
 \end{equation}
 
 
-Whenever an agent takes an action in a state and experiences a reward, the old Q-value needs to be updated to reflect that observation. This is done by adding the experienced reward $R$ for taking action $a$ in state $s$ to the discounted largest Q-value of the next state $Q(S^\prime, a^\prime)$ ($\gamma$ is the discount factor), subtracting the old Q-value, multiplying everything by the learning rate $\alpha$ and adding it to the old Q-value. The learning rate specifies the importance of new information \textit{vis-à-vis} old information. In traditional RL, the Q-function is a lookup table where each entry corresponds to a Q-value. Q-tables are suitable for low-dimensional problems with small state and action spaces, however they quickly become infeasible for complex problems. For instance, assuming an image size of $84 \times 84$, the RGB Super Mario state space has a size of $(84 \times 84 \times 3)^{256}$. Storing the Q-values for a state space of that size is impossible. The solution is to replace the lookup table with a neural network called a Deep Q Network (DQN) or policy network. This works because neural networks are universal function approximators and can be used to learn any mapping. Especially Convolutional Neural Networks (CNN) have made it possible to identify features in images and map them to outputs, thus reducing the need for a large memory footprint and allowing the application of Reinforcement Learning to high-dimensional problems like video games. A video game Deep Reinforcement Learning system usually has a \textit{policy network}. The policy network is a CNN that receives a game frame as input and outputs a vector of Q-values which can then be mapped to actions to be taken.
+Whenever an agent takes an action in a state and experiences a reward, the old Q-value needs to be updated to reflect that observation. This is done by adding the experienced reward $R$ for taking action $a$ in state $s$ to the discounted largest Q-value of the next state $Q(S^\prime, a^\prime)$ ($\gamma$ is the discount factor), subtracting the old Q-value, multiplying everything by the learning rate $\alpha$ and adding it to the old Q-value. The learning rate specifies the importance of new information \textit{vis-à-vis} old information. In traditional RL, the Q-function is a lookup table where each entry corresponds to a Q-value. Q-tables are suitable for low-dimensional problems with small state and action spaces, however they quickly become infeasible for complex problems. For instance, assuming an image size of $84 \times 84$, the RGB Super Mario state space has a size of $(84 \times 84 \times 3)^{256}$. Storing the Q-values for a state space of that size is impossible. The solution is to replace the lookup table with a neural network called a Deep Q Network (DQN) or policy network. This works because neural networks are universal function approximators and can be used to learn any mapping. Convolutional Neural Networks (CNN) have become especially popular within the Reinforcement Learning community because they allow end to end learning. CNNs have made it possible to identify features in images and map them to outputs, thus removing the process of manually extracting features from game frames. Furthermore, CNNs reduce the need for a large memory footprint and allow for the application of Reinforcement Learning to high-dimensional problems like video games. A video game Deep Reinforcement Learning system usually has a \textit{policy network}. The policy network is a CNN that receives a game frame as input and outputs a vector of Q-values which can then be mapped to actions to be taken.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[trim={0 2cm 0 2cm},clip,width=.75\linewidth]{figs/deep_rl_video_game.png}
+\includegraphics[trim={0 2cm 0 2cm},clip,width=.75\linewidth]{figs/deep_rl_video_game.eps}
 \caption{Policy Network for Super Mario (not to scale)} \label{fig:2}
 \end{figure}
 
-The input first passes through a couple of convolutional layers designed to detect shapes and features such as edges and high level objects. Then follow two fully connected layers to produce the output. For Super Mario, the state is represented as a pixel matrix of dimensions $(width \times height \times channels)$ where channels is the number of colour channels in the frame - 3 for RGB, 1 for grayscale. Given a state, the CNN performs a forward pass and assigns ranks to the possible actions Mario can take, e.g. left, right, jump etc. The network has an output neuron for each possible action Mario can take in the game. Ranks in this case are the Q-values of that state and so the best action is the output neuron with the highest Q-value. Now all that remains is to train the network so that we can learn the optimal Q-values of the MDP. The principle remains the same as in the Q-update equation \ref{q_update} with the difference that the Q function is a CNN instead of a lookup-table. First, the loss of the network is calculated using a loss function, which is then differentiated with respect to the weights of the network before taking a gradient step. Ultimate goal of the learning process is for the CNN to output Q-values to approximate the optimal Q-values of the MDP. 
+The input first passes through a couple of convolutional layers designed to detect shapes and features such as edges and high level objects. Then follow fully connected layers to produce the output. For Super Mario, the state is represented as a pixel matrix of dimensions $(width \times height \times channels)$ where channels is the number of colour channels in the frame - 3 for RGB, 1 for grayscale. Given a state, the CNN performs a forward pass and assigns ranks to the possible actions Mario can take, e.g. left, right, jump etc. Each action is represented by a neuron in the output layer in the network. Ranks in this case are the Q-values of the state that was passed through the network, and so the best action is the output neuron with the highest Q-value. Now all that remains is to train the network so that the agent can learn the optimal Q-values of the MDP. First, the loss of the network is calculated using a loss function such as the huber loss \cite{huber1992robust}, which is then differentiated with respect to the weights of the network before taking a gradient step. The network is fully trained when the output Q-values have sufficiently approximated the true Q-values of the MDP.  
 
 \subsubsection{Target Networks}
-The improvement made by replacing the Q-table with a neural network is significant, however an issue arises when calculating the network loss in the Q-value update (see \ref{eq:q_update}). The loss is computed as the difference between the targeted Q-values of the next state, i.e. $Q(s^\prime, a^\prime)$, and the Q-values outputted by the network for the current state, i.e. $Q(s,a)$. Goal is for $Q(s,a)$ to approximate $Q(s^\prime, a^\prime)$, though because the policy network is used to calculate both values, any weight updates to the network will shift both $Q(s,a)$ and $Q(s^\prime, a^\prime)$. At each iteration, $Q(s,a)$ will move closer to the targeted Q-value., However the targeted $Q(s^\prime, a^\prime)$ will move as well and we end up chasing a moving target. Ultimately, this causes overestimation of the Q-values and leads to learning instabilities resulting in poor policies. The solution is to use a separate target network with the frozen weights of the policy network to calculate the target Q-values. Therefore, target Q-values remain stationary when being approximated and the network does not overestimate Q-values. Periodically, the policy network's weights are copied to the target network so that they accurately reflect the learning process.
+The improvement made by replacing the Q-table with a neural network is significant, however an issue arises when calculating the network loss. The loss is computed as the difference between the outputted Q-values of the current state-action pair and the true Q-values. 
+
+\begin{equation} \label{eq:q_loss}
+	loss = Q^*(s,a) - Q(s,a) 
+\end{equation}
+
+Calculating the optimal Q-value of a state $Q(s,a)$ requires the maximum Q-value $Q(s^\prime, a^\prime)$ of the next state (see equation \ref{eq:optimal_q}). However, because the policy network is used to calculate both values, any weight updates to the network will shift both $Q(s,a)$ and $Q(s^\prime, a^\prime)$. At each iteration, $Q(s,a)$ will move closer to the optimal targeted Q-value. Yet the targeted $Q(s^\prime, a^\prime)$ will move as well and we end up chasing a moving target. Ultimately, this causes overestimation of the Q-values and leads to learning instabilities resulting in poor policies. The solution is to use a separate target network with the frozen weights of the policy network to calculate the target Q-values. Therefore, target Q-values remain stationary when being approximated and the network does not overestimate Q-values. Periodically, the policy network's weights are copied to the target network so that they accurately reflect the learning process.
 
 
 %\begin{figure}[!htb]
 %\centering
-%\includegraphics[trim={0 3cm 0 3cm},clip,width=1\linewidth]{figs/policy_target_nn.png}
+%\includegraphics[trim={0 3cm 0 3cm},clip,width=1\linewidth]{figs/policy_target_nn.eps}
 %\caption{Policy and Target Networks} \label{fig:2}
 %\end{figure}
 
 \subsubsection{Experience Replay}
-In traditional Reinforcement Learning, observations of the environment are immediately discarded after the Q-values have been updated. Experiencing the environment as a consecutive stream of temporally sequential observations becomes problematic because samples are highly correlated and training on correlated data may get you stuck in a local minimum. Furthermore, because observations are not kept, each one of them can only be used in a single weight update which makes learning less efficient. Therefore, most Deep Q Learning algorithms attempt to break correlation between samples and reuse them for weight updates with a \textit{replay memory} \cite{lin1993reinforcement}. The replay memory is a buffer of size $N$ where the agent stores experience tuples $e_t = (s_t, a_t, r_{t+1}, s_{t+1})$. Until the agent has collected a sufficient number of samples, it will execute random actions. Once the memory has been filled with enough samples, the agent randomly samples a batch and uses it to train the policy network. 
+In traditional Reinforcement Learning, observations of the environment are immediately discarded after the Q-values have been updated. Experiencing the environment as a consecutive stream of temporally sequential observations becomes problematic because samples are highly correlated and training on correlated data may trap you in a local minimum. Furthermore, because observations are not kept, each one of them can only be used in a single weight update which makes learning less efficient. Therefore, most Deep Q Learning algorithms attempt to break correlation between samples and reuse them for weight updates with a \textit{replay memory} \cite{lin1993reinforcement}. The replay memory is a buffer of size $N$ where the agent stores experience tuples $e_t = (s_t, a_t, r_{t+1}, s_{t+1})$. The agent uses samples from the replay memory to train the DQN, not the live frame it currently sees. Until the agent has collected a sufficient number of samples, it will execute random actions. Once the memory has been filled with enough samples, the agent randomly samples a batch and uses it to train the policy network. 
 
 
 \subsection{Hierarchical Reinforcement Learning}
-Arguably, one of humans' most remarkable abilities is the ability to generalise knowledge \cite{geirhos2018generalisation} across various contexts withstanding input distribution changes. For example, you are able to recognise a door as a door and open it regardless of its colour or material because you abstract away the features which make up the door and generalise it to other doors. While Deep Reinforcement Learning partially alleviates the issue of generalisation \cite{sutton1996generalization}, it remains a substantial issue \cite{van2017hybrid} to date. Reinforcement Learning agents are prone to overspecialise and overfit because they are trained and tested within the same environment \cite{cobbe2018quantifying}. If Mario is trained to solve level \textit{World 1-1}, he only becomes an expert on that particular level. When placed in the next level, he would not perform as well because Mario did not \textbf{learn} any concepts of the world. Instead, he \textbf{remembers} optimal action sequences only applicable to a distinct problem. This is also known as \textit{flat} Reinforcement Learning.
+Arguably, one of humans' most remarkable abilities is the ability to generalise knowledge \cite{geirhos2018generalisation} across various contexts withstanding input distribution changes. For example, you are able to recognise a door as a door and open it regardless of its colour or material because you abstract away the features which make up the door and generalise those features to other doors. While Deep Reinforcement Learning partially alleviates the issue of generalisation \cite{sutton1996generalization}, it remains a substantial issue \cite{van2017hybrid} to date. Reinforcement Learning agents are prone to overspecialise and overfit because they are trained and tested within the same environment \cite{cobbe2018quantifying}. If Mario is trained to solve level \textit{World 1-1}, he only becomes an expert on that particular level. When placed in the next level, he would not perform as well because Mario did not \textbf{learn} any concepts of the world. Instead, he \textbf{remembers} optimal action sequences only applicable to a distinct problem. This is also known as \textit{flat} Reinforcement Learning.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\vspace{-20pt}
 	\begin{center}
-		\includegraphics[width=0.4\textwidth]{figs/hrl_smdp.png}
+		\includegraphics[width=0.4\textwidth]{figs/hrl_smdp.eps}
 	\end{center}
 	\vspace{-20pt}
-\caption{The Hierarchical RL Semi Markov Decision Process \protect\cite{ribas2011neural}} \label{fig:4}
+\caption{The Hierarchical RL Semi Markov Decision Process \protect\cite{ribas2011neural}} \label{fig:hrl_mdp}
 \end{wrapfigure}
 
-Learning reusable skills is the essence of Hierarchical Reinforcement Learning. It is inspired by the fact that human decision making is \textit{temporally abstract} \cite{sutton1999between} and hierarchically composed. When leaving work to go home, you need to exit the office, however first you need to get up from your chair and take the lift downstairs. The parent task of going home contains multiple subtasks which themselves involve subtasks of their own. By decomposing the overall problem into smaller subproblems, learning is sped up and actions can be reused across the domain. This requires some modification to the MDP used in tradiational Reinforcement Learning. Remember that in \textit{flat} learning, each action $a_t$ only lasts a single timestep. Now, the agent can execute actions lasting multiple timesteps. An action $a_t$ in state $s_t$ can transport the agent to state $s^{\prime}_{t+k}$. The policy $\pi$ is made up of multiple sub-policies, each of which are catering to a specific subset of the state space. At timestep $t_1$, the primitive action $a$ is selected and lasts one timestep. At $t_2$, the policy $\pi$ invokes a subpolicy or subtask $\sigma$ which is in charge of selecting primitive actions until $t_5$. Upon termination, the subpolicy returns a reward (yellow asterisk) back to the master policy which incorporates it into the value of the state from where the policy was invoked. What convolutional neural networks did for vision, figuring out behavioural hierarchies are to RL.
+Learning reusable skills is the essence of Hierarchical Reinforcement Learning. It is inspired by the fact that human decision making is \textit{temporally abstract} \cite{sutton1999between} and hierarchically composed. When leaving work to go home, you need to exit the office, however first you need to get up from your chair and take the lift downstairs. The parent task of going home contains multiple subtasks which themselves involve subtasks of their own. By decomposing the overall problem into smaller subproblems, learning is sped up and actions can be reused across the domain. This requires some modification to the MDP used in tradiational Reinforcement Learning. In \textit{flat} learning, each action $a_t$ only lasts a single timestep. Now, the agent can execute actions lasting multiple timesteps. An action $a_t$ in state $s_t$ can transport the agent to state $s^{\prime}_{t+k}$. In Figure \ref{fig:hrl_mdp}, the policy $\pi$ is made up of multiple sub-policies, each of which are catering to a specific subset of the state space. At timestep $t_1$, the primitive action $a$ is selected and lasts one timestep. At $t_2$, the policy $\pi$ invokes a subpolicy or subtask $\sigma$ which is in charge of selecting primitive actions until $t_5$. Upon termination, the subpolicy returns a reward (yellow asterisk) back to the master policy which incorporates it into the value of the state from where the policy was invoked.
 
 \subsubsection{Option-Critic}
-The following Hierarchical algorithm is an advancement on the Markov-Options framework \cite{sutton1999between} which first introduced a framework for extending the classical one-timestep-action MDP to a multi-timestep-actions Semi MDP (SMDP). The SMDP contains \textit{Markov Options}, a layer of temporal abstraction on top of the primitive one-timestep actions of the agent. An option is defined as a triplet $\langle I, \pi, \beta \rangle$ where:
+The following Hierarchical algorithm builds upon the Markov-Options framework \cite{sutton1999between} which first introduced a framework for extending the classical one-timestep-action MDP to a multi-timestep-actions Semi MDP (SMDP). The SMDP contains \textit{Markov Options}, a layer of temporal abstraction on top of the primitive one-timestep actions of the agent. An option is defined as a triplet $\langle I, \pi, \beta \rangle$ where:
 
 \begin{itemize}[noitemsep]
 	\itemsep0em
@@ -161,26 +172,26 @@ An option can only be chosen by the agent if the current state is in the subset 
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\vspace{-20pt}
 	\begin{center}
-		\includegraphics[width=0.4\textwidth]{figs/option_critic_architecture.png}
+		\includegraphics[width=0.4\textwidth]{figs/option_critic_architecture.eps}
 	\end{center}
 	\vspace{-20pt}
 \caption{Option-Critic Architecture \protect\cite{ribas2011neural}} \label{fig:4}
 \end{wrapfigure}
 
-At each timestep, the master policy $\pi_\Omega$ chooses an option/subpolicy $\omega_t$. We follow the regular MDP structure where the option/subpolicy executes an action $a$ in the environment and receives a reward $r$ and new state $s^\prime$ in return. The critic then evaluates the option by using the Q-value $Q_U$ of executing a subpolicy $\omega$ from state $s$ to obtain the new Q update. If the next state is a terminal state of an option, we obtain the update value $\delta$ by subtracting the observed reward $r$ from $Q_U$. Otherwise, we compute the update value like we did for a terminal state and add the discounted Q-value $Q_\Omega$ of the entire option as well as the max Q-value of the \textbf{next} option. After evaluating, the option is improved using Stochastic Gradient Descent. The option terminates when the criterion $\beta_\omega$ is fulfilled after which the policy over options/master policy chooses the next option. 
+At each timestep, the master policy $\pi_\Omega$ chooses an option/subpolicy $\omega_t$. We follow the regular MDP structure where the option/subpolicy executes an action $a$ in the environment and receives a reward $r$ and new state $s^\prime$ in return. The critic then evaluates the option by using the Q-value $Q_U$ of executing a subpolicy $\omega$ from state $s$ to obtain the new Q update. If the next state is a terminal state of an option, we obtain the update value $\delta$ for the Q-value by subtracting the observed reward $r$ from $Q_U$. Otherwise, we compute the update value like we did for a terminal state and add the discounted Q-value $Q_\Omega$ of the entire option as well as the max Q-value of the \textbf{next} option. After evaluating, the option is improved using Stochastic Gradient Descent. The option terminates when the criterion $\beta_\omega$ is fulfilled after which the policy over options/master policy chooses the next option. The algorithm can be found in more detail in \textit{The Option-Critic Architecture} \cite{bacon2017option}.
 
-\subsubsection{Feudal Networks}
-Another recent Hierarchical Reinforcement Learning algorithm is DeepMind's FeUdal Network (FuN) \cite{vezhnevets2017feudal}. Like the Option-Critic architecture, is is an improvement on an older system, called Feudal Reinforcement Learning \cite{dayan1993feudal}. Feudal Reinforcement Learning follows the general Hierarchical Reinforcement Learning architecture where different levels of temporal abstraction work together to solve the overall task. Taking after the questionable medieval feudal system, managers set goals for the sub-managers to solve in the state space and receive rewards once completed. Communication is restricted to a single hierarchical step, meaning that each level can only give goals to the sub-manager below and receive goals from the manager above. Additionally, the number of hierarchies are not fixed. Though a great improvement on standard Q-learning, traditional Feudal Reinforcement Learning is not general enough to work on multiple domains and has inherent convergence issues. DeepMind's FeUdal Network provides a fixed two-level manager-worker hierarchy encapsulating multiple neural networks. At the top is the manager, setting goals for the worker in the latent space. Working like a compass, the manager figures out \textbf{where} the worker should go. At the bottom, the worker has a high temporal resolution and is responsible for choosing primitive actions in the environment. Given a goal by the manager, the worker decides \textbf{how} to achieve it.
+\subsubsection{Feudal Networks (FuN)}
+Another recent Hierarchical Reinforcement Learning algorithm is DeepMind's FeUdal Network (FuN) \cite{vezhnevets2017feudal}. Like the Option-Critic architecture, is is an improvement on an older system, called Feudal Reinforcement Learning \cite{dayan1993feudal}. Feudal Reinforcement Learning follows the general Hierarchical Reinforcement Learning architecture where different levels of temporal abstraction work together to solve the overall task. Taking after the questionable medieval feudal system, managers set goals for the sub-managers to solve in the state space and receive rewards once completed. Communication is restricted to a single hierarchical step, meaning that each level can only give goals to the sub-manager below and receive goals from the manager above. Additionally, the number of hierarchies is theoretically unbounded. Though a great improvement on standard Q-learning, traditional Feudal Reinforcement Learning is not general enough to work on multiple domains and has inherent convergence issues. DeepMind's FeUdal Network provides a fixed two-level manager-worker hierarchy encapsulating multiple neural networks. At the top is the manager, setting goals for the worker in the latent space. The latent space is a compressed version of the data. Working like a compass, the manager figures out \textbf{where} the worker should go. At the bottom, the worker has a high temporal resolution and is responsible for choosing primitive actions in the environment. Given a goal by the manager, the worker decides \textbf{how} to achieve it.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\begin{center}
-		\includegraphics[width=.5\textwidth]{figs/fun_architecture.png}
+		\includegraphics[width=.5\textwidth]{figs/fun_architecture.eps}
 	\end{center}
 	\caption{FuN Architecure \protect\cite{vezhnevets2017feudal}} \label{fig:4}
 \end{wrapfigure}
 
 
-FuN has a more complex architecture than the regular DQN and Option-Critic systems. First, the game frame is passed through a CNN modelled after DeepMind's Atari \cite{DBLP:journals/corr/MnihKSGAWR13} network to compute a separate intermediate representation $z_t$ of the state $x_t$ to be shared between the manager and worker. After further compressing the state $z_t$ into $s_t$, the manager utilises a Long short-term memory (LSTM) Recurrent Neural Network (RNN) to compute a goal $g_t$ for the worker to solve. The worker is given the intermediate state representation $z_t$ and uses an LSTM to produce an action embedding matrix $U$ where each row corresponds to a possible action within the game. To incorporate the manager's goal, the worker then embeds it into a vector $w_t$. By applying a dot product to the action matrix $U_t$ and the goal embedding $w_t$, we get a probability distribution over the actions, making FuN a stochastic architecture. 
+FuN has a more complex architecture than the regular DQN and Option-Critic systems. First, the game frame is passed through a CNN modelled after DeepMind's Atari \cite{DBLP:journals/corr/MnihKSGAWR13} network to compute a separate intermediate representation $z_t$ of the state $x_t$ to be shared between the manager and worker. After further compressing the state $z_t$ into $s_t$, the manager utilises a Long short-term memory (LSTM) Recurrent Neural Network (RNN) to compute a goal $g_t$ for the worker to solve. The worker is given the intermediate state representation $z_t$ and uses an LSTM to produce an action embedding matrix $U$ where each row corresponds to a possible action within the game. To incorporate the manager's goal, the worker then embeds it into a vector $w_t$. By applying a dot product to the action matrix $U_t$ and the goal embedding $w_t$, we get a probability distribution over the actions which means that FuN produces a stochastic policy unlike the deterministic DQN and Option Critic. The FeUdal Network learns by a \textit{transition policy gradient} which boilds down to training the manager to predict goals which return large rewards in the state space. 
 
 \section{System Requirements}
 
@@ -198,7 +209,7 @@ The following section specifies the requirements to be fulfilled by the system:
 Every MDP has a reward function. Because the chosen Super Mario framework does not have a reward function, it will first need to be designed. The function should incentivise the intended behaviour of the agent - to move as far right as possible in the level without dying.
 	
 	\item \textbf{Java-Python Bridge}\\
-	Because the chosen Super Mario game framework is written in Java and Python is the de facto lingua franca of Reinforcement Learning, the system needs to have a communication bridge between the languages. The system needs to train for longer periods of time, so avoiding unnecessary overhead whereever possible is important. Getting the two languages "as close" as possible to each other is therefore vital. A client-server architecture using HTTP to send JSON is easy to implement, however comes with too much overhead. The Jython \cite{jython} and JPype \cite{jpype} frameworks are directly embedded in the JVM to reduce latency, however they are not as out of the box user friendly. The Py4J \cite{py4j} framework on the other hand uses sockets to communicate with the Java API which leads to a slight performance decrease. Though it is nearly effortless to setup and easy to use which is why it is the best choice for the system.
+	Because the Super Mario game framework is written in Java and Python is the de facto lingua franca of Reinforcement Learning, the system needs to have a communication bridge between the languages. The system needs to train for longer periods of time, so avoiding unnecessary overhead whereever possible is important. Getting the two languages "as close" as possible to each other is therefore vital. A client-server architecture using HTTP to send JSON is easy to implement, however comes with too much overhead. The Jython \cite{jython} and JPype \cite{jpype} frameworks allow for Python code to be executed in a Java environment by being directly embedded in the JVM. This reduces latency, however they have a steep learning curve and in the case of Jython only support Python 2.7. The Py4J \cite{py4j} framework on the other hand uses sockets to communicate with the Java API which leads to a slight performance decrease. Though it is nearly effortless to setup and easy to use which is why it is the best choice for the system.
 	
 	\item \textbf{Deep Learning Libraries}\\
 	Contemporary Reinforcement Learning algorithms rely on Neural Networks to learn behaviour. The system needs to be able to initialise and train neural networks by making use of existing libraries. PyTorch is the most suitable option as it offers a good balance between low-level granularity and easy to use high-level API. Additionally, PyTorch has their own Reinforcement Learning tutorials.
@@ -207,13 +218,13 @@ Every MDP has a reward function. Because the chosen Super Mario framework does n
 	The different Reinforcement Learning agents of this project all need to interact with the Super Mario Java game emulator. Writing a Python interface that bridges to the emulator and provides standard operations for the agents to use will reduce code duplication on the agents' part and decouple them from the emulator logic.
 	
 	\item \textbf{Preprocessing}\\
-	The environment as observed by the Reinforcement Learning agent is a pixel matrix of the current frame of the game. Commonly, frames are cropped and scaled before being passed to the neural network. Cropping removes unnecessary information such as the score and timer counters at the top of the screen. Scaling reduces the complexity of the image and the number of neurons needed in the network. For to reduce latency, cropping and scaling will need to be done on the Java side of the system.
+	The environment as observed by the Reinforcement Learning agent is a pixel matrix of the current frame of the game. Commonly, frames are cropped and scaled before being passed to the neural network. Cropping removes unnecessary information such as the score and timer counters at the top of the screen. Scaling reduces the complexity of the image and the number of neurons needed in the network. To reduce latency, cropping and scaling will need to be done on the Java side of the system.
 	
 	\item \textbf{Monitor Training}\\
-	Reinforcement Learning algorithms need to train for anything from several hours to several days. Monitoring this process while it is going on is important because bugs can be caught early on and hyperparameters are more easily compared. Tensorboard provides tools for visualising various metrics such as rewards and loss. Graphs are updated live as the training is happening and the data can be downloaded as JSON or CSV for further analysis.
+	Reinforcement Learning algorithms need to train for periods lasting from several hours to several days. Monitoring this process while it is going on is important because bugs can be caught early on and hyperparameters are more easily compared. Tensorboard provides tools for visualising various metrics such as rewards and loss. Graphs are updated live as the training is happening and the data can be downloaded as JSON or CSV for further analysis.
 	
 	\item \textbf{Remote Training}\\
-	The entire system needs to be able to run locally as well as remotely in the cloud. Hardware in the cloud is more powerful and can be scaled up and down as needed. Additionally, it is robust. Google Cloud provides APIs specifically designed for Machine Learning and comes with free credits for first time users. Hence it was used for training the Reinforcement Learning models.
+	The entire system needs to be able to run locally as well as remotely in the cloud. Hardware in the cloud is more powerful and can be scaled up and down as needed. Additionally, it is robust against failures and accidents. Google Cloud provides APIs specifically designed for Machine Learning and comes with free credits for first time users.
 	
 \end{itemize}
 
@@ -228,22 +239,22 @@ Super Mario Bros game was released by Nintendo in 1985 and is the most iconic Su
 
 
 \subsection{Overall Architecture}
-The system follows a client-server model where the Reinforcement Learning client uses the Py4J bridge to execute actions on the game emulator server and observe states and rewards. The client first initiates the environment via the game interface and receiving back the start state of the MDP (note that this process is not displayed in the game server diagram). Having chosen an action according to their policy, the agent passes a \textit{tensor} with said action to the game interface which encodes it as a \textit{boolean action vector}, e.g. $\begin{bmatrix} false & true & false & true & false\end{bmatrix}$ for going right. When the action vector is received by the Game Server via Py4J, the action is executed in the environment $k$ times (see section \ref{frame_stacking_skipping} for frame skipping). The final frame of the action sequence is cropped and resized (see section \ref{frame_preprocessing}) and the reward is calculated using the environment's reward function (see section \ref{reward_function}). The reward and the frame are then marshalled back to the client using Py4J and extracted by the Reinforcement Learning Agent using the game interface. At every timestep and after every completed episode, the agent writes the observed reward and the calculated loss into tensorboard. Once training has finished, the models and hyperparameters are saved for demonstration, evaluation and further training. For the 
+The system follows a client-server model where the Reinforcement Learning client uses the Py4J bridge to execute actions on the game emulator server and observes states and rewards in return. The client first initiates the environment via the game interface and receives back the start state of the MDP (note that this process is not displayed in the game server diagram in Figure \ref{fig:system_architecture}). Having chosen an action according to their policy, the agent passes a \textit{tensor} with said action to the game interface which encodes it as a \textit{boolean action vector}, e.g. $\begin{bmatrix} false & true & false & true & false\end{bmatrix}$. When the action vector is received by the Game Server via Py4J, the action is executed in the environment $k$ times (see section \ref{frame_stacking_skipping} for frame skipping). Having executed the acition $k$ times, the final frame of the action sequence is cropped and resized (see section \ref{frame_preprocessing}) and the reward is calculated using the environment's reward function (see section \ref{reward_function}). The reward and the frame are then marshalled back to the client using Py4J and extracted by the Reinforcement Learning Agent using the game interface. At every timestep and after every completed episode, the agent writes the observed reward and the calculated loss into tensorboard. Once training has finished, the models and hyperparameters are saved for demonstration, evaluation and further training.
 
-\begin{figure}[!htb]
+\begin{figure}[!htb]\label{fig:system_architecture}
 \centering
-\includegraphics[trim={0 2cm 0 2cm},clip,width=1\linewidth]{figs/system_architecture.png}
+\includegraphics[trim={0 2cm 0 2cm},clip,width=1\linewidth]{figs/system_architecture.eps}
 \caption{System Architecture}
 \end{figure}
 
-The game server is a \textit{jar} file built using \textit{maven} exposing a port for the client to interact with. It is based on the \textit{marioai} \cite{marioai} framework which had to be partially rewritten. Various methods and classes for calculating the reward, preprocessing the game frame and exposing the observations of the environment to an outside agent. To allow for remote training, both client and server are running on a 4CPU 16GB Google Cloud virtual machine. Although only relying on CPU power to the run the system is prolonging training times, the expense of adding GPUs was considered too much for this project.
+The game server is a \textit{jar} file built using \textit{maven} exposing a port for the client to interact with. It is based on the \textit{marioai} \cite{marioai} framework which had to be . extended and rewritten to fit the requirements of the system. Various methods and classes for calculating the reward, preprocessing the game frame and exposing the observations of the environment to an outside agent were added to the existing codebase. To allow for remote training, both client and server are running on a single 4CPU 16GB Google Cloud virtual machine. Although only relying on CPU power to the run the system is prolonging training times, the expense of adding GPUs was considered too much for this project.
 
 
 \subsection{Reward Function} \label{reward_function}
 
-A Reinforcement Learning agent learns to distinguish between desirable and undesirable behaviour depending on the reward they illicit from the environment. At each time step $t$, the agent receives a scalar reward $R_t \in \R$ as a result of an action taken at time step $t-1$. The agents goal is to maximise the total reward it receives $\sum^{t}_{i=1} R_i$ and thus solve the task it is given. If we want to the agent to do something, it needs to receive rewards which when maximised achieve the goal we set out. It is important to note that the reward tells the agent \textit{what} it should achieve but not \textit{how} it should be achieved. Designing a reward function improperly might lead to unintended behaviour, also known as the \textit{cobra effect}. During British colonial rule in India, the government offered a reward for dead cobras as a way to reduce their population. Eventually, people began breeding cobras for income to milk the system and the program was scrapped. Breeders then set their snakes free, leading to an increase in the cobra population \cite{siebert2001kobra}. This is a pertinent example of how a flawed reward function can produce unwanted behaviour. It is important to remember that in the end, you always get the behaviour you incentivised, not always the behaviour you intended. A well-crafted reward function aligns the \textbf{incentivised} behaviour with the \textbf{intended} behaviour.
+A Reinforcement Learning agent learns to distinguish between desirable and undesirable behaviour by observing the reward signal associated with actions in the environment. At each time step $t$, the agent receives a scalar reward $R_t \in \R$ as a result of an action taken at time step $t-1$. The agents goal is to maximise the total reward it receives $\sum^{t}_{i=1} R_i$. The agent needs to receive rewards such that when maximised achieve the goal or solve the problem that we set out. It is important to note that the reward tells the agent \textit{what} it should achieve but not \textit{how} it should be achieved. Designing a reward function improperly might lead to unintended behaviour, also known as the \textit{cobra effect}. During British colonial rule in India, the government offered a reward for dead cobras as a way to reduce their population. Eventually, people began breeding cobras for income to milk the system and the program was scrapped. Breeders then set their snakes free, leading to an increase in the cobra population \cite{siebert2001kobra}. This is a pertinent example of how a flawed reward function can produce unwanted behaviour. It is important to remember that in the end, you always get the behaviour you incentivised, not always the behaviour you intended. A well-crafted reward function aligns the \textbf{incentivised} behaviour with the \textbf{intended} behaviour.
 
-Luckily, simple video games such as Super Mario often have clear criteria for success and failure, meaning that reward function design is of relatively low complexity. We want to incentivise Mario to reach the flag at the end of the level (success) and avoid anything that results in death (failure). Giving Mario positive rewards for moving right in the level and negative rewards for moving left forces Mario to keep moving right. Additionally, providing large negative rewards in terminal failure states and large positive rewards in terminal success states further forces Mario to stay alive and move towards the flag. Positive rewards encourage the agent to keep playing and accumulating those rewards. However, an agent may potentially avoid a terminal state to keep racking up rewards. Therefore, it is important to have positive terminal state values which make the agent choose the terminal state over reward hacking. Negative rewards on the other hand encourage the agent to finish the level as quickly as possible. Besides death, the agent is also penalised each time step $t$ to avoid him standing still. Thus, the agent will want to reach a terminal state as quickly as possible. Rewards are usually bounded to avoid exploding gradients in the neural networks.
+Luckily, simple video games such as Super Mario often have clear criteria for success and failure, meaning that reward function design is of relatively low complexity. We want to incentivise Mario to reach the flag at the end of the level (success) and avoid anything that results in death (failure). Giving Mario positive rewards for moving right in the level and negative rewards for moving left forces Mario to keep moving right. Additionally, providing large negative rewards in terminal failure states and large positive rewards in terminal success states further forces Mario to stay alive and move towards the flag. Positive rewards encourage the agent to keep playing and accumulating those rewards. However, an agent may potentially avoid a terminal state to keep racking up rewards, known as \textit{reward hacking} \cite{amodei2016concrete}. Therefore, it is important to have positive terminal state values which make the agent choose the terminal state over reward hacking. Negative rewards on the other hand encourage the agent to finish the level as quickly as possible because they are constantly losing points. With this in mind, besides death, the agent is also penalised each time step $t$ to avoid him standing still. Thus, the agent will want to reach a terminal state as quickly as possible.
 \linebreak
 The reward function used in this project is inspired by the  \textit{openai gym} Super Mario Bros framework \cite{pypi}. It is composed of three variables $v, c, d$:
 
@@ -251,7 +262,7 @@ The reward function used in this project is inspired by the  \textit{openai gym}
 
 	\item Velocity: $v = x_t - x_{t-1}$. The difference in the agent's \textit{x} values in between time steps $t$ and $t - 1$. Moving right will increase $v$.
 	
-	\item Clock: $c = c_t - c_{t-1}$. The difference in the game's clock values in between time steps $t$ and $t - 1$. For each action committed in game, $c$ will decrease by $1$. Using frame skipping \ref{frame_stacking_skipping}, each action performed by the Reinforcement Learning agent will yield a $c$ value of $-4$. This is to prevent the agent from standing still.
+	\item Clock: $c = c_t - c_{t-1}$. The difference in the game's clock values in between time steps $t$ and $t - 1$. For each action committed in game, $c$ will decrease by $1$. This is to prevent the agent from standing still.
 	
 	\item Death/Win: 
 		\begin{equation*}
@@ -271,12 +282,12 @@ The reward function used in this project is inspired by the  \textit{openai gym}
 
 
 \subsection{Exploitation vs Exploration}\label{exploit_explore}
-A major challenge within Reinforcement Learning is to strike a balance between gathering enough information about the environment (exploration) and to obtain as much reward as possible (exploitation) \cite{sutton2011reinforcement}. A greedy agent will choose the action which according to their current knowledge returns the largest reward - \textit{exploitation}. Though for an agent to exploit an action they must previously have explored it enough times to have a reliable estimate on the action's reward. Being greedy produces large short term rewards, however the agent might ignore other options with potentially even larger rewards. Performing exploration instead could uncover those options and therefore lead to more reward in the long run. The dilemma arises when at each time step, the agent must decide whether to exploit or explore the environment. Exploring too much makes the agent a slow but steady learner. Exploiting too much means that the agent will quickly converge on their choice of actions but ultimately not act optimally.
+A major challenge within Reinforcement Learning is to strike a balance between gathering enough information about the environment (exploration) and obtaining as much reward as possible (exploitation) \cite{sutton2011reinforcement}. A greedy agent will choose the action which according to their current knowledge returns the largest reward - \textit{exploitation}. Though for an agent to exploit an action they must previously have explored it enough times to have a reliable estimate on the action's reward. Being greedy produces large short term rewards, however the agent might ignore other options with potentially even larger rewards. Performing exploration could uncover those options and therefore lead to more reward in the long run. The dilemma arises when at each time step, the agent must decide whether to exploit or explore the environment. Exploring too much makes the agent a slow but steady learner. Exploiting too much means that the agent will quickly converge on their choice of actions but ultimately not act optimally.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 \vspace{-40pt}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{figs/epsilon_decay.png}
+    \includegraphics[width=0.48\textwidth]{figs/epsilon_decay.eps}
   \end{center}
   \vspace{-20pt}
   \caption{Variants of $\epsilon$ Decay}
@@ -287,48 +298,35 @@ A popular policy for choosing between exploitation and exploration is the $\epsi
 
 
 \subsection{Frame Preprocessing} \label{frame_preprocessing}
-Preprocessing data is a step all Machine Learning systems go through prior to starting the actual learning. For a Reinforcement Learning network, the input is a pixel matrix representing a game frame. For Super Mario, the dimensions of the raw image as returned by the game are $240 \times 256 \times 3$. Before the raw image can be passed to the network however, it needs to go through a series of preprocessing steps aimed at reducing its dimensionality and making learning less computationally demanding. First, unnecessary information such as the score, lives, and timer and cropped out because they do not provide relevant clues to the agent. Second, the image is resized to $84 \times 84 \times 3$ using bilinear interpolation \cite{gribbon2004novel} to further reduce the size of the neural network needed for training. The dimensions $84 \times 84$ are taken from DeepMind's \textit{Playing Atari with Reinforcement Learning} paper \cite{DBLP:journals/corr/MnihKSGAWR13}. Converting the image to grayscale is another often applied preprocessing step. Though models tend to perform lower on grayscale \cite{lample2017playing}.
+Preprocessing data is a step all Machine Learning systems go through prior to starting the actual learning. For a Reinforcement Learning network, the input is a pixel matrix representing a game frame. For Super Mario, the dimensions of the raw image as returned by the game are $240 \times 256 \times 3$. Before the raw image can be passed to the network, it needs to go through a series of preprocessing steps aimed at reducing its dimensionality to make learning less computationally demanding. First, unnecessary information such as the score, lives, and timer and cropped out because they do not provide relevant clues to the agent. Second, the image is resized to $84 \times 84 \times 3$ using bilinear interpolation \cite{gribbon2004novel} to reduce the size of the neural network needed for training. The dimensions $84 \times 84$ are taken from DeepMind's \textit{Playing Atari with Reinforcement Learning} paper \cite{DBLP:journals/corr/MnihKSGAWR13}. Converting the image to grayscale is often applied preprocessing step, though grayscale models tend to perform lower \cite{lample2017playing}.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[trim={0 4.5cm 0 5cm},clip,width=1\linewidth]{figs/frame_preprocessing.png}
+\includegraphics[trim={0 4.5cm 0 5cm},clip,width=1\linewidth]{figs/frame_preprocessing.eps}
 \caption{Frame Preprocessing Pipeline}
 \end{figure}
 
 
 
 \subsection{Frame Stacking and Frame Skipping} \label{frame_stacking_skipping}
-When playing a video game, it is important for the player to have a sense of how the objects in the environment are moving. Looking at a single frame of Super Mario does not tell you whether Mario is moving left, right, up or down. Only when presented with consecutive frames could you actually determine Mario's movement. Hence, to give the policy network of our system an idea of where Mario is going, it is fed a stack of 4 frames as input. Using 4 frames was again pioneered by DeepMind \cite{DBLP:journals/corr/MnihKSGAWR13}.
+When playing a video game, it is important for the player to have a sense of how the objects in the environment are moving. Looking at a single frame of Super Mario does not tell you whether Mario is moving left, right, up or down. Only when presented with consecutive frames could you actually determine Mario's movement. Hence, to give the policy network of our system an idea of where Mario is going, it is fed a stack of 4 frames as input during training. Using 4 frames was again pioneered by DeepMind \cite{DBLP:journals/corr/MnihKSGAWR13}.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[trim={0 2cm 0 2cm}, clip, width=.75\linewidth]{figs/frame_stacking_nn.png}
+\includegraphics[trim={0 2cm 0 2cm}, clip, width=.75\linewidth]{figs/frame_stacking_nn.eps}
 \caption{Stacked frames are given as input to the neural network. The dimension of the input thus becomes $84 \times 84 \times 3 \times 4$}.
 \end{figure}
 
-Another trick DeepMind used in their paper is to only show the agent every $k^{th}$ frame of the game. Instead of taking an action for every frame in the game, the agent now decides on an action every $k^{th}$ frame. The chosen action is then repeated for $k-1$ frames. This idea is partially motivated by how humans would play the game. A human player makes decisions on how to proceed in the game not for every frame they observe, but at intervals depending on the game environment (some games require faster reactions than others). Using frame-skipping also has the benefit of speedier learning because executing actions in the emulator is faster than making the agent choose an action. Choosing a value for $k$, one must factor in the desired resolution granularity. A large value for $k$ means that episodes can be played faster, however the agent might miss out on opportunities in the game because the same action is repeated too many times \cite{braylan2015frame}. On the other hand, agents may learn associations between temporally distant states and actions when skipping a large amount of frames. A small $k$ gives the agent finer granularity, though at the cost of longer episodes. 
-
-
-%\begin{figure}[!htb]
-%\minipage[t]{0.48\textwidth}
-%  \includegraphics[trim={0 2cm 0 2cm}, clip, width=\linewidth]{figs/frame_stacking_nn.png}
-%  \caption{Stacked frames are given as input to the neural network. The dimension of the input thus becomes $84 \times 84 \times 3 \times 4$}\label{fig:steps_gap_level}
-%\endminipage\hfill
-%\minipage[t]{0.48\textwidth}
-%  \includegraphics[trim={0 4cm 0 4cm}, clip, width=\linewidth]{figs/frame_skipping.png}
-%  \caption{The agent selects action $a$ to be executed $k$ times in the emulator and observes the $k^{th}$ frame}\label{fig:}
-%\endminipage\hfill
-%\end{figure}
-
+Another trick DeepMind used in their paper is to only show the agent every $k^{th}$ frame of the game. Instead of taking an action for every frame in the game, the agent now decides on an action every $k^{th}$ frame. The chosen action is then repeated for $k$ frames. This idea is partially motivated by how humans would play the game. A human player makes decisions on how to proceed in the game not for every frame they observe, but at intervals depending on the game environment (some games require faster reactions than others). Using frame-skipping also has the benefit of speedier learning because executing actions in the emulator is faster than doing a forward pass through the policy network to decide on an action. Choosing a value for $k$, one must factor in the desired resolution granularity. A large value for $k$ means that episodes can be played faster because the emulator is doing more work than the policy network. However, the agent might miss out on opportunities in the game because the same action is repeated too many times \cite{braylan2015frame}. On the other hand, agents may learn associations between temporally distant states and actions when skipping a large amount of frames. A small $k$ gives the agent finer granularity, though at the cost of longer episodes. This project uses the value $k = 4$.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[trim={0 4cm 0 4cm}, clip, width=1\linewidth]{figs/frame_skipping.png}
+\includegraphics[trim={0 4cm 0 4cm}, clip, width=1\linewidth]{figs/frame_skipping.eps}
 \caption{The agent selects action $a$ to be executed $k$ times in the emulator and observes the $k^{th}$ frame}.
 \end{figure}
 
 \subsection{Custom Levels}\label{custom_levels}
-Investigating whether agents can learn skills and reuse is best done with custom levels. A custom level represents a skill the agent ought to learn and therefore provides a closed off space where learning can take place. The project used three custom built levels - two where agents were meant to learn a basic skill, as well as a third one which is a combination of the two basic levels. Regardless of the skill that agents are supposed to learn, the goal is still to reach the flag at the end. In the system, levels are \texttt{.txt} file with ASCII art and can rapidly be created and changed if needed. The three levels created for this project were:
+Investigating whether agents can learn skills and reuse is best done with custom levels. A custom level represents a skill the agent ought to learn and therefore provides a closed off space where learning can take place. The project used three custom built levels - two where agents were meant to learn a basic skill, as well as a third one which is a combination of the two basic levels. Regardless of the skill that agents are supposed to learn, the goal is still to reach the flag at the end. In the system, levels are \texttt{.txt} files with ASCII art and can rapidly be created and changed if needed. The three levels created for this project were:
 
 \begin{enumerate}
 	\item \textbf{Steps with Gap}\\
@@ -345,15 +343,15 @@ Investigating whether agents can learn skills and reuse is best done with custom
 
 	\begin{figure}[!htb]
 \minipage[t]{0.25\textwidth}
-  \includegraphics[width=\linewidth]{figs/steps_gap_level.png}
+  \includegraphics[width=\linewidth]{figs/steps_gap_level.eps}
   \caption{Steps with Gap Level}\label{fig:steps_gap_level}
 \endminipage\hfill
 \minipage[t]{0.25\textwidth}
-  \includegraphics[width=\linewidth]{figs/two_pipe_level.png}
+  \includegraphics[width=\linewidth]{figs/two_pipe_level.eps}
   \caption{Two Pipes Level}\label{fig:}
 \endminipage\hfill
 \minipage[t]{0.25\textwidth}%
-  \includegraphics[width=\linewidth]{figs/steps_pipe_level.png}
+  \includegraphics[width=\linewidth]{figs/steps_pipe_level.eps}
   \caption{Steps with Gap + Two Pipes}\label{fig:awesome_image3}
 \endminipage
 \end{figure}
@@ -363,15 +361,13 @@ The project is confined to only teaching Mario navigation tasks, hence why none 
 
 
 \section{Experiment Design}
-The goal of this project is to investigate whether introducing hierarchies and temporal abstraction into Reinforcement Learning speeds up the learning process. A good indicator of a model's learning process is how quickly it is able to accumulate rewards. Models that learn quickly, will have discovered actions which return large rewards sooner than slow learning models. Therefore, the main metric used to compare the different Reinforcement Learning models will be the average reward per episode. To judge whether learning hierarchies is beneficial to learning speed, the same Mario model is trained sequentially on three levels. The first two levels are designed for Mario learn specific skills - navigating steps and jumping over pipes respectively (section \ref{custom_levels}). The third level is a combination of the two previous levels and requires the previously learned skills to be solved. An agent which has learned reusable hierarchies should in theory adopt to the new environment faster than a flat-learning agent. Adopting in this sense means to acquire rewards faster. In addition to comparing the different learning agents against each other in the new environment, the agents will also be compared against versions of themselves which have not been trained on previous levels. The purpose of this comparison is to investigate whether training agents \textit{sequentially} is beneficial over learning from scratch.
-
-Determining the stopping criterion, i.e. when the model should stop learning, was grounds to some experimentation. Using the number of episodes played the agent is common, however episodes vary in length across different levels as well as in the same level. This variation means that agents will have had different amount of playtime as better agents would finish sooner and there is no guarantee that agents get the same experience. The goal was to let all agents experience the same number of frames of the game to better predict training times and to use the number of episodes as a metric of success instead. A fast-learning agent should be able to play through more episodes using the same number of timesteps than a slow-learning agent. Thus, the completed number of episodes after $t$ timesteps can also be used to compare the different Reinforcement Learning models. To summarise, an agent which learns quickly should achieve more rewards in fewer episodes.
+The goal of this project is to investigate whether introducing hierarchies, temporal abstraction and sequential learning into Reinforcement Learning speeds up the learning process. A good indicator of a model's learning process is how quickly it is able to accumulate rewards. Models that learn quickly, will have discovered actions which return large rewards sooner than slow learning models. Therefore, the main metric used to compare the different Reinforcement Learning models will be the average reward per episode. To judge whether learning hierarchies is beneficial to learning speed, the same Mario model is trained sequentially on three levels. The first two levels are designed for Mario learn specific skills - navigating steps and jumping over pipes respectively (section \ref{custom_levels}). The third level is a combination of the two previous levels and requires the previously learned skills to be solved. An agent which has learned reusable hierarchies should in theory adopt to the new environment faster than a flat-learning agent. Adopting in this sense means to acquire rewards faster, which should show in an initially steeper reward curve. To judge whether learning \textit{sequentially} gives a learning advantage, the agents will also be compared against \textit{non-sequential} versions of themselves. These are models which have not been trained on previous levels and come without any prior knowledge. The purpose of this comparison is to investigate whether training agents \textit{sequentially} is beneficial over learning from scratch.
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{ |c|c|c|c|c|c| } 
  \hline
- \textbf{Model} & \textbf{Level} & \textbf{sequential} & \textbf{Frames} & \textbf{Runtime}\\
+ \textbf{Model} & \textbf{Level} & \textbf{Sequential} & \textbf{Frames} & \textbf{Runtime}\\
  \hline 
  DQN & Steps with Gap & False & $2 \times 10^5$ & 1d 3h 54m 59s\\ 
  \hline
@@ -410,23 +406,26 @@ FuN & Two Pipes & True & $2 \times 10^5$ & 1d 17h 14m 25s\\
 \label{tbl:experiments}
 \end{table}
 
-All experiments were run once on a Google Cloud 4CPU 15GB RAM virtual machine. While it is desirable to run experiments multiple times to ensure that the observations do not represent noise, financial limitations and long training times only allowed a single run per experiment. 
+Determining the stopping criterion for the experiments, i.e. when the model should stop learning, was grounds to some experimentation. Letting agents play a set number of episodes is common, however episodes vary in length across different levels as well as in the same level. This variation means that agents will have had different amount of playtime as better agents would finish sooner. Therefore, there would be no guarantee that agents get the same number of experiences. It was decided to let all agents experience the same number of frames of the game to better predict training times and to also use the number of completed episodes as an indicator of performance. A fast-learning agent should be able to play through more episodes using the same number of timesteps than a slow-learning agent. Thus, the completed number of episodes after $t$ timesteps can also be used to compare the different Reinforcement Learning models. While it is desirable to run experiments multiple times to ensure that the observations do not represent noise, financial limitations and long training times only allowed a single run per experiment. 
+
+
 
 \section{Results}
 
 \subsection{DQN Agent}\label{dqn_experiment}
-Using a DQN as a comparison baseline is common in the Reinforcement Learning literature \cite{bacon2017option, kulkarni2016hierarchical, hessel2018rainbow, levy2017learning}, thus this project will follow the trend. This section will show how the Deep Reinforcement Learning theory from section \ref{deep_rl} was used to construct a DQN agent and compare the average reward per episode for sequential and non-sequential models. The DQN agent uses a policy and target network, both of which are CNNs with three convolutional layers followed by two linear layers. The activation function used between the layers is a Rectified Linear Unit (ReLu) \cite{lecun2015deep}, which over the past years established itself as the most popular activation function for training neural networks \cite{ramachandran2017searching}. The agent also makes use of experience replay with a buffer of size 100,000. 
+%Using a DQN as a comparison baseline is common in the Reinforcement Learning literature \cite{bacon2017option, kulkarni2016hierarchical, hessel2018rainbow, levy2017learning}, thus this project will follow the trend. 
+This section will show how the Deep Reinforcement Learning theory from section \ref{deep_rl} was used to construct a DQN agent and compare the average reward per episode for sequential and non-sequential models. The DQN agent uses a policy and target network, both of which are CNNs with three convolutional layers followed by two linear layers. The activation function used between the layers is a Rectified Linear Unit (ReLu) \cite{lecun2015deep}, which over the past years established itself as the most popular activation function for training neural networks \cite{ramachandran2017searching}. The agent also has an experience replay buffer of size 100,000. 
 
 \begin{figure}[!htb]
-\vspace{-40pt}
+\vspace{-10pt}
 \centering
-\includegraphics[trim={0 0 0 0}, clip, width=1\linewidth]{figs/dqn.png}
+\includegraphics[trim={0 0 0 0}, clip, width=1\linewidth]{figs/dqn.eps}
 \vspace{-20pt}
 \caption{Illustration of the CNN used by the DQN Agent (not to scale). Stride is the number of pixels the convolutional filter moves. Kernel is the size of the filter.}
 \label{fig:dqn_cnn}
 \end{figure}
 
-Choosing the hyperparameters for a model is an important aspect. Performing a grid search \ref{bergstra2012random} for optimising parameters would have been to costly considering the time it takes to run each experiment. Therefore, parameters values commonly appearing in the Reinforcement Learning literature and various implementations of the DQN algorithm were chosen.
+Choosing the hyperparameters for a model is an important aspect. Performing a grid search \ref{bergstra2012random} for optimising parameters would have been to costly considering the time it took to run each experiment. Therefore, parameters values commonly found in the Reinforcement Learning literature and various implementations of the DQN algorithm were chosen.
 
 \begin{table}
 	\begin{tabular}{ |c|c|c|c|c|c|c|}
@@ -455,21 +454,21 @@ Choosing the hyperparameters for a model is an important aspect. Performing a gr
      \centering
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/dqn_results_1.png}
+         \includegraphics[width=\textwidth]{figs/dqn_results_1.eps}
          \caption{}
          \label{fig:dqn_results_1}
      \end{subfigure}
      \hfill
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/dqn_results_2.png}
+         \includegraphics[width=\textwidth]{figs/dqn_results_2.eps}
          \caption{}
          \label{fig:dqn_results_2}
      \end{subfigure}
      \hfill
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/dqn_results_3.png}
+         \includegraphics[width=\textwidth]{figs/dqn_results_3.eps}
          \caption{}
          \label{fig:dqn_results_3}
      \end{subfigure}
@@ -483,15 +482,15 @@ Choosing the hyperparameters for a model is an important aspect. Performing a gr
 	\hline
 	\textbf{Levels} & Steps & sequential Pipe & Pipe & Steps + Pipe & sequential Steps + Pipe\\
 	\hline
-	\textbf{Final Rewards} & 242.34 & 225.76 & 322.24 & -25.0 & 242.34 \\
+	\textbf{Final Rewards} & 128.73 & 225.76 & 322.24 & -25.0 & 242.34 \\
 	\hline
-	\textbf{Total Rewards} & 388.12 & 2485.56 & 4483.92 & -228.09 & 388.12 \\
+	\textbf{Total Rewards} & 409.92 & 2485.56 & 4483.92 & -228.09 & 388.12 \\
 	\hline
 \end{tabular}
 \caption{Rewards accumulated by the DQN agent in each level. Final rewards are the total rewards acquired in the final episode of the run. Total rewards is the sum of all rewards of the run.}
 \end{table}
 
-The DQN agent was able to mostly find successful policies for all three levels, accumulating mostly positive rewards in all except the Steps + Pipe level when trained from scratch. A successful policy should lead to a net positive reward for the agent in the very last episode of the run. In the last episode, the agent is fully exploiting the environment by only choosing optimal actions. Hence, if the agent has learned a successful policy it is expected that the total reward in the last episode is positive. The results also show that a sequential agent who has been trained on the steps level is able to accumulate rewards faster at first in the pipe level when compared to an agent who has to learn the level from scratch (see the first 250 episodes in \ref{fig:dqn_results_2}). Thereafter, the two models have nearly identical reward curves however. The non-sequential agent manages to accumulate a higher reward in the final episode of the run, suggesting that the model learned a better policy. Looking at the total rewards per run, it can be confirmed that the non-sequential model accumulated more in total as well. In the final level where the steps and pipes were combined to test Mario's abilities to reuse information (\ref{fig:dqn_results_3}), both the sequential and non-sequential model learned at about equal speeds. Although here the sequential model appears to have found a more successful policy as it has more rewards in the final episode as well as over the entire run.
+The DQN agent was able to mostly find successful policies for all three levels, accumulating mostly positive rewards in all except the non-sequential Steps + Pipe level. A successful policy should lead to a net positive reward for the agent in the very last episode of the run. In the last episode, the agent is fully exploiting the environment by only choosing optimal actions. Hence, if the agent has learned a successful policy, it is expected that the total reward in the last episode is positive. The results also show that a sequential agent who has been trained on the steps level is able to accumulate rewards faster at first in the pipe level when compared to an agent who has to learn the level from scratch (see the first 250 episodes in \ref{fig:dqn_results_2}). Thereafter, the two models have nearly identical reward curves however. The non-sequential agent manages to accumulate a higher reward in the final episode of the run, suggesting that the model learned a better policy. Looking at the total rewards per run, it can be confirmed that the non-sequential model accumulated more in total as well. In the final level where the steps and pipes were combined to test Mario's abilities to reuse information (\ref{fig:dqn_results_3}), both the sequential and non-sequential model learned at about equal speeds. Although here the sequential model appears to have found a more successful policy as it has more rewards in the final episode as well as over the entire run.
 
 
 \subsection{Option-Critic Agent}\label{oc_experiment}
@@ -502,21 +501,21 @@ The Option Critic implementation follows that of a DQN with the addition of the 
      \centering
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/oc_results_1.png}
+         \includegraphics[width=\textwidth]{figs/oc_results_1.eps}
          \caption{}
          \label{fig:oc_results_1}
      \end{subfigure}
      \hfill
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/oc_results_2.png}
+         \includegraphics[width=\textwidth]{figs/oc_results_2.eps}
          \caption{}
          \label{fig:oc_results_2}
      \end{subfigure}
      \hfill
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/oc_results_3.png}
+         \includegraphics[width=\textwidth]{figs/oc_results_3.eps}
          \caption{}
          \label{fig:oc_results_3}
      \end{subfigure}
@@ -553,21 +552,21 @@ The implementation of the FuN agent differs from that of the DQN and Option Crit
      \centering
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/fun_results_1.png}
+         \includegraphics[width=\textwidth]{figs/fun_results_1.eps}
          \caption{}
          \label{fig:fun_results_1}
      \end{subfigure}
      \hfill
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/fun_results_2.png}
+         \includegraphics[width=\textwidth]{figs/fun_results_2.eps}
          \caption{}
          \label{fig:fun_results_2}
      \end{subfigure}
      \hfill
      \begin{subfigure}[t]{0.32\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/fun_results_3.png}
+         \includegraphics[width=\textwidth]{figs/fun_results_3.eps}
          \caption{}
          \label{fig:fun_results_3}
      \end{subfigure}
@@ -601,14 +600,14 @@ Comparing the sequential models against non-sequential models showed that sequen
      \centering
      \begin{subfigure}[t]{0.48\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/all_results_1.png}
+         \includegraphics[width=\textwidth]{figs/all_results_1.eps}
          \caption{}
          \label{fig:all_results_1}
      \end{subfigure}
      \hfill
      \begin{subfigure}[t]{0.48\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{figs/all_results_2.png}
+         \includegraphics[width=\textwidth]{figs/all_results_2.eps}
          \caption{}
          \label{fig:fun_results_2}
      \end{subfigure}
@@ -624,7 +623,7 @@ Comparing the average rewards per episode for all three sequentially trained alg
 \begin{wrapfigure}{r}{0.5\textwidth}
 \vspace{-40pt}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{figs/good_policy.png}
+    \includegraphics[width=0.48\textwidth]{figs/good_policy.eps}
   \end{center}
   \vspace{-20pt}
   \caption{The average reward per run and the number of completed episodes. Pearson is a linear correlation coefficient. Spearman is a nonlinear correlation coefficient.}
