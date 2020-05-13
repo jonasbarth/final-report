@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  9 MAY 2020 17:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  13 MAY 2020 10:26
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -379,6 +379,9 @@ LaTeX Warning: Label `fig:fun_results_2' multiply defined.
 
 LaTeX Warning: Label `sub@fig:fun_results_2' multiply defined.
 
+
+LaTeX Warning: Label `fig:all_results' multiply defined.
+
 )
 \openout1 = `final_report.aux'.
 
@@ -531,37 +534,10 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `final_report.toc'.
 
- [2]
-
-LaTeX Warning: Citation `DBLP:journals/corr/MnihKSGAWR13' on page 1 undefined o
-n input line 61.
-
-
-LaTeX Warning: Citation `alpha_go' on page 1 undefined on input line 61.
-
-
-LaTeX Warning: Citation `arulkumaran2019alphastar' on page 1 undefined on input
- line 61.
-
-
-LaTeX Warning: Citation `hessel2018rainbow' on page 1 undefined on input line 6
-6.
-
-
-LaTeX Warning: Citation `bellemare2017distributional' on page 1 undefined on in
-put line 66.
-
-
-LaTeX Warning: Citation `nachum2019does' on page 1 undefined on input line 68.
-
-[1]
-
-LaTeX Warning: Citation `puterman2014markov' on page 2 undefined on input line 
-78.
-
+ [2] [1]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
-1.
-("C:\Program Files\MikTex\tex/latex/lm\ts1lmr.fd"
+0.
+ ("C:\Program Files\MikTex\tex/latex/lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package epstopdf Info: Source file: <figs/mdp_detail.eps>
@@ -572,7 +548,7 @@ Package epstopdf Info: Source file: <figs/mdp_detail.eps>
 (epstopdf)                    size: 48141 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/mdp_detail-eps-convert
 ed-to.pdf figs/mdp_detail.eps>
-(epstopdf)             \includegraphics on input line 92.
+(epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -582,23 +558,8 @@ lusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: figs/mdp_detail-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/mdp_detail-eps-converted-to.pdf>
 Package pdftex.def Info: figs/mdp_detail-eps-converted-to.pdf  used on input li
-ne 92.
+ne 91.
 (pdftex.def)             Requested size: 241.84842pt x 102.56319pt.
-
-LaTeX Warning: Citation `franccois2018introduction' on page 2 undefined on inpu
-t line 93.
-
-
-LaTeX Warning: Citation `franccois2018introduction' on page 2 undefined on inpu
-t line 93.
-
-
-LaTeX Warning: Citation `watkins1992q' on page 2 undefined on input line 96.
-
-
-LaTeX Warning: Citation `bellman1966dynamic' on page 2 undefined on input line 
-96.
-
 [2]
 Package epstopdf Info: Source file: <figs/deep_rl_video_game.eps>
 (epstopdf)                    date: 2020-05-09 17:11:30
@@ -609,7 +570,7 @@ df>
 (epstopdf)                    size: 24983 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/deep_rl_video_game-eps
 -converted-to.pdf figs/deep_rl_video_game.eps>
-(epstopdf)             \includegraphics on input line 118.
+(epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -619,33 +580,10 @@ pdfTeX warning: pdflatex (file ./figs/deep_rl_video_game-eps-converted-to.pdf):
 File: figs/deep_rl_video_game-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/deep_rl_video_game-eps-converted-to.pdf>
 Package pdftex.def Info: figs/deep_rl_video_game-eps-converted-to.pdf  used on 
-input line 118.
+input line 117.
 (pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
-
-LaTeX Warning: Citation `huber1992robust' on page 3 undefined on input line 122
-.
-
-[3 <./figs/mdp_detail-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `lin1993reinforcement' on page 4 undefined on input lin
-e 141.
-
-
-LaTeX Warning: Citation `geirhos2018generalisation' on page 4 undefined on inpu
-t line 145.
-
-
-LaTeX Warning: Citation `sutton1996generalization' on page 4 undefined on input
- line 145.
-
-
-LaTeX Warning: Citation `van2017hybrid' on page 4 undefined on input line 145.
-
-
-LaTeX Warning: Citation `cobbe2018quantifying' on page 4 undefined on input lin
-e 145.
-
-[4 <./figs/deep_rl_video_game-eps-converted-to.pdf>]
+[3 <./figs/mdp_detail-eps-converted-to.pdf>] [4 <./figs/deep_rl_video_game-eps-
+converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/hrl_smdp.eps>
 (epstopdf)                    date: 2020-05-08 15:28:28
 (epstopdf)                    size: 12320410 bytes
@@ -654,7 +592,7 @@ Package epstopdf Info: Source file: <figs/hrl_smdp.eps>
 (epstopdf)                    size: 78168 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/hrl_smdp-eps-converted
 -to.pdf figs/hrl_smdp.eps>
-(epstopdf)             \includegraphics on input line 150.
+(epstopdf)             \includegraphics on input line 149.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -664,28 +602,8 @@ sion: found PDF version <1.7>, but at most version <1.5> allowed
 File: figs/hrl_smdp-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/hrl_smdp-eps-converted-to.pdf>
 Package pdftex.def Info: figs/hrl_smdp-eps-converted-to.pdf  used on input line
- 150.
+ 149.
 (pdftex.def)             Requested size: 193.47577pt x 99.39473pt.
-
-LaTeX Warning: Citation `ribas2011neural' on page 5 undefined on input line 153
-.
-
-
-LaTeX Warning: Citation `ribas2011neural' on page 5 undefined on input line 153
-.
-
-
-LaTeX Warning: Citation `sutton1999between' on page 5 undefined on input line 1
-56.
-
-
-LaTeX Warning: Citation `sutton1999between' on page 5 undefined on input line 1
-59.
-
-
-LaTeX Warning: Citation `bacon2017option' on page 5 undefined on input line 168
-.
-
 Package epstopdf Info: Source file: <figs/option_critic_architecture.eps>
 (epstopdf)                    date: 2020-05-08 15:28:08
 (epstopdf)                    size: 2627497 bytes
@@ -695,7 +613,7 @@ ted-to.pdf>
 (epstopdf)                    size: 35715 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/option_critic_architec
 ture-eps-converted-to.pdf figs/option_critic_architecture.eps>
-(epstopdf)             \includegraphics on input line 175.
+(epstopdf)             \includegraphics on input line 174.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -708,29 +626,9 @@ File: figs/option_critic_architecture-eps-converted-to.pdf Graphic file (type p
 df)
 <use figs/option_critic_architecture-eps-converted-to.pdf>
 Package pdftex.def Info: figs/option_critic_architecture-eps-converted-to.pdf  
-used on input line 175.
+used on input line 174.
 (pdftex.def)             Requested size: 193.47577pt x 179.38861pt.
-
-LaTeX Warning: Citation `ribas2011neural' on page 5 undefined on input line 178
-.
-
-
-LaTeX Warning: Citation `ribas2011neural' on page 5 undefined on input line 178
-.
-
 [5 <./figs/hrl_smdp-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `bacon2017option' on page 6 undefined on input line 181
-.
-
-
-LaTeX Warning: Citation `vezhnevets2017feudal' on page 6 undefined on input lin
-e 184.
-
-
-LaTeX Warning: Citation `dayan1993feudal' on page 6 undefined on input line 184
-.
-
 Package epstopdf Info: Source file: <figs/fun_architecture.eps>
 (epstopdf)                    date: 2020-05-08 15:27:47
 (epstopdf)                    size: 5460771 bytes
@@ -740,7 +638,7 @@ Package epstopdf Info: Source file: <figs/fun_architecture.eps>
 (epstopdf)                    size: 63273 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/fun_architecture-eps-c
 onverted-to.pdf figs/fun_architecture.eps>
-(epstopdf)             \includegraphics on input line 188.
+(epstopdf)             \includegraphics on input line 187.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -750,42 +648,17 @@ DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: figs/fun_architecture-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/fun_architecture-eps-converted-to.pdf>
 Package pdftex.def Info: figs/fun_architecture-eps-converted-to.pdf  used on in
-put line 188.
+put line 187.
 (pdftex.def)             Requested size: 241.84842pt x 123.27426pt.
-
-LaTeX Warning: Citation `vezhnevets2017feudal' on page 6 undefined on input lin
-e 190.
-
-
-LaTeX Warning: Citation `vezhnevets2017feudal' on page 6 undefined on input lin
-e 190.
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/MnihKSGAWR13' on page 6 undefined o
-n input line 194.
-
 [6 <./figs/option_critic_architecture-eps-converted-to.pdf> <./figs/fun_archite
-cture-eps-converted-to.pdf>]
+cture-eps-converted-to.pdf>] [7]
 
-LaTeX Warning: Citation `marioai' on page 7 undefined on input line 203.
-
-
-LaTeX Warning: Citation `jython' on page 7 undefined on input line 212.
-
-
-LaTeX Warning: Citation `jpype' on page 7 undefined on input line 212.
-
-
-LaTeX Warning: Citation `py4j' on page 7 undefined on input line 212.
-
-[7]
-
-Package caption Warning: \label without proper reference on input line 244.
+Package caption Warning: \label without proper reference on input line 239.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:system_architecture' on page 8 undefined on input
- line 242.
+ line 237.
 
 Package epstopdf Info: Source file: <figs/system_architecture.eps>
 (epstopdf)                    date: 2020-05-09 15:18:49
@@ -796,7 +669,7 @@ pdf>
 (epstopdf)                    size: 23124 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/system_architecture-ep
 s-converted-to.pdf figs/system_architecture.eps>
-(epstopdf)             \includegraphics on input line 246.
+(epstopdf)             \includegraphics on input line 241.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -806,28 +679,9 @@ pdfTeX warning: pdflatex (file ./figs/system_architecture-eps-converted-to.pdf)
 File: figs/system_architecture-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/system_architecture-eps-converted-to.pdf>
 Package pdftex.def Info: figs/system_architecture-eps-converted-to.pdf  used on
- input line 246.
-(pdftex.def)             Requested size: 483.69684pt x 214.94936pt.
-
-LaTeX Warning: Citation `marioai' on page 8 undefined on input line 250.
-
-[8]
-
-LaTeX Warning: Citation `siebert2001kobra' on page 9 undefined on input line 25
-5.
-
-
-LaTeX Warning: Citation `amodei2016concrete' on page 9 undefined on input line 
-257.
-
-
-LaTeX Warning: Citation `pypi' on page 9 undefined on input line 259.
-
-[9 <./figs/system_architecture-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `sutton2011reinforcement' on page 10 undefined on input
- line 285.
-
+ input line 241.
+(pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
+[8 <./figs/system_architecture-eps-converted-to.pdf>] [9]
 Package epstopdf Info: Source file: <figs/epsilon_decay.eps>
 (epstopdf)                    date: 2020-05-09 17:16:28
 (epstopdf)                    size: 27531 bytes
@@ -836,7 +690,7 @@ Package epstopdf Info: Source file: <figs/epsilon_decay.eps>
 (epstopdf)                    size: 14591 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/epsilon_decay-eps-conv
 erted-to.pdf figs/epsilon_decay.eps>
-(epstopdf)             \includegraphics on input line 290.
+(epstopdf)             \includegraphics on input line 287.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -846,37 +700,8 @@ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: figs/epsilon_decay-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/epsilon_decay-eps-converted-to.pdf>
 Package pdftex.def Info: figs/epsilon_decay-eps-converted-to.pdf  used on input
- line 290.
+ line 287.
 (pdftex.def)             Requested size: 232.17241pt x 174.25774pt.
-
-LaTeX Warning: Citation `white2012bandit' on page 10 undefined on input line 29
-7.
-
-
-LaTeX Warning: Citation `mnih2015human' on page 10 undefined on input line 297.
-
-
-
-LaTeX Warning: Citation `maroti2019rbed' on page 10 undefined on input line 297
-.
-
-
-LaTeX Warning: Citation `chuchro2017game' on page 10 undefined on input line 29
-7.
-
-
-LaTeX Warning: Citation `gribbon2004novel' on page 10 undefined on input line 3
-01.
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/MnihKSGAWR13' on page 10 undefined 
-on input line 301.
-
-
-LaTeX Warning: Citation `lample2017playing' on page 10 undefined on input line 
-301.
-
-[10 <./figs/epsilon_decay-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/frame_preprocessing.eps>
 (epstopdf)                    date: 2020-05-09 15:18:49
 (epstopdf)                    size: 43544 bytes
@@ -886,22 +711,20 @@ pdf>
 (epstopdf)                    size: 29224 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/frame_preprocessing-ep
 s-converted-to.pdf figs/frame_preprocessing.eps>
-(epstopdf)             \includegraphics on input line 305.
+(epstopdf)             \includegraphics on input line 302.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/frame_preprocessing-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/frame_preprocessing-eps-converted-to.pdf, id=139, 963.6pt x 542.025pt>
+<figs/frame_preprocessing-eps-converted-to.pdf, id=103, 963.6pt x 542.025pt>
 File: figs/frame_preprocessing-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/frame_preprocessing-eps-converted-to.pdf>
 Package pdftex.def Info: figs/frame_preprocessing-eps-converted-to.pdf  used on
- input line 305.
+ input line 302.
 (pdftex.def)             Requested size: 483.69684pt x 136.39644pt.
-
-LaTeX Warning: Citation `DBLP:journals/corr/MnihKSGAWR13' on page 11 undefined 
-on input line 312.
-
+[10 <./figs/frame_preprocessing-eps-converted-to.pdf> <./figs/epsilon_decay-eps
+-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/frame_stacking_nn.eps>
 (epstopdf)                    date: 2020-05-09 15:18:45
 (epstopdf)                    size: 56123 bytes
@@ -911,24 +734,18 @@ f>
 (epstopdf)                    size: 17420 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/frame_stacking_nn-eps-
 converted-to.pdf figs/frame_stacking_nn.eps>
-(epstopdf)             \includegraphics on input line 316.
+(epstopdf)             \includegraphics on input line 313.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/frame_stacking_nn-eps-converted-to.pdf): 
 PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/frame_stacking_nn-eps-converted-to.pdf, id=141, 963.6pt x 542.025pt>
+<figs/frame_stacking_nn-eps-converted-to.pdf, id=151, 963.6pt x 542.025pt>
 File: figs/frame_stacking_nn-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/frame_stacking_nn-eps-converted-to.pdf>
 Package pdftex.def Info: figs/frame_stacking_nn-eps-converted-to.pdf  used on i
-nput line 316.
+nput line 313.
 (pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
-
-LaTeX Warning: Citation `braylan2015frame' on page 11 undefined on input line 3
-20.
-
-[11 <./figs/frame_preprocessing-eps-converted-to.pdf> <./figs/frame_stacking_nn
--eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/frame_skipping.eps>
 (epstopdf)                    date: 2020-05-09 15:18:47
 (epstopdf)                    size: 39589 bytes
@@ -937,20 +754,20 @@ Package epstopdf Info: Source file: <figs/frame_skipping.eps>
 (epstopdf)                    size: 17027 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/frame_skipping-eps-con
 verted-to.pdf figs/frame_skipping.eps>
-(epstopdf)             \includegraphics on input line 324.
+(epstopdf)             \includegraphics on input line 321.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/frame_skipping-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/frame_skipping-eps-converted-to.pdf, id=165, 963.6pt x 542.025pt>
+<figs/frame_skipping-eps-converted-to.pdf, id=153, 963.6pt x 542.025pt>
 File: figs/frame_skipping-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/frame_skipping-eps-converted-to.pdf>
 Package pdftex.def Info: figs/frame_skipping-eps-converted-to.pdf  used on inpu
-t line 324.
+t line 321.
 (pdftex.def)             Requested size: 483.69684pt x 157.81995pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-329.
+326.
 ("C:\Program Files\MikTex\tex/latex/lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -958,6 +775,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+ [11 <./figs/frame_stacking_nn-eps-converted-to.pdf> <./figs/frame_skipping-eps
+-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/steps_gap_level.eps>
 (epstopdf)                    date: 2020-05-08 15:27:25
 (epstopdf)                    size: 369628 bytes
@@ -967,17 +786,17 @@ Package epstopdf Info: Source file: <figs/steps_gap_level.eps>
 (epstopdf)                    size: 11050 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/steps_gap_level-eps-co
 nverted-to.pdf figs/steps_gap_level.eps>
-(epstopdf)             \includegraphics on input line 346.
+(epstopdf)             \includegraphics on input line 343.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/steps_gap_level-eps-converted-to.pdf): PD
 F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/steps_gap_level-eps-converted-to.pdf, id=167, 256.96pt x 240.9pt>
+<figs/steps_gap_level-eps-converted-to.pdf, id=177, 256.96pt x 240.9pt>
 File: figs/steps_gap_level-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/steps_gap_level-eps-converted-to.pdf>
 Package pdftex.def Info: figs/steps_gap_level-eps-converted-to.pdf  used on inp
-ut line 346.
+ut line 343.
 (pdftex.def)             Requested size: 120.92421pt x 113.36636pt.
 Package epstopdf Info: Source file: <figs/two_pipe_level.eps>
 (epstopdf)                    date: 2020-05-08 15:27:27
@@ -987,20 +806,20 @@ Package epstopdf Info: Source file: <figs/two_pipe_level.eps>
 (epstopdf)                    size: 9861 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/two_pipe_level-eps-con
 verted-to.pdf figs/two_pipe_level.eps>
-(epstopdf)             \includegraphics on input line 350.
+(epstopdf)             \includegraphics on input line 347.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/two_pipe_level-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/two_pipe_level-eps-converted-to.pdf, id=168, 256.96pt x 240.9pt>
+<figs/two_pipe_level-eps-converted-to.pdf, id=178, 256.96pt x 240.9pt>
 File: figs/two_pipe_level-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/two_pipe_level-eps-converted-to.pdf>
 Package pdftex.def Info: figs/two_pipe_level-eps-converted-to.pdf  used on inpu
-t line 350.
+t line 347.
 (pdftex.def)             Requested size: 120.92421pt x 113.36636pt.
 
-Underfull \hbox (badness 1028) in paragraph at lines 351--351
+Underfull \hbox (badness 1028) in paragraph at lines 348--348
 []\OT1/lmr/m/n/10.95 (+20) Figure 12: |Two Pipes
  []
 
@@ -1013,29 +832,20 @@ Package epstopdf Info: Source file: <figs/steps_pipe_level.eps>
 (epstopdf)                    size: 11564 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/steps_pipe_level-eps-c
 onverted-to.pdf figs/steps_pipe_level.eps>
-(epstopdf)             \includegraphics on input line 354.
+(epstopdf)             \includegraphics on input line 351.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/steps_pipe_level-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/steps_pipe_level-eps-converted-to.pdf, id=169, 256.96pt x 240.9pt>
+<figs/steps_pipe_level-eps-converted-to.pdf, id=179, 256.96pt x 240.9pt>
 File: figs/steps_pipe_level-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/steps_pipe_level-eps-converted-to.pdf>
 Package pdftex.def Info: figs/steps_pipe_level-eps-converted-to.pdf  used on in
-put line 354.
+put line 351.
 (pdftex.def)             Requested size: 120.92421pt x 113.36636pt.
-[12 <./figs/frame_skipping-eps-converted-to.pdf> <./figs/steps_gap_level-eps-co
-nverted-to.pdf> <./figs/two_pipe_level-eps-converted-to.pdf> <./figs/steps_pipe
-_level-eps-converted-to.pdf>] [13]
-
-LaTeX Warning: Citation `lecun2015deep' on page 14 undefined on input line 417.
-
-
-
-LaTeX Warning: Citation `ramachandran2017searching' on page 14 undefined on inp
-ut line 417.
-
+[12 <./figs/steps_gap_level-eps-converted-to.pdf> <./figs/two_pipe_level-eps-co
+nverted-to.pdf> <./figs/steps_pipe_level-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/dqn.eps>
 (epstopdf)                    date: 2020-05-09 15:18:45
 (epstopdf)                    size: 125677 bytes
@@ -1044,24 +854,24 @@ Package epstopdf Info: Source file: <figs/dqn.eps>
 (epstopdf)                    size: 44289 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/dqn-eps-converted-to.p
 df figs/dqn.eps>
-(epstopdf)             \includegraphics on input line 422.
+(epstopdf)             \includegraphics on input line 419.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/dqn-eps-converted-to.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<figs/dqn-eps-converted-to.pdf, id=196, 963.6pt x 542.025pt>
+<figs/dqn-eps-converted-to.pdf, id=193, 963.6pt x 542.025pt>
 File: figs/dqn-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/dqn-eps-converted-to.pdf>
-Package pdftex.def Info: figs/dqn-eps-converted-to.pdf  used on input line 422.
+Package pdftex.def Info: figs/dqn-eps-converted-to.pdf  used on input line 419.
 
-(pdftex.def)             Requested size: 483.69684pt x 272.07874pt.
+(pdftex.def)             Requested size: 362.77263pt x 204.05284pt.
 
-LaTeX Warning: Reference `bergstra2012random' on page 14 undefined on input lin
-e 428.
+LaTeX Warning: Citation `bergstra2012random' on page 13 undefined on input line
+ 425.
 
 
-Overfull \hbox (3.19936pt too wide) in paragraph at lines 431--448
+Overfull \hbox (3.19936pt too wide) in paragraph at lines 429--446
 [][] 
  []
 
@@ -1073,17 +883,17 @@ Package epstopdf Info: Source file: <figs/dqn_results_1.eps>
 (epstopdf)                    size: 18204 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/dqn_results_1-eps-conv
 erted-to.pdf figs/dqn_results_1.eps>
-(epstopdf)             \includegraphics on input line 457.
+(epstopdf)             \includegraphics on input line 455.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/dqn_results_1-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/dqn_results_1-eps-converted-to.pdf, id=198, 433.62pt x 289.08pt>
+<figs/dqn_results_1-eps-converted-to.pdf, id=195, 433.62pt x 289.08pt>
 File: figs/dqn_results_1-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/dqn_results_1-eps-converted-to.pdf>
 Package pdftex.def Info: figs/dqn_results_1-eps-converted-to.pdf  used on input
- line 457.
+ line 455.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
 Package epstopdf Info: Source file: <figs/dqn_results_2.eps>
 (epstopdf)                    date: 2020-05-09 13:53:29
@@ -1093,17 +903,17 @@ Package epstopdf Info: Source file: <figs/dqn_results_2.eps>
 (epstopdf)                    size: 27036 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/dqn_results_2-eps-conv
 erted-to.pdf figs/dqn_results_2.eps>
-(epstopdf)             \includegraphics on input line 464.
+(epstopdf)             \includegraphics on input line 462.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/dqn_results_2-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/dqn_results_2-eps-converted-to.pdf, id=199, 433.62pt x 289.08pt>
+<figs/dqn_results_2-eps-converted-to.pdf, id=196, 433.62pt x 289.08pt>
 File: figs/dqn_results_2-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/dqn_results_2-eps-converted-to.pdf>
 Package pdftex.def Info: figs/dqn_results_2-eps-converted-to.pdf  used on input
- line 464.
+ line 462.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
 Package epstopdf Info: Source file: <figs/dqn_results_3.eps>
 (epstopdf)                    date: 2020-05-09 13:53:29
@@ -1113,29 +923,22 @@ Package epstopdf Info: Source file: <figs/dqn_results_3.eps>
 (epstopdf)                    size: 27462 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/dqn_results_3-eps-conv
 erted-to.pdf figs/dqn_results_3.eps>
-(epstopdf)             \includegraphics on input line 471.
+(epstopdf)             \includegraphics on input line 469.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/dqn_results_3-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/dqn_results_3-eps-converted-to.pdf, id=200, 433.62pt x 289.08pt>
+<figs/dqn_results_3-eps-converted-to.pdf, id=197, 433.62pt x 289.08pt>
 File: figs/dqn_results_3-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/dqn_results_3-eps-converted-to.pdf>
 Package pdftex.def Info: figs/dqn_results_3-eps-converted-to.pdf  used on input
- line 471.
+ line 469.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14 <./figs/dqn-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `bacon2017option' on page 15 undefined on input line 49
-7.
-
-
-LaTeX Warning: Citation `oc_github' on page 15 undefined on input line 497.
-
+[13] [14 <./figs/dqn-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/oc_results_1.eps>
 (epstopdf)                    date: 2020-05-09 13:57:36
 (epstopdf)                    size: 43997 bytes
@@ -1144,7 +947,7 @@ Package epstopdf Info: Source file: <figs/oc_results_1.eps>
 (epstopdf)                    size: 18235 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/oc_results_1-eps-conve
 rted-to.pdf figs/oc_results_1.eps>
-(epstopdf)             \includegraphics on input line 504.
+(epstopdf)             \includegraphics on input line 502.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1154,7 +957,7 @@ nclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: figs/oc_results_1-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/oc_results_1-eps-converted-to.pdf>
 Package pdftex.def Info: figs/oc_results_1-eps-converted-to.pdf  used on input 
-line 504.
+line 502.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
 Package epstopdf Info: Source file: <figs/oc_results_2.eps>
 (epstopdf)                    date: 2020-05-09 13:57:36
@@ -1164,7 +967,7 @@ Package epstopdf Info: Source file: <figs/oc_results_2.eps>
 (epstopdf)                    size: 23341 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/oc_results_2-eps-conve
 rted-to.pdf figs/oc_results_2.eps>
-(epstopdf)             \includegraphics on input line 511.
+(epstopdf)             \includegraphics on input line 509.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1174,7 +977,7 @@ nclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: figs/oc_results_2-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/oc_results_2-eps-converted-to.pdf>
 Package pdftex.def Info: figs/oc_results_2-eps-converted-to.pdf  used on input 
-line 511.
+line 509.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
 Package epstopdf Info: Source file: <figs/oc_results_3.eps>
 (epstopdf)                    date: 2020-05-09 13:57:36
@@ -1184,7 +987,7 @@ Package epstopdf Info: Source file: <figs/oc_results_3.eps>
 (epstopdf)                    size: 21265 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/oc_results_3-eps-conve
 rted-to.pdf figs/oc_results_3.eps>
-(epstopdf)             \includegraphics on input line 518.
+(epstopdf)             \includegraphics on input line 516.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1194,13 +997,12 @@ nclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: figs/oc_results_3-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/oc_results_3-eps-converted-to.pdf>
 Package pdftex.def Info: figs/oc_results_3-eps-converted-to.pdf  used on input 
-line 518.
+line 516.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
 [15 <./figs/dqn_results_1-eps-converted-to.pdf> <./figs/dqn_results_2-eps-conve
-rted-to.pdf> <./figs/dqn_results_3-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `fun_github' on page 16 undefined on input line 549.
-
+rted-to.pdf> <./figs/dqn_results_3-eps-converted-to.pdf> <./figs/oc_results_1-e
+ps-converted-to.pdf> <./figs/oc_results_2-eps-converted-to.pdf> <./figs/oc_resu
+lts_3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/fun_results_1.eps>
 (epstopdf)                    date: 2020-05-09 13:56:31
 (epstopdf)                    size: 44834 bytes
@@ -1209,17 +1011,17 @@ Package epstopdf Info: Source file: <figs/fun_results_1.eps>
 (epstopdf)                    size: 19195 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/fun_results_1-eps-conv
 erted-to.pdf figs/fun_results_1.eps>
-(epstopdf)             \includegraphics on input line 555.
+(epstopdf)             \includegraphics on input line 553.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/fun_results_1-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fun_results_1-eps-converted-to.pdf, id=324, 433.62pt x 289.08pt>
+<figs/fun_results_1-eps-converted-to.pdf, id=430, 433.62pt x 289.08pt>
 File: figs/fun_results_1-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/fun_results_1-eps-converted-to.pdf>
 Package pdftex.def Info: figs/fun_results_1-eps-converted-to.pdf  used on input
- line 555.
+ line 553.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
 Package epstopdf Info: Source file: <figs/fun_results_2.eps>
 (epstopdf)                    date: 2020-05-09 13:56:31
@@ -1229,17 +1031,17 @@ Package epstopdf Info: Source file: <figs/fun_results_2.eps>
 (epstopdf)                    size: 26633 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/fun_results_2-eps-conv
 erted-to.pdf figs/fun_results_2.eps>
-(epstopdf)             \includegraphics on input line 562.
+(epstopdf)             \includegraphics on input line 560.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/fun_results_2-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fun_results_2-eps-converted-to.pdf, id=325, 433.62pt x 289.08pt>
+<figs/fun_results_2-eps-converted-to.pdf, id=431, 433.62pt x 289.08pt>
 File: figs/fun_results_2-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/fun_results_2-eps-converted-to.pdf>
 Package pdftex.def Info: figs/fun_results_2-eps-converted-to.pdf  used on input
- line 562.
+ line 560.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
 Package epstopdf Info: Source file: <figs/fun_results_3.eps>
 (epstopdf)                    date: 2020-05-09 13:56:31
@@ -1249,20 +1051,20 @@ Package epstopdf Info: Source file: <figs/fun_results_3.eps>
 (epstopdf)                    size: 25742 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/fun_results_3-eps-conv
 erted-to.pdf figs/fun_results_3.eps>
-(epstopdf)             \includegraphics on input line 569.
+(epstopdf)             \includegraphics on input line 567.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/fun_results_3-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fun_results_3-eps-converted-to.pdf, id=326, 433.62pt x 289.08pt>
+<figs/fun_results_3-eps-converted-to.pdf, id=432, 433.62pt x 289.08pt>
 File: figs/fun_results_3-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/fun_results_3-eps-converted-to.pdf>
 Package pdftex.def Info: figs/fun_results_3-eps-converted-to.pdf  used on input
- line 569.
+ line 567.
 (pdftex.def)             Requested size: 154.78653pt x 103.19092pt.
-[16 <./figs/oc_results_1-eps-converted-to.pdf> <./figs/oc_results_2-eps-convert
-ed-to.pdf> <./figs/oc_results_3-eps-converted-to.pdf>]
+[16 <./figs/fun_results_1-eps-converted-to.pdf> <./figs/fun_results_2-eps-conve
+rted-to.pdf> <./figs/fun_results_3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/all_results_1.eps>
 (epstopdf)                    date: 2020-05-09 14:10:04
 (epstopdf)                    size: 85854 bytes
@@ -1271,17 +1073,17 @@ Package epstopdf Info: Source file: <figs/all_results_1.eps>
 (epstopdf)                    size: 30481 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/all_results_1-eps-conv
 erted-to.pdf figs/all_results_1.eps>
-(epstopdf)             \includegraphics on input line 603.
+(epstopdf)             \includegraphics on input line 601.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/all_results_1-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/all_results_1-eps-converted-to.pdf, id=436, 433.62pt x 289.08pt>
+<figs/all_results_1-eps-converted-to.pdf, id=546, 433.62pt x 289.08pt>
 File: figs/all_results_1-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/all_results_1-eps-converted-to.pdf>
 Package pdftex.def Info: figs/all_results_1-eps-converted-to.pdf  used on input
- line 603.
+ line 601.
 (pdftex.def)             Requested size: 232.17241pt x 154.78198pt.
 Package epstopdf Info: Source file: <figs/all_results_2.eps>
 (epstopdf)                    date: 2020-05-09 14:10:04
@@ -1291,34 +1093,29 @@ Package epstopdf Info: Source file: <figs/all_results_2.eps>
 (epstopdf)                    size: 27055 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/all_results_2-eps-conv
 erted-to.pdf figs/all_results_2.eps>
-(epstopdf)             \includegraphics on input line 610.
+(epstopdf)             \includegraphics on input line 608.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/all_results_2-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/all_results_2-eps-converted-to.pdf, id=437, 433.62pt x 289.08pt>
+<figs/all_results_2-eps-converted-to.pdf, id=547, 433.62pt x 289.08pt>
 File: figs/all_results_2-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/all_results_2-eps-converted-to.pdf>
 Package pdftex.def Info: figs/all_results_2-eps-converted-to.pdf  used on input
- line 610.
+ line 608.
 (pdftex.def)             Requested size: 232.17241pt x 154.78198pt.
-
-LaTeX Warning: Citation `kirkpatrick2017overcoming' on page 17 undefined on inp
-ut line 620.
-
-[17 <./figs/fun_results_1-eps-converted-to.pdf> <./figs/fun_results_2-eps-conve
-rted-to.pdf> <./figs/fun_results_3-eps-converted-to.pdf> <./figs/all_results_1-
-eps-converted-to.pdf> <./figs/all_results_2-eps-converted-to.pdf>]
+[17 <./figs/all_results_1-eps-converted-to.pdf> <./figs/all_results_2-eps-conve
+rted-to.pdf>]
 Package epstopdf Info: Source file: <figs/good_policy.eps>
-(epstopdf)                    date: 2020-05-08 15:27:00
-(epstopdf)                    size: 747581 bytes
+(epstopdf)                    date: 2020-05-11 14:49:37
+(epstopdf)                    size: 40336 bytes
 (epstopdf)             Output file: <figs/good_policy-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-05-08 15:49:44
-(epstopdf)                    size: 17700 bytes
+(epstopdf)                    date: 2020-05-11 14:52:16
+(epstopdf)                    size: 22949 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/good_policy-eps-conver
 ted-to.pdf figs/good_policy.eps>
-(epstopdf)             \includegraphics on input line 626.
+(epstopdf)             \includegraphics on input line 639.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1328,197 +1125,35 @@ clusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: figs/good_policy-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/good_policy-eps-converted-to.pdf>
 Package pdftex.def Info: figs/good_policy-eps-converted-to.pdf  used on input l
-ine 626.
+ine 639.
 (pdftex.def)             Requested size: 232.17241pt x 154.78198pt.
-[18 <./figs/good_policy-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `chuchro2017game' on page 19 undefined on input line 66
-8.
-
-[19]
-
-LaTeX Warning: Citation `song2016measuring' on page 20 undefined on input line 
-672.
-
-
-LaTeX Warning: Citation `byrne2008principle' on page 20 undefined on input line
- 676.
-
-[20]
-No file final_report.bbl.
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Overfull \hbox (19.8665pt too wide) in paragraph at lines 693--733
-\OT1/lmr/m/n/10.95 (-20) Borges, D. (2018). The Curse of Di-men-sion-al-ity!. [
-on-line] Medium. Avail-able at: https://medium.com/diogo-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Overfull \hbox (57.59312pt too wide) in paragraph at lines 693--733
-\OT1/lmr/m/n/10.95 (-20) Edi-tion). [on-line] Plato.stanford.edu. Avail-able at
-: https://plato.stanford.edu/archives/win2017/entries/empiricism-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--733
-
- []
-
-[21] [22] (final_report.aux)
+Package epstopdf Info: Source file: <figs/sequential_policy_analysis.eps>
+(epstopdf)                    date: 2020-05-11 15:17:36
+(epstopdf)                    size: 33090 bytes
+(epstopdf)             Output file: <figs/sequential_policy_analysis-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2020-05-11 15:35:46
+(epstopdf)                    size: 20510 bytes
+(epstopdf)             Command: <epstopdf --outfile=figs/sequential_policy_anal
+ysis-eps-converted-to.pdf figs/sequential_policy_analysis.eps>
+(epstopdf)             \includegraphics on input line 646.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./figs/sequential_policy_analysis-eps-converted-
+to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allo
+wed
+<figs/sequential_policy_analysis-eps-converted-to.pdf, id=631, 433.62pt x 289.0
+8pt>
+File: figs/sequential_policy_analysis-eps-converted-to.pdf Graphic file (type p
+df)
+<use figs/sequential_policy_analysis-eps-converted-to.pdf>
+Package pdftex.def Info: figs/sequential_policy_analysis-eps-converted-to.pdf  
+used on input line 646.
+(pdftex.def)             Requested size: 232.17241pt x 154.78198pt.
+[18 <./figs/good_policy-eps-converted-to.pdf> <./figs/sequential_policy_analysi
+s-eps-converted-to.pdf>] [19] [20] (final_report.bbl [21] [22]) [23]
+(final_report.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1527,18 +1162,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8351 strings out of 491277
- 131676 string characters out of 3114223
- 264761 words of memory out of 3000000
- 13572 multiletter control sequences out of 15000+200000
- 54764 words of font info for 110 fonts, out of 3000000 for 9000
+ 8431 strings out of 491277
+ 133358 string characters out of 3114223
+ 272997 words of memory out of 3000000
+ 13640 multiletter control sequences out of 15000+200000
+ 55689 words of font info for 115 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,9n,77p,2544b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MikTex/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Program Files/Mik
-Tex/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MikTex/fonts/enc/dvips/l
-m/lm-mathex.enc}{C:/Program Files/MikTex/fonts/enc/dvips/lm/lm-rm.enc}{C:/Progr
-am Files/MikTex/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MikTex/fonts
-/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MikTex/fonts/type1/public/lm/lmbx10.
+ 48i,9n,77p,2548b,533s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MikTex/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MikT
+ex/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Program Files/MikTex/fonts/enc/dvips/lm/l
+m-mathsy.enc}{C:/Program Files/MikTex/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Prog
+ram Files/MikTex/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MikTex/fonts/en
+c/dvips/lm/lm-mathit.enc}<C:/Program Files/MikTex/fonts/type1/public/lm/lmbx10.
 pfb><C:/Program Files/MikTex/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files
 /MikTex/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MikTex/fonts/type1/p
 ublic/lm/lmmi10.pfb><C:/Program Files/MikTex/fonts/type1/public/lm/lmmi8.pfb><C
@@ -1549,9 +1184,9 @@ ublic/lm/lmmi10.pfb><C:/Program Files/MikTex/fonts/type1/public/lm/lmmi8.pfb><C
 ype1/public/lm/lmsy6.pfb><C:/Program Files/MikTex/fonts/type1/public/lm/lmsy8.p
 fb><C:/Program Files/MikTex/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/
 MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on final_report.pdf (24 pages, 983060 bytes).
+Output written on final_report.pdf (25 pages, 1017201 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
+ 806 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13991 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 14508 words of extra memory for PDF output out of 17280 (max. 10000000)
 
