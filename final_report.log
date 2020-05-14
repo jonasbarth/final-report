@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  13 MAY 2020 10:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  14 MAY 2020 16:57
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -604,6 +604,7 @@ File: figs/hrl_smdp-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figs/hrl_smdp-eps-converted-to.pdf  used on input line
  149.
 (pdftex.def)             Requested size: 193.47577pt x 99.39473pt.
+[5 <./figs/hrl_smdp-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/option_critic_architecture.eps>
 (epstopdf)                    date: 2020-05-08 15:28:08
 (epstopdf)                    size: 2627497 bytes
@@ -620,7 +621,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./figs/option_critic_architecture-eps-converted-
 to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allo
 wed
-<figs/option_critic_architecture-eps-converted-to.pdf, id=49, 689.57625pt x 639
+<figs/option_critic_architecture-eps-converted-to.pdf, id=56, 689.57625pt x 639
 .38875pt>
 File: figs/option_critic_architecture-eps-converted-to.pdf Graphic file (type p
 df)
@@ -628,7 +629,6 @@ df)
 Package pdftex.def Info: figs/option_critic_architecture-eps-converted-to.pdf  
 used on input line 174.
 (pdftex.def)             Requested size: 193.47577pt x 179.38861pt.
-[5 <./figs/hrl_smdp-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/fun_architecture.eps>
 (epstopdf)                    date: 2020-05-08 15:27:47
 (epstopdf)                    size: 5460771 bytes
@@ -681,7 +681,7 @@ File: figs/system_architecture-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figs/system_architecture-eps-converted-to.pdf  used on
  input line 241.
 (pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
-[8 <./figs/system_architecture-eps-converted-to.pdf>] [9]
+[8] [9 <./figs/system_architecture-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figs/epsilon_decay.eps>
 (epstopdf)                    date: 2020-05-09 17:16:28
 (epstopdf)                    size: 27531 bytes
@@ -747,11 +747,11 @@ Package pdftex.def Info: figs/frame_stacking_nn-eps-converted-to.pdf  used on i
 nput line 313.
 (pdftex.def)             Requested size: 362.77263pt x 161.2071pt.
 Package epstopdf Info: Source file: <figs/frame_skipping.eps>
-(epstopdf)                    date: 2020-05-09 15:18:47
-(epstopdf)                    size: 39589 bytes
+(epstopdf)                    date: 2020-05-13 11:09:52
+(epstopdf)                    size: 5606203 bytes
 (epstopdf)             Output file: <figs/frame_skipping-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-05-09 15:21:35
-(epstopdf)                    size: 17027 bytes
+(epstopdf)                    date: 2020-05-13 11:10:50
+(epstopdf)                    size: 70907 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/frame_skipping-eps-con
 verted-to.pdf figs/frame_skipping.eps>
 (epstopdf)             \includegraphics on input line 321.
@@ -792,7 +792,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/steps_gap_level-eps-converted-to.pdf): PD
 F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/steps_gap_level-eps-converted-to.pdf, id=177, 256.96pt x 240.9pt>
+<figs/steps_gap_level-eps-converted-to.pdf, id=171, 256.96pt x 240.9pt>
 File: figs/steps_gap_level-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/steps_gap_level-eps-converted-to.pdf>
 Package pdftex.def Info: figs/steps_gap_level-eps-converted-to.pdf  used on inp
@@ -812,7 +812,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/two_pipe_level-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/two_pipe_level-eps-converted-to.pdf, id=178, 256.96pt x 240.9pt>
+<figs/two_pipe_level-eps-converted-to.pdf, id=172, 256.96pt x 240.9pt>
 File: figs/two_pipe_level-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/two_pipe_level-eps-converted-to.pdf>
 Package pdftex.def Info: figs/two_pipe_level-eps-converted-to.pdf  used on inpu
@@ -838,7 +838,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/steps_pipe_level-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/steps_pipe_level-eps-converted-to.pdf, id=179, 256.96pt x 240.9pt>
+<figs/steps_pipe_level-eps-converted-to.pdf, id=173, 256.96pt x 240.9pt>
 File: figs/steps_pipe_level-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/steps_pipe_level-eps-converted-to.pdf>
 Package pdftex.def Info: figs/steps_pipe_level-eps-converted-to.pdf  used on in
@@ -860,16 +860,12 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/dqn-eps-converted-to.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<figs/dqn-eps-converted-to.pdf, id=193, 963.6pt x 542.025pt>
+<figs/dqn-eps-converted-to.pdf, id=187, 963.6pt x 542.025pt>
 File: figs/dqn-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/dqn-eps-converted-to.pdf>
 Package pdftex.def Info: figs/dqn-eps-converted-to.pdf  used on input line 419.
 
 (pdftex.def)             Requested size: 362.77263pt x 204.05284pt.
-
-LaTeX Warning: Citation `bergstra2012random' on page 13 undefined on input line
- 425.
-
 
 Overfull \hbox (3.19936pt too wide) in paragraph at lines 429--446
 [][] 
@@ -889,7 +885,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/dqn_results_1-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/dqn_results_1-eps-converted-to.pdf, id=195, 433.62pt x 289.08pt>
+<figs/dqn_results_1-eps-converted-to.pdf, id=189, 433.62pt x 289.08pt>
 File: figs/dqn_results_1-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/dqn_results_1-eps-converted-to.pdf>
 Package pdftex.def Info: figs/dqn_results_1-eps-converted-to.pdf  used on input
@@ -909,7 +905,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/dqn_results_2-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/dqn_results_2-eps-converted-to.pdf, id=196, 433.62pt x 289.08pt>
+<figs/dqn_results_2-eps-converted-to.pdf, id=190, 433.62pt x 289.08pt>
 File: figs/dqn_results_2-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/dqn_results_2-eps-converted-to.pdf>
 Package pdftex.def Info: figs/dqn_results_2-eps-converted-to.pdf  used on input
@@ -929,7 +925,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/dqn_results_3-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/dqn_results_3-eps-converted-to.pdf, id=197, 433.62pt x 289.08pt>
+<figs/dqn_results_3-eps-converted-to.pdf, id=191, 433.62pt x 289.08pt>
 File: figs/dqn_results_3-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/dqn_results_3-eps-converted-to.pdf>
 Package pdftex.def Info: figs/dqn_results_3-eps-converted-to.pdf  used on input
@@ -953,7 +949,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/oc_results_1-eps-converted-to.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/oc_results_1-eps-converted-to.pdf, id=213, 433.62pt x 289.08pt>
+<figs/oc_results_1-eps-converted-to.pdf, id=207, 433.62pt x 289.08pt>
 File: figs/oc_results_1-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/oc_results_1-eps-converted-to.pdf>
 Package pdftex.def Info: figs/oc_results_1-eps-converted-to.pdf  used on input 
@@ -973,7 +969,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/oc_results_2-eps-converted-to.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/oc_results_2-eps-converted-to.pdf, id=214, 433.62pt x 289.08pt>
+<figs/oc_results_2-eps-converted-to.pdf, id=208, 433.62pt x 289.08pt>
 File: figs/oc_results_2-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/oc_results_2-eps-converted-to.pdf>
 Package pdftex.def Info: figs/oc_results_2-eps-converted-to.pdf  used on input 
@@ -993,7 +989,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/oc_results_3-eps-converted-to.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/oc_results_3-eps-converted-to.pdf, id=215, 433.62pt x 289.08pt>
+<figs/oc_results_3-eps-converted-to.pdf, id=209, 433.62pt x 289.08pt>
 File: figs/oc_results_3-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/oc_results_3-eps-converted-to.pdf>
 Package pdftex.def Info: figs/oc_results_3-eps-converted-to.pdf  used on input 
@@ -1017,7 +1013,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/fun_results_1-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fun_results_1-eps-converted-to.pdf, id=430, 433.62pt x 289.08pt>
+<figs/fun_results_1-eps-converted-to.pdf, id=424, 433.62pt x 289.08pt>
 File: figs/fun_results_1-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/fun_results_1-eps-converted-to.pdf>
 Package pdftex.def Info: figs/fun_results_1-eps-converted-to.pdf  used on input
@@ -1037,7 +1033,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/fun_results_2-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fun_results_2-eps-converted-to.pdf, id=431, 433.62pt x 289.08pt>
+<figs/fun_results_2-eps-converted-to.pdf, id=425, 433.62pt x 289.08pt>
 File: figs/fun_results_2-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/fun_results_2-eps-converted-to.pdf>
 Package pdftex.def Info: figs/fun_results_2-eps-converted-to.pdf  used on input
@@ -1057,7 +1053,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/fun_results_3-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fun_results_3-eps-converted-to.pdf, id=432, 433.62pt x 289.08pt>
+<figs/fun_results_3-eps-converted-to.pdf, id=426, 433.62pt x 289.08pt>
 File: figs/fun_results_3-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/fun_results_3-eps-converted-to.pdf>
 Package pdftex.def Info: figs/fun_results_3-eps-converted-to.pdf  used on input
@@ -1079,7 +1075,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/all_results_1-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/all_results_1-eps-converted-to.pdf, id=546, 433.62pt x 289.08pt>
+<figs/all_results_1-eps-converted-to.pdf, id=540, 433.62pt x 289.08pt>
 File: figs/all_results_1-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/all_results_1-eps-converted-to.pdf>
 Package pdftex.def Info: figs/all_results_1-eps-converted-to.pdf  used on input
@@ -1099,7 +1095,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/all_results_2-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/all_results_2-eps-converted-to.pdf, id=547, 433.62pt x 289.08pt>
+<figs/all_results_2-eps-converted-to.pdf, id=541, 433.62pt x 289.08pt>
 File: figs/all_results_2-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/all_results_2-eps-converted-to.pdf>
 Package pdftex.def Info: figs/all_results_2-eps-converted-to.pdf  used on input
@@ -1121,7 +1117,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/good_policy-eps-converted-to.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/good_policy-eps-converted-to.pdf, id=630, 433.62pt x 289.08pt>
+<figs/good_policy-eps-converted-to.pdf, id=624, 433.62pt x 289.08pt>
 File: figs/good_policy-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/good_policy-eps-converted-to.pdf>
 Package pdftex.def Info: figs/good_policy-eps-converted-to.pdf  used on input l
@@ -1143,7 +1139,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./figs/sequential_policy_analysis-eps-converted-
 to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allo
 wed
-<figs/sequential_policy_analysis-eps-converted-to.pdf, id=631, 433.62pt x 289.0
+<figs/sequential_policy_analysis-eps-converted-to.pdf, id=625, 433.62pt x 289.0
 8pt>
 File: figs/sequential_policy_analysis-eps-converted-to.pdf Graphic file (type p
 df)
@@ -1162,11 +1158,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8431 strings out of 491277
- 133358 string characters out of 3114223
- 272997 words of memory out of 3000000
- 13640 multiletter control sequences out of 15000+200000
- 55689 words of font info for 115 fonts, out of 3000000 for 9000
+ 8446 strings out of 491277
+ 133526 string characters out of 3114223
+ 273002 words of memory out of 3000000
+ 13641 multiletter control sequences out of 15000+200000
+ 56182 words of font info for 122 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,9n,77p,2548b,533s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MikTex/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MikT
@@ -1184,9 +1180,9 @@ ublic/lm/lmmi10.pfb><C:/Program Files/MikTex/fonts/type1/public/lm/lmmi8.pfb><C
 ype1/public/lm/lmsy6.pfb><C:/Program Files/MikTex/fonts/type1/public/lm/lmsy8.p
 fb><C:/Program Files/MikTex/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/
 MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on final_report.pdf (25 pages, 1017201 bytes).
+Output written on final_report.pdf (25 pages, 1073876 bytes).
 PDF statistics:
- 806 PDF objects out of 1000 (max. 8388607)
+ 800 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  14508 words of extra memory for PDF output out of 17280 (max. 10000000)
 

@@ -1,7 +1,7 @@
 \babel@toc {english}{}
 \contentsline {section}{\numberline {1}Introduction}{1}%
 \contentsline {subsection}{\numberline {1.1}Motivation}{1}%
-\contentsline {subsection}{\numberline {1.2}Objectives}{1}%
+\contentsline {subsection}{\numberline {1.2}Objectives}{2}%
 \contentsline {section}{\numberline {2}Literature Review}{2}%
 \contentsline {subsection}{\numberline {2.1}Deep RL}{2}%
 \contentsline {subsubsection}{\numberline {2.1.1}Target Networks}{4}%
@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {3}System Requirements}{7}%
 \contentsline {section}{\numberline {4}System Implementation}{8}%
 \contentsline {subsection}{\numberline {4.1}Overall Architecture}{8}%
-\contentsline {subsection}{\numberline {4.2}Reward Function}{9}%
+\contentsline {subsection}{\numberline {4.2}Reward Function}{8}%
 \contentsline {subsection}{\numberline {4.3}Exploitation vs Exploration}{10}%
 \contentsline {subsection}{\numberline {4.4}Frame Preprocessing}{10}%
 \contentsline {subsection}{\numberline {4.5}Frame Stacking and Frame Skipping}{11}%
